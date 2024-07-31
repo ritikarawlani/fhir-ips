@@ -1,5 +1,5 @@
 Instance: composition-minimal
-InstanceOf: CompositionUvIps
+InstanceOf: Composition-uv-ips
 Title: "IPS Composition example - minimal"
 Description: "IPS Composition example - minimal"
 Usage: #example
