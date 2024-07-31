@@ -1,0 +1,27 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Device/ips-example-imaging-1> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ips-example-imaging-1"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device ips-example-imaging-1</b></p><a name=\"ips-example-imaging-1\"> </a><a name=\"hcips-example-imaging-1\"> </a><a name=\"ips-example-imaging-1-en-US\"> </a><p><b>identifier</b>: <code>http://my.organization.example/devicesID</code>/12345</p><p><b>manufacturer</b>: Imaging Devices Manufacturer</p><h3>DeviceNames</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Name</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>H.I.A. BEGIN</td><td>Model name</td></tr></table><p><b>modelNumber</b>: 2.0.1</p></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "http://my.organization.example/devicesID"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "12345" ]
+  ] ) ; # 
+  fhir:manufacturer [ fhir:v "Imaging Devices Manufacturer"] ; # 
+  fhir:deviceName ( [
+     fhir:name [ fhir:v "H.I.A. BEGIN" ] ;
+     fhir:type [ fhir:v "model-name" ]
+  ] ) ; # 
+  fhir:modelNumber [ fhir:v "2.0.1"] . # 
+
+# -------------------------------------------------------------------------------------
+

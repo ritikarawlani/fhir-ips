@@ -1,0 +1,464 @@
+[
+  {
+    "id" : "ips-server",
+    "type" : "CapabilityStatement",
+    "url" : "http://hl7.org/fhir/uv/ips/CapabilityStatement/ips-server",
+    "version" : "2.0.0-ballot",
+    "name" : "IpsServerCapabilityStatement"
+  },
+  {
+    "id" : "hl7.fhir.uv.ips",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips",
+    "version" : "2.0.0-ballot",
+    "name" : "InternationalPatientSummaryIG"
+  },
+  {
+    "id" : "summary",
+    "type" : "OperationDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/OperationDefinition/summary",
+    "version" : "2.0.0-ballot",
+    "name" : "IpsSummary"
+  },
+  {
+    "id" : "AllergyIntolerance-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "AllergyIntoleranceUvIps"
+  },
+  {
+    "id" : "Bundle-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "BundleUvIps"
+  },
+  {
+    "id" : "CodeableConcept-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "CodeableConceptIPS"
+  },
+  {
+    "id" : "Coding-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Coding-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "CodingIPS"
+  },
+  {
+    "id" : "Composition-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "CompositionUvIps"
+  },
+  {
+    "id" : "Condition-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ConditionUvIps"
+  },
+  {
+    "id" : "Device-observer-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "DeviceObserverUvIps"
+  },
+  {
+    "id" : "Device-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "DeviceUvIps"
+  },
+  {
+    "id" : "DeviceUseStatement-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "DeviceUseStatementUvIps"
+  },
+  {
+    "id" : "DiagnosticReport-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "DiagnosticReportUvIps"
+  },
+  {
+    "id" : "Flag-alert-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "FlagAlertUvIps"
+  },
+  {
+    "id" : "ImagingStudy-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ImagingStudyUvIps"
+  },
+  {
+    "id" : "Immunization-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ImmunizationUvIps"
+  },
+  {
+    "id" : "Medication-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicationIPS"
+  },
+  {
+    "id" : "MedicationRequest-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicationRequestIPS"
+  },
+  {
+    "id" : "MedicationStatement-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicationStatementIPS"
+  },
+  {
+    "id" : "Observation-alcoholuse-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationAlcoholUseUvIps"
+  },
+  {
+    "id" : "Observation-pregnancy-edd-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationPregnancyEddUvIps"
+  },
+  {
+    "id" : "Observation-pregnancy-outcome-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationPregnancyOutcomeUvIps"
+  },
+  {
+    "id" : "Observation-pregnancy-status-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationPregnancyStatusUvIps"
+  },
+  {
+    "id" : "Observation-results-laboratory-pathology-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationResultsLaboratoryPathologyUvIps"
+  },
+  {
+    "id" : "Observation-results-radiology-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationResultsRadiologyUvIps"
+  },
+  {
+    "id" : "Observation-tobaccouse-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ObservationTobaccoUseUvIps"
+  },
+  {
+    "id" : "Organization-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "OrganizationUvIps"
+  },
+  {
+    "id" : "Patient-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PatientUvIps"
+  },
+  {
+    "id" : "Practitioner-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PractitionerUvIps"
+  },
+  {
+    "id" : "PractitionerRole-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PractitionerRoleUvIps"
+  },
+  {
+    "id" : "Procedure-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ProcedureUvIps"
+  },
+  {
+    "id" : "Quantity-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "QuantityIPS"
+  },
+  {
+    "id" : "Range-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "RangeIPS"
+  },
+  {
+    "id" : "Ratio-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "RatioIPS"
+  },
+  {
+    "id" : "SimpleQuantity-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "SimpleQuantityIPS"
+  },
+  {
+    "id" : "Specimen-uv-ips",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "SpecimenUvIps"
+  },
+  {
+    "id" : "allergy-intolerance-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "AllergyIntoleranceUvIps"
+  },
+  {
+    "id" : "allergy-reaction-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "AllergyReactionUvIps"
+  },
+  {
+    "id" : "body-site-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "BodySiteUvIps"
+  },
+  {
+    "id" : "current-smoking-status-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "CurrentSmokingStatusUvIps"
+  },
+  {
+    "id" : "edd-method-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PregnancyExpectedDeliveryDateMethodUvIps"
+  },
+  {
+    "id" : "healthcare-professional-roles-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/healthcare-professional-roles-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "HealthcareProfessionalRolesUvIps"
+  },
+  {
+    "id" : "medical-devices-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicalDevicesUvIps"
+  },
+  {
+    "id" : "medication-example-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medication-example-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicationsExampleUvIps"
+  },
+  {
+    "id" : "medication-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicationsUvIps"
+  },
+  {
+    "id" : "medicine-active-substances-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicineActiveSubstancesUvIps"
+  },
+  {
+    "id" : "medicine-doseform",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicineDoseFormUvIps"
+  },
+  {
+    "id" : "medicine-route-of-administration",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration",
+    "version" : "2.0.0-ballot",
+    "name" : "MedicineRouteOfAdministrationUvIps"
+  },
+  {
+    "id" : "personal-relationship-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/personal-relationship-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PersonalRelationshipUvIps"
+  },
+  {
+    "id" : "pregnancies-summary-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PregnanciesSummaryUvIps"
+  },
+  {
+    "id" : "pregnancy-status-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "PregnancyStatusUvIps"
+  },
+  {
+    "id" : "problem-type-loinc",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/problem-type-loinc",
+    "version" : "2.0.0-ballot",
+    "name" : "ProblemTypeLoinc"
+  },
+  {
+    "id" : "problem-type-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ProblemTypeUvIps"
+  },
+  {
+    "id" : "problems-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ProblemsUvIps"
+  },
+  {
+    "id" : "procedures-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ProceduresUvIps"
+  },
+  {
+    "id" : "results-coded-values-laboratory-pathology-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsCodedValuesLaboratoryPathologyUvIps"
+  },
+  {
+    "id" : "results-laboratory-pathology-observations-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsLaboratoryPathologyObservationUvIps"
+  },
+  {
+    "id" : "results-radiology-numobs-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-numobs-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsRadiologyMeasurementObservationUvIps"
+  },
+  {
+    "id" : "results-radiology-observations-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-observations-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsRadiologyObservationUvIps"
+  },
+  {
+    "id" : "results-radiology-txtobs-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-txtobs-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsRadiologyTextualObservationUvIps"
+  },
+  {
+    "id" : "results-specimen-collection-method-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-collection-method-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsSpecimenCollectionMethodUvIps"
+  },
+  {
+    "id" : "results-specimen-type-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-type-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "ResultsSpecimenTypeUvIps"
+  },
+  {
+    "id" : "target-diseases-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "VaccineTargetDiseasesUvIps"
+  },
+  {
+    "id" : "vaccines-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "VaccinesUvIps"
+  },
+  {
+    "id" : "vaccines-whoatc-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "VaccinesWhoAtcUvIps"
+  },
+  {
+    "id" : "whoatc-uv-ips",
+    "type" : "ValueSet",
+    "url" : "http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips",
+    "version" : "2.0.0-ballot",
+    "name" : "WhoAtcUvIps"
+  }
+]

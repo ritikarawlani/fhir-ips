@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-137",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-137",
+  "name" : "UnionMedicineActiveSubstancesUvIpsAndMedicineActiveSubstancesUvIps",
+  "title" : "Union of Medicine Active Substances - IPS And Medicine Active Substances - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "410942007"
+      }]
+    }]
+  }
+}

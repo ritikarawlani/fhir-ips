@@ -1,0 +1,58 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/MedicationRequest/eumfh-39-07-1-request> a fhir:MedicationRequest ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eumfh-39-07-1-request"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: MedicationRequest eumfh-39-07-1-request</b></p><a name=\"eumfh-39-07-1-request\"> </a><a name=\"hceumfh-39-07-1-request\"> </a><a name=\"eumfh-39-07-1-request-en-US\"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href=\"Medication-eumfh-39-07-1.html\">simvastatin</a></p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig (inject 39-07)</a></p><blockquote><p><b>dosageInstruction</b></p></blockquote><h3>DispenseRequests</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>ValidityPeriod</b></td></tr><tr><td style=\"display: none\">*</td><td>2021-01-01 --&gt; (ongoing)</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:intent [ fhir:v "order"] ; # 
+  fhir:medication [
+     a fhir:Reference ;
+     fhir:link <http://hl7.org/fhir/uv/ips/Medication/eumfh-39-07-1> ;
+     fhir:reference [ fhir:v "Medication/eumfh-39-07-1" ] ;
+     fhir:display [ fhir:v "simvastatin" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ] ;
+     fhir:display [ fhir:v "Alexander Heig (inject 39-07)" ]
+  ] ; # 
+  fhir:dosageInstruction ( [
+     fhir:text [ fhir:v "40 mg/day" ] ;
+     fhir:timing [
+       fhir:repeat [
+         fhir:frequency [ fhir:v "1"^^xsd:positiveInteger ] ;
+         fhir:period [ fhir:v "1"^^xsd:decimal ] ;
+         fhir:periodUnit [ fhir:v "d" ]
+       ]
+     ] ;
+     fhir:doseAndRate ( [
+       fhir:dose [
+         a fhir:Quantity ;
+         fhir:value [ fhir:v "40"^^xsd:decimal ] ;
+         fhir:unit [ fhir:v "mg" ] ;
+         fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "mg" ]
+       ]
+     ] )
+  ] ) ; # 
+  fhir:dispenseRequest [
+     fhir:validityPeriod [
+       fhir:start [ fhir:v "2021-01-01"^^xsd:date ]
+     ]
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Medication/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

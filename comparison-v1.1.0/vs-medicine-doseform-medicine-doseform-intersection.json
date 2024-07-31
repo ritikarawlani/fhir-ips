@@ -1,0 +1,86 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "f399e6f6-0ebf-490e-8291-a6ddaa31be02-141",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/f399e6f6-0ebf-490e-8291-a6ddaa31be02-141",
+  "name" : "IntersectionMedicineDoseFormUvIpsAndMedicineDoseFormUvIps",
+  "title" : "Intersection of Medicine Doseform - IPS And Medicine Doseform - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T07:04:16+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "status",
+        "op" : "=",
+        "value" : "Current"
+      },
+      {
+        "property" : "class",
+        "op" : "=",
+        "value" : "PDF"
+      },
+      {
+        "property" : "domain",
+        "op" : "=",
+        "value" : "Human and Veterinary"
+      }]
+    },
+    {
+      "filter" : [{
+        "property" : "status",
+        "op" : "=",
+        "value" : "Current"
+      },
+      {
+        "property" : "class",
+        "op" : "=",
+        "value" : "CMT"
+      },
+      {
+        "property" : "domain",
+        "op" : "=",
+        "value" : "Human and Veterinary"
+      }]
+    },
+    {
+      "filter" : [{
+        "property" : "status",
+        "op" : "=",
+        "value" : "Current"
+      },
+      {
+        "property" : "class",
+        "op" : "=",
+        "value" : "CDF"
+      },
+      {
+        "property" : "domain",
+        "op" : "=",
+        "value" : "Human and Veterinary"
+      }]
+    },
+    {
+      "filter" : [{
+        "property" : "status",
+        "op" : "=",
+        "value" : "Current"
+      },
+      {
+        "property" : "class",
+        "op" : "=",
+        "value" : "PFT"
+      },
+      {
+        "property" : "domain",
+        "op" : "=",
+        "value" : "Human and Veterinary"
+      }]
+    }]
+  }
+}

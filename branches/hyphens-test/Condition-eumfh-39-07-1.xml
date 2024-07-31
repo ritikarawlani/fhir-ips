@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="eumfh-39-07-1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Condition eumfh-39-07-1</b></p><a name="eumfh-39-07-1"> </a><a name="hceumfh-39-07-1"> </a><a name="eumfh-39-07-1-en-US"> </a><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 75326-9}">Problem</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 91861009}">Acute myeloid leukemia</span></p><p><b>subject</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig (inject 39-07)</a></p><p><b>onset</b>: 2014</p><p><b>asserter</b>: <a href="Practitioner-eumfh-39-07.html">Dr. Mark Antonio</a></p></div>
+  </text>
+  <clinicalStatus>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+      <code value="active"/>
+    </coding>
+  </clinicalStatus>
+  <category>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="75326-9"/>
+      <display value="Problem"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="91861009"/>
+      <display value="Acute myeloid leukemia"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/eumfh-39-07"/>
+    <display value="Alexander Heig (inject 39-07)"/>
+  </subject>
+  <onsetDateTime value="2014"/>
+  <asserter>
+    <reference value="Practitioner/eumfh-39-07"/>
+    <display value="Dr. Mark Antonio"/>
+  </asserter>
+</Condition>

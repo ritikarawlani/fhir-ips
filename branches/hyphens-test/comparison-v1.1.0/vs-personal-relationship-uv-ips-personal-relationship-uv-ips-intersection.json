@@ -1,0 +1,176 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-147",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-147",
+  "name" : "IntersectionPersonalRelationshipUvIpsAndPersonalRelationshipUvIps",
+  "title" : "Intersection of Personal Relationship - IPS [Deprecated] And Personal Relationship - IPS [Deprecated]",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "AUNT",
+        "display" : "aunt"
+      },
+      {
+        "code" : "CHILD",
+        "display" : "child"
+      },
+      {
+        "code" : "CHLDADOPT",
+        "display" : "adopted child"
+      },
+      {
+        "code" : "CHLDFOST",
+        "display" : "foster child"
+      },
+      {
+        "code" : "CHLDINLAW",
+        "display" : "child in-law"
+      },
+      {
+        "code" : "COUSN",
+        "display" : "cousin"
+      },
+      {
+        "code" : "DAU",
+        "display" : "natural daughter"
+      },
+      {
+        "code" : "DAUADOPT",
+        "display" : "adopted daughter"
+      },
+      {
+        "code" : "DAUC",
+        "display" : "daughter"
+      },
+      {
+        "code" : "DAUFOST",
+        "display" : "foster daughter"
+      },
+      {
+        "code" : "DAUINLAW",
+        "display" : "daughter in-law"
+      },
+      {
+        "code" : "DOMPART",
+        "display" : "domestic partner"
+      },
+      {
+        "code" : "FAMMEMB",
+        "display" : "family member"
+      },
+      {
+        "code" : "FRND",
+        "display" : "unrelated friend"
+      },
+      {
+        "code" : "FTH",
+        "display" : "father"
+      },
+      {
+        "code" : "FTHINLAW",
+        "display" : "father-in-law"
+      },
+      {
+        "code" : "GGRPRN",
+        "display" : "great grandparent"
+      },
+      {
+        "code" : "GRNDCHILD",
+        "display" : "grandchild"
+      },
+      {
+        "code" : "GRPRN",
+        "display" : "grandparent"
+      },
+      {
+        "code" : "MTH",
+        "display" : "mother"
+      },
+      {
+        "code" : "MTHINLAW",
+        "display" : "mother-in-law"
+      },
+      {
+        "code" : "NBOR",
+        "display" : "neighbor"
+      },
+      {
+        "code" : "NCHILD",
+        "display" : "natural child"
+      },
+      {
+        "code" : "NIENEPH",
+        "display" : "niece/nephew"
+      },
+      {
+        "code" : "PRN",
+        "display" : "parent"
+      },
+      {
+        "code" : "PRNINLAW",
+        "display" : "parent in-law"
+      },
+      {
+        "code" : "ROOM",
+        "display" : "roomate"
+      },
+      {
+        "code" : "SIB",
+        "display" : "sibling"
+      },
+      {
+        "code" : "SIGOTHR",
+        "display" : "significant other"
+      },
+      {
+        "code" : "SON",
+        "display" : "natural son"
+      },
+      {
+        "code" : "SONADOPT",
+        "display" : "adopted son"
+      },
+      {
+        "code" : "SONC",
+        "display" : "son"
+      },
+      {
+        "code" : "SONFOST",
+        "display" : "foster son"
+      },
+      {
+        "code" : "SONINLAW",
+        "display" : "son in-law"
+      },
+      {
+        "code" : "SPS",
+        "display" : "spouse"
+      },
+      {
+        "code" : "STPCHLD",
+        "display" : "step child"
+      },
+      {
+        "code" : "STPDAU",
+        "display" : "stepdaughter"
+      },
+      {
+        "code" : "STPSON",
+        "display" : "stepson"
+      },
+      {
+        "code" : "UNCLE",
+        "display" : "uncle"
+      }]
+    }]
+  }
+}

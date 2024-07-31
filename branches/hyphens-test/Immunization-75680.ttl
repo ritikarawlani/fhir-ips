@@ -1,0 +1,112 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Immunization/75680> a fhir:Immunization ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "75680"] ; # 
+  fhir:language [ fhir:v "fr-LU"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\" xml:lang=\"fr-LU\" lang=\"fr-LU\"><p class=\"res-header-id\"><b>Generated Narrative: Immunization 75680</b></p><a name=\"75680\"> </a><a name=\"hc75680\"> </a><a name=\"75680-en-US\"> </a><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Language: fr-LU</p></div><p><b>status</b>: Completed</p><p><b>vaccineCode</b>: <span title=\"Codes:{http://snomed.info/sct 871878002}, {http://www.whocc.no/atc J07CA02}, {https://cnk.apb.be/codings/cnk_product_codes 2374429}\">Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite</span></p><p><b>patient</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p><p><b>occurrence</b>: 1998-06-04 00:00:00+0200</p><p><b>primarySource</b>: true</p><p><b>lotNumber</b>: AXK23RWERS</p><p><b>expirationDate</b>: 2000-06-01</p><p><b>site</b>: <span title=\"Codes:{http://snomed.info/sct 11207009}\">Cuisse droite</span></p><p><b>route</b>: <span title=\"Codes:{http://standardterms.edqm.eu 20035000}\">Voie intramusculaire</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:vaccineCode [
+     fhir:coding ( [
+       a sct:871878002 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "871878002" ] ;
+       fhir:display [
+         fhir:v "Bordetella pertussis and Clostridium tetani and Corynebacterium diphtheriae and Human poliovirus antigens only vaccine product" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "fr-LU" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "J07CA02" ] ;
+       fhir:display [
+         fhir:v "diphtheria-pertussis-poliomyelitis-tetanus" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "fr-LU" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "DIPHTERIE - COQUELUCHE - POLIOMYELITE - TETANOS" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] [
+       fhir:system [ fhir:v "https://cnk.apb.be/codings/cnk_product_codes"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "2374429" ] ;
+       fhir:display [ fhir:v "BOOSTRIX POLIO SER PREREMPL 1 X 0,5 ML" ]
+     ] ) ;
+     fhir:text [ fhir:v "Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite" ]
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/66033> ;
+     fhir:reference [ fhir:v "Patient/66033" ]
+  ] ; # 
+  fhir:occurrence [ fhir:v "1998-06-04T00:00:00+02:00"^^xsd:dateTime] ; # 
+  fhir:primarySource [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:lotNumber [ fhir:v "AXK23RWERS"] ; # 
+  fhir:expirationDate [ fhir:v "2000-06-01"^^xsd:date] ; # 
+  fhir:site [
+     fhir:coding ( [
+       a sct:11207009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11207009" ] ;
+       fhir:display [
+         fhir:v "Right thigh" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "fr-LU" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Cuisse droite" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Cuisse droite" ]
+  ] ; # 
+  fhir:route [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "20035000" ] ;
+       fhir:display [
+         fhir:v "Intramuscular use" ;
+         fhir:extension ( [
+           fhir:extension ( [
+             fhir:url [ fhir:v "lang"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "fr-LU" ]
+           ] [
+             fhir:url [ fhir:v "content"^^xsd:anyURI ] ;
+             fhir:value [ fhir:v "Voie intramusculaire" ]
+           ] ) ;
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/translation"^^xsd:anyURI ]
+         ] )
+       ]
+     ] ) ;
+     fhir:text [ fhir:v "Voie intramusculaire" ]
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/66033> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

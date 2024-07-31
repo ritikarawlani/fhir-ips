@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="results-radiology-observations-uv-ips"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet results-radiology-observations-uv-ips</b></p><a name="results-radiology-observations-uv-ips"> </a><a name="hcresults-radiology-observations-uv-ips"> </a><a name="results-radiology-observations-uv-ips-en-US"> </a><ul><li>Include codes from<a href="http://loinc.org"><code>http://loinc.org</code></a> where STATUS  = ACTIVE andCLASS  = LP29684-5</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-observations-uv-ips"/>
+  <identifier>
+    <use value="official"/>
+    <system value="http://art-decor.org/ns/oids/vs"/>
+    <value value="2.16.840.1.113883.11.22.40"/>
+  </identifier>
+  <version value="2.0.0-ballot"/>
+  <name value="ResultsRadiologyObservationUvIps"/>
+  <title value="Results Radiology Observation - IPS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-07-31T14:25:49+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <description value="Value Set Definition: &#xA;LOINC {STATUS in {ACTIVE}, CLASS in LP29684-5 (\&quot;RAD\&quot;)}"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This material contains content from LOINC (http://loinc.org). LOINC is copyright © 1995-2020, Regenstrief Institute, Inc. and the Logical Observation Identifiers Names and Codes (LOINC) Committee and is available at no cost under the license at http://loinc.org/license. LOINC® is a registered United States trademark of Regenstrief Institute, Inc"/>
+  <compose>
+    <include>
+      <system value="http://loinc.org"/>
+      <filter>
+        <property value="STATUS"/>
+        <op value="="/>
+        <value value="ACTIVE"/>
+      </filter>
+      <filter>
+        <property value="CLASS"/>
+        <op value="="/>
+        <value value="LP29684-5"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

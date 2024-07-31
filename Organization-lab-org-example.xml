@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="lab-org-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization lab-org-example</b></p><a name="lab-org-example"> </a><a name="hclab-org-example"> </a><a name="lab-org-example-en-US"> </a><p><b>active</b>: true</p><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 73588009}">Hospital-based laboratory facility</span></p><p><b>name</b>: Best Hospital Laboratory</p></div>
+  </text>
+  <active value="true"/>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="73588009"/>
+      <display value="Hospital-based laboratory facility"/>
+    </coding>
+  </type>
+  <name value="Best Hospital Laboratory"/>
+</Organization>

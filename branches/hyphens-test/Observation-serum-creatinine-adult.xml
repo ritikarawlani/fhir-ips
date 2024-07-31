@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="serum-creatinine-adult"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation serum-creatinine-adult</b></p><a name="serum-creatinine-adult"> </a><a name="hcserum-creatinine-adult"> </a><a name="serum-creatinine-adult-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}">Laboratory</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 2160-0}">Creatinine [Mass/volume] in Serum or Plasma</span></p><p><b>subject</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>effective</b>: 2018-02-16 09:17:00+0100</p><p><b>performer</b>: <a href="Organization-TII-Organization1.html">Organization Someplace General Hospital</a></p><p><b>value</b>: 2.46 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>interpretation</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}">High</span></p><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 0.76 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>high</b>: 1.27 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></p><p><b>appliesTo</b>: <span title="Codes:{http://snomed.info/sct 248153007}">Male</span></p><p><b>age</b>: 15-? unit: string (PrimitiveType/Observation.referenceRange[0].age.low.unit): element = string -&gt; unit=string[yrs]</p></blockquote><blockquote><p><b>referenceRange</b></p><p><b>low</b>: 0.57 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>high</b>: 1 mg/dL<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg/dL = 'mg/dL')</span></p><p><b>type</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}">Normal Range</span></p><p><b>appliesTo</b>: <span title="Codes:{http://snomed.info/sct 248152002}">Female</span></p><p><b>age</b>: 15-? unit: string (PrimitiveType/Observation.referenceRange[1].age.low.unit): element = string -&gt; unit=string[yrs]</p></blockquote></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="2160-0"/>
+      <display value="Creatinine [Mass/volume] in Serum or Plasma"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/eumfh-39-07"/>
+  </subject>
+  <effectiveDateTime value="2018-02-16T09:17:00+01:00"/>
+  <performer>
+    <reference value="Organization/TII-Organization1"/>
+  </performer>
+  <valueQuantity>
+    <value value="2.46"/>
+    <unit value="mg/dL"/>
+    <system value="http://unitsofmeasure.org"/>
+    <code value="mg/dL"/>
+  </valueQuantity>
+  <interpretation>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"/>
+      <code value="H"/>
+    </coding>
+  </interpretation>
+  <referenceRange>
+    <low>
+      <value value="0.76"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </low>
+    <high>
+      <value value="1.27"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </high>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+        <code value="normal"/>
+        <display value="Normal Range"/>
+      </coding>
+    </type>
+    <appliesTo>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="248153007"/>
+        <display value="Male"/>
+      </coding>
+    </appliesTo>
+    <age>
+      <low>
+        <value value="15"/>
+        <unit value="yrs"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="a"/>
+      </low>
+    </age>
+  </referenceRange>
+  <referenceRange>
+    <low>
+      <value value="0.57"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </low>
+    <high>
+      <value value="1"/>
+      <unit value="mg/dL"/>
+      <system value="http://unitsofmeasure.org"/>
+      <code value="mg/dL"/>
+    </high>
+    <type>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/referencerange-meaning"/>
+        <code value="normal"/>
+        <display value="Normal Range"/>
+      </coding>
+    </type>
+    <appliesTo>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="248152002"/>
+        <display value="Female"/>
+      </coding>
+    </appliesTo>
+    <age>
+      <low>
+        <value value="15"/>
+        <unit value="yrs"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="a"/>
+      </low>
+    </age>
+  </referenceRange>
+</Observation>

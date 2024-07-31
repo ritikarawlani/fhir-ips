@@ -1,0 +1,9 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "f399e6f6-0ebf-490e-8291-a6ddaa31be02-54",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/f399e6f6-0ebf-490e-8291-a6ddaa31be02-54",
+  "name" : "IntersectionFHIRSpecimenCollectionMethodAndResultsSpecimenCollectionMethodUvIps",
+  "title" : "Intersection of FHIR Specimen Collection Method And Results Specimen Collection Method - IPS",
+  "status" : "draft",
+  "date" : "2024-07-31T07:04:16+00:00"
+}

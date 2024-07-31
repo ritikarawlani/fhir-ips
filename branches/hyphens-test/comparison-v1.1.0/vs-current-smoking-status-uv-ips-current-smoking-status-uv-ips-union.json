@@ -1,0 +1,116 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-122",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-122",
+  "name" : "UnionCurrentSmokingStatusUvIpsAndCurrentSmokingStatusUvIps",
+  "title" : "Union of Current Smoking Status - IPS And Current Smoking Status - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 1
+        }],
+        "code" : "LA18976-3",
+        "display" : "Current every day smoker"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 2
+        }],
+        "code" : "LA18977-1",
+        "display" : "Current some day smoker"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 3
+        }],
+        "code" : "LA15920-4",
+        "display" : "Former smoker"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 4
+        }],
+        "code" : "LA18978-9",
+        "display" : "Never smoker"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 5
+        }],
+        "code" : "LA18979-7",
+        "display" : "Smoker, current status unknown"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 6
+        }],
+        "code" : "LA18980-5",
+        "display" : "Unknown if ever smoked"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 7
+        }],
+        "code" : "LA18981-3",
+        "display" : "Heavy tobacco smoker"
+      },
+      {
+        "extension" : [{
+          "url" : "http://hl7.org/fhir/StructureDefinition/ordinalValue",
+          "valueDecimal" : 8
+        }],
+        "code" : "LA18982-1",
+        "display" : "Light tobacco smoker"
+      },
+      {
+        "code" : "449868002",
+        "display" : "Smokes tobacco daily (finding)"
+      },
+      {
+        "code" : "428041000124106",
+        "display" : "Occasional tobacco smoker (finding)"
+      },
+      {
+        "code" : "8517006",
+        "display" : "Ex-smoker (finding)"
+      },
+      {
+        "code" : "266919005",
+        "display" : "Never smoked tobacco (finding)"
+      },
+      {
+        "code" : "77176002",
+        "display" : "Smoker (finding)"
+      },
+      {
+        "code" : "266927001",
+        "display" : "Tobacco smoking consumption unknown (finding)"
+      },
+      {
+        "code" : "230063004",
+        "display" : "Heavy cigarette smoker (finding)"
+      },
+      {
+        "code" : "230060001",
+        "display" : "Light cigarette smoker (finding)"
+      }]
+    }]
+  }
+}

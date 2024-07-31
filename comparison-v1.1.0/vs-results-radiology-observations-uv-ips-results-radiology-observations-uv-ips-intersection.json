@@ -1,0 +1,25 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "f399e6f6-0ebf-490e-8291-a6ddaa31be02-165",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/f399e6f6-0ebf-490e-8291-a6ddaa31be02-165",
+  "name" : "IntersectionResultsRadiologyObservationUvIpsAndResultsRadiologyObservationUvIps",
+  "title" : "Intersection of Results Radiology Observation - IPS And Results Radiology Observation - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T07:04:16+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "CLASS",
+        "op" : "=",
+        "value" : "RAD"
+      }]
+    }]
+  }
+}
