@@ -1,0 +1,144 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "medicine-doseform"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet medicine-doseform</b></p><a name=\"medicine-doseform\"> </a><a name=\"hcmedicine-doseform\"> </a><a name=\"medicine-doseform-en-US\"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = PDF and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = CMT and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = CDF and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = PFT and domain  = Human and Veterinary</li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "http://art-decor.org/ns/oids/vs"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.11.22.25" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "MedicineDoseFormUvIps"] ; # 
+  fhir:title [ fhir:v "Medicine Doseform - IPS"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-14T14:11:06+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "EDQM (European Directorate for the Quality of Medicines and Healthcare) Dose Form codes.  This Value Set includes all the EDQM Standard Terms having:  \n[Concept Status] = ‘Current’ AND  \n[Concept Class] IN (‘PDF’, ‘CMT’, ‘CDF’, ‘PFT') AND  \n[Domain] = 'Human and Veterinary'  \n\nPDF = 'Pharmaceutical dose form'; CMT = 'Combined terms'; CDF = 'Combined pharmaceutical dose form'; PFT = 'Patient Friendly'"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:copyright [ fhir:v "This artifact includes content from EDQM Standard Terms. EDQM Standard Terms are copyright European Directorate for the Quality of Medicines. Terms & Conditions in https://www.edqm.eu/en/standard-terms-database"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "status" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Current" ]
+       ] [
+         fhir:property [ fhir:v "class" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "PDF" ]
+       ] [
+         fhir:property [ fhir:v "domain" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Human and Veterinary" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "status" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Current" ]
+       ] [
+         fhir:property [ fhir:v "class" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "CMT" ]
+       ] [
+         fhir:property [ fhir:v "domain" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Human and Veterinary" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "status" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Current" ]
+       ] [
+         fhir:property [ fhir:v "class" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "CDF" ]
+       ] [
+         fhir:property [ fhir:v "domain" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Human and Veterinary" ]
+       ] )
+     ] [
+       fhir:system [ fhir:v "http://standardterms.edqm.eu"^^xsd:anyURI ] ;
+       fhir:filter ( [
+         fhir:property [ fhir:v "status" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Current" ]
+       ] [
+         fhir:property [ fhir:v "class" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "PFT" ]
+       ] [
+         fhir:property [ fhir:v "domain" ] ;
+         fhir:op [ fhir:v "=" ] ;
+         fhir:value [ fhir:v "Human and Veterinary" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

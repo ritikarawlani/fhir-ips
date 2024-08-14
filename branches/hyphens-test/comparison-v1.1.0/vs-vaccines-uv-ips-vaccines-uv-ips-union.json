@@ -1,0 +1,46 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-176",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-176",
+  "name" : "UnionVaccinesUvIpsAndVaccinesUvIps",
+  "title" : "Union of Vaccines - IPS And Vaccines - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "system" : "http://snomed.info/sct",
+      "version" : "http://snomed.info/sct/900000000000207008",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "787859002"
+      }]
+    },
+    {
+      "valueSet" : ["http://hl7.org/fhir/uv/ips/ValueSet/absent-or-unknown-immunizations-uv-ips"]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "787859002"
+      }]
+    },
+    {
+      "system" : "http://snomed.info/sct",
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "787482006"
+      }]
+    }]
+  }
+}

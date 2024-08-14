@@ -1,0 +1,30 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-179",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-179",
+  "name" : "UnionVaccinesWhoAtcUvIpsAndVaccinesWhoAtcUvIps",
+  "title" : "Union of Vaccines WHO ATC - IPS And Vaccines WHO ATC - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "filter" : [{
+        "property" : "concept",
+        "op" : "is-a",
+        "value" : "J07"
+      },
+      {
+        "property" : "concept",
+        "op" : "descendent-of",
+        "value" : "J07"
+      }]
+    }]
+  }
+}

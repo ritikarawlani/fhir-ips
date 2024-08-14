@@ -1,0 +1,97 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/OperationDefinition/summary> a fhir:OperationDefinition ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "summary"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: OperationDefinition summary</b></p><a name=\"summary\"> </a><a name=\"hcsummary\"> </a><a name=\"summary-en-US\"> </a><p>URL: [base]/Patient/$summary</p><p>URL: [base]/Patient/[id]/$summary</p><p>Parameters</p><table class=\"grid\"><tr><td><b>Use</b></td><td><b>Name</b></td><td><b>Scope</b></td><td><b>Cardinality</b></td><td><b>Type</b></td><td><b>Binding</b></td><td><b>Documentation</b></td></tr><tr><td>IN</td><td>identifier</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#string\">string</a><br/>(<a href=\"http://hl7.org/fhir/R4/search.html#token\">token</a>)</td><td/><td><div><p>When the logical id of the patient is not used, servers MAY choose to support patient selection based on provided identifier. Unless the identifier system is unknown, requestors SHOULD include both the system and value (e.g. 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') when using this parameter.</p>\n</div></td></tr><tr><td>IN</td><td>profile</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/datatypes.html#uri\">uri</a></td><td/><td><div><p>A specific profile for the patient summary may be specified. By default, servers MAY use the universal Composition profile to identify what profile the returned summary will adhere to.  This is intended as a more flexible approach for implementers to support derivations of the IPS (e.g. national and jurisdictional implementations).</p>\n</div></td></tr><tr><td>OUT</td><td>return</td><td/><td>0..1</td><td><a href=\"http://hl7.org/fhir/R4/bundle.html\">Bundle</a></td><td/><td><div><p>The Bundle returned is a document conforming to the specified input Composition profile parameter or the International Patient Summary <a href=\"./StructureDefinition-Composition-uv-ips.html\">Composition profile</a> (if not otherwise specified)</p>\n</div></td></tr></table></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/ips/OperationDefinition/summary"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "IpsSummary"] ; # 
+  fhir:title [ fhir:v "IPS Summary"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:kind [ fhir:v "operation"] ; # 
+  fhir:date [ fhir:v "2024-07-15T13:15:56.964-00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "This operation returns an IPS document in response to a POST request.  The returned document MAY be generated on-demand and SHOULD represent the latest available information. This operation would not necessarily create a persisted IPS instance on the server responding to the request. When historic records or other documents are desired, this operation is not appropriate. For alternative operations and IPS generation guidance, please see [IPS Generation and Data Inclusion](./Generation-and-Data-Inclusion.html) \n\nGenerally when a patient's logical id is known, that id would be used to request the patient summary from a FHIR server (see [id] pattern below). When it is not known, servers MAY support using other identifiers (see identifier parameter below).\n\nServers MAY support profiles beyond the IPS. When supported, other profiles can be specified using the profile parameter. When not supported, servers MAY use the universal IPS Composition profile to identify what profile is returned by default.  \n"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:affectsState [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:code [ fhir:v "summary"] ; # 
+  fhir:resource ( [ fhir:v "Patient"] ) ; # 
+  fhir:system [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:type [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:instance [ fhir:v "true"^^xsd:boolean] ; # 
+  fhir:parameter ( [
+     fhir:name [ fhir:v "identifier" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "When the logical id of the patient is not used, servers MAY choose to support patient selection based on provided identifier. Unless the identifier system is unknown, requestors SHOULD include both the system and value (e.g. 'identifier=https://standards.digital.health.nz/ns/nhi-id|CNNJ9186') when using this parameter." ] ;
+     fhir:type [ fhir:v "string" ] ;
+     fhir:searchType [ fhir:v "token" ]
+  ] [
+     fhir:name [ fhir:v "profile" ] ;
+     fhir:use [ fhir:v "in" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "A specific profile for the patient summary may be specified. By default, servers MAY use the universal Composition profile to identify what profile the returned summary will adhere to.  This is intended as a more flexible approach for implementers to support derivations of the IPS (e.g. national and jurisdictional implementations)." ] ;
+     fhir:type [ fhir:v "uri" ]
+  ] [
+     fhir:name [ fhir:v "return" ] ;
+     fhir:use [ fhir:v "out" ] ;
+     fhir:min [ fhir:v "0"^^xsd:integer ] ;
+     fhir:max [ fhir:v "1" ] ;
+     fhir:documentation [ fhir:v "The Bundle returned is a document conforming to the specified input Composition profile parameter or the International Patient Summary [Composition profile](./StructureDefinition-Composition-uv-ips.html) (if not otherwise specified)" ] ;
+     fhir:type [ fhir:v "Bundle" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,49 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Observation/tobacco-use-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "tobacco-use-example"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation tobacco-use-example</b></p><a name=\"tobacco-use-example\"> </a><a name=\"hctobacco-use-example\"> </a><a name=\"tobacco-use-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 72166-2}\">Tobacco smoking status</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: <span title=\"Codes:{http://loinc.org LA15920-4}\">Former smoker</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:72166-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "72166-2" ] ;
+       fhir:display [ fhir:v "Tobacco smoking status" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/patient-example-female> ;
+     fhir:reference [ fhir:v "Patient/patient-example-female" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2019-07-15"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a loinc:LA15920-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "LA15920-4" ] ;
+       fhir:display [ fhir:v "Former smoker" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/patient-example-female> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

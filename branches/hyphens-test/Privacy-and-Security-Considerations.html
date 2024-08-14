@@ -1,0 +1,322 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Privacy and Security Considerations - International Patient Summary Implementation Guide v2.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7.css"/>
+    <link rel="stylesheet" href="assets/css/fhir-ig.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"11"}
+    h3,h4,h5,h6{--heading-prefix:"11"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="http://hl7.org">
+            <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">International Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0-ballot - STU 2 Ballot
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">General Principles and Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l183">​</a>
+        <a href="principles.html">General Principles</a>
+      </li>
+      <li><a name="l189">​</a>
+        <a href="design.html">Design Conventions</a>
+      </li>
+      <li><a name="l195">​</a>
+        <a href="ipsGeneration.html">Generation and Data Inclusion</a>
+      </li>
+      <li><a name="l201">​</a>
+        <a href="considerations.html">Privacy and Security Considerations</a>
+      </li>
+      <li><a name="l207">​</a>
+        <a href="knownIssues.html">Known Issues and Future Development</a>
+      </li>
+    </ul>
+  </li>
+  <li><a name="l215">​</a>
+    <a href="ipsStructure.html">The "IPS"</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-Composition-uv-ips.html">The IPS Composition</a>
+      </li>
+      <li>
+        <a href="profiles.html">IPS Library</a>
+      </li>
+      <li>
+        <a href="datatypes.html">Datatypes</a>
+      </li>
+      <li><a name="l248">​</a>
+        <a href="extensions.html">Extensions</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="OperationDefinition-summary.html">Operations</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="copyrights.html">Copyrights</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Privacy and Security Considerations</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">International Patient Summary Implementation Guide, published by HL7 International / Patient Care. This guide is not an authorized publication; it is the continuous build for version 2.0.0-ballot built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/ritikarawlani/fhir-ips">https://github.com/ritikarawlani/fhir-ips</a> and changes regularly. See the <a href="http://hl7.org/fhir/uv/ips/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Privacy and Security Considerations</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#sensitive-resources" id="markdown-toc-sensitive-resources">Sensitive Resources</a></li>
+  <li><a href="#sensitive-section-narrative" id="markdown-toc-sensitive-section-narrative">Sensitive Section Narrative</a></li>
+  <li><a href="#defining-the-ips-high-water-mark" id="markdown-toc-defining-the-ips-high-water-mark">Defining the IPS “High Water Mark”</a></li>
+</ul>
+
+</div>
+<p>The IPS will carry Patient identifiable health information (i.e., PI, PII, PHI, and SPI), and some of this data is considered specifically highly sensitive (e.g. mental health, drug abuse, sexual health, etc). Thus the IPS is subject to Privacy, Security, and Medical Records Regulations.</p>
+
+<p>Health information is sensitive, and thus must be recognized as sensitive. There is a subset of health information that is related to stigmatizing topics that are highly sensitive and considered restricted. For more information healthcare information and Privacy see <a href="https://hl7.org/fhir/uv/security-label-ds4p/">FHIR Data Segmentation for Privacy</a> Implementation Guide. This guide includes details on Healthcare Privacy background, data tagging, data segmentation, and focuses on the use of security and privacy data tagging to protect health information.</p>
+
+<p>The Health information may be impacted by Privacy Consent, also known as authorizations. The mechanism of Consent is not covered in IPS. IHE has an Implementation Guide covering <a href="https://profiles.ihe.net/ITI/PCF/index.html">Privacy Consent on FHIR</a>.</p>
+
+<p>Where an IPS is being created with a given recipient, the permissions of that recipient can and should be used to affect the content of the IPS. This might result in no limitations on the data in the IPS, or might result in some highly sensitive data being redacted. Any redaction of data must address any increase in risks to Medical Safety. The tradeoff between Privacy and Safety is a policy. The IPS specification does not define this policy.</p>
+
+<p>Often an IPS is created for one purpose and gets used for other purposes. Thus it is important to consider how the data might flow from the first party audience of the IPS to others downstream. This section covers design considerations, but does not include any normative rules that must be followed.</p>
+
+<h3 id="sensitive-resources">Sensitive Resources</h3>
+
+<p>The <a href="https://hl7.org/fhir/uv/security-label-ds4p/">FHIR Data Segmentation for Privacy</a> Implementation Guide addresses mechanisms to use the FHIR Resource.meta.security element to carry classifications of the data within the Resource. Such as identifying when a Resource contains specific kinds of stigmatizing highly sensitive health topics. This methodology enables selective handling of these highly sensitive data differently from normal health data.</p>
+
+<p>When an IPS is being created for a given recipient that does not have the authorization to receive highly sensitive health data, these tags can be used to exclude these highly sensitive Resources from the IPS. For example, when creating an IPS for a nationwide treatment network, and where the patient has not authorized highly sensitive information to be exposed on that nationwide treatment network, then any data that is identified (e.g. tagged) as highly sensitive would not be included in the IPS.</p>
+
+<p>Data may be eliminated for other Privacy reasons, depending on policy. Such as a Patient Consent that would restrict data by timeframe, or author, etc. IHE has an Implementation Guide covering <a href="https://profiles.ihe.net/ITI/PCF/index.html">Privacy Consent on FHIR</a> including Consent profiles covering all of these concerns.</p>
+
+<p>The IPS may be created with a system audience (e.g. EHR, PHR), where that system is expected and trusted to redact highly sensitive health information based on user permission within that system. For this to function all Resources need to preserve their security and privacy tagging. This use-case is also a use of the Bundle.meta.security “High Water Mark” defined below, as a signal to the system.</p>
+
+<h3 id="sensitive-section-narrative">Sensitive Section Narrative</h3>
+
+<p>The IPS has section narrative that is expected to be generated based on the content included. This section narrative would need to be created carefully considering the highly sensitive health topics. This would be especially important when the IPS may be consumed by users that would have differing permissions than the permissions used to create the IPS. For example, when the IPS is created including all health data, but a section is consumed by a user that should not be allowed to see highly sensitive data. Removing the highly sensitive data can be accomplished using the Resource.meta.security tagging, but the same is not available for narrative.</p>
+
+<h3 id="defining-the-ips-high-water-mark">Defining the IPS “High Water Mark”</h3>
+
+<p>The IPS <a href="https://hl7.org/fhir/uv/security-label-ds4p/glossary.html#high-water-mark-hwm">“High Water Mark”</a> is defined as the most sensitive of all the content within the Bundle as would be specified in Bundle.meta.security. Thus if all the data in the IPS is normal health data, then the Bundle.meta.security would indicate <code class="language-plaintext highlighter-rouge">N</code> normal. However if there is any restricted health data, then the Bundle.meta.security would indicate <code class="language-plaintext highlighter-rouge">R</code> restricted. This example uses the <a href="https://terminology.hl7.org/ValueSet-v3-Confidentiality.html">Confidentiality codes</a>.</p>
+
+<p>The IPS Bundle.meta.security would also contain any Security or Privacy tags that apply to the content of the IPS. Examples include Obligations or Refrain instructions, such as do not redisclose without an explicit consent. These Obligations and Refrains are a set of codes included in the <a href="https://hl7.org/fhir/security-labels.html#hcs">Healthcare Privacy and Security Classification System (HCS)</a></p>
+
+<p>This Bundle level tag indicates to a recipient the most restrictive rules that would need to be applied to the processing of the content.</p>
+
+<p>The use of Bundle.meta.security as described here is not a requirement of IPS, but is included here as Design Considerations in the creation of IPS and the consumption of IPS.</p>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.uv.ips#2.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Jul 31, 2024 14:25+0000">2024-07-31</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" href="http://hl7.org/fhir/uv/ips/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

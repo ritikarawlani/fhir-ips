@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Medication xmlns="http://hl7.org/fhir">
+  <id value="eumfh-39-07-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Medication eumfh-39-07-1</b></p><a name="eumfh-39-07-1"> </a><a name="hceumfh-39-07-1"> </a><a name="eumfh-39-07-1-en-US"> </a><p><b>code</b>: <span title="Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 757704}, {http://www.whocc.no/atc C10AA01}">Simvastatin 40 MG Disintegrating Oral Tablet</span></p><p><b>form</b>: <span title="Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 1294713}, {http://standardterms.edqm.eu 10219000}">Disintegrating Oral Product</span></p><h3>Ingredients</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Item[x]</b></td><td><b>Strength</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://www.nlm.nih.gov/research/umls/rxnorm 36567}">Simvastatin</span></td><td>40 mcg<span style="background: LightGoldenRodYellow"> (Details: UCUM  codemg = 'mg')</span>/1 tablet<span style="background: LightGoldenRodYellow"> (Details: UCUM  code{tablet} = '{tablet}')</span></td></tr></table></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="757704"/>
+      <display value="Simvastatin 40 MG Disintegrating Oral Tablet"/>
+    </coding>
+    <coding>
+      <system value="http://www.whocc.no/atc"/>
+      <code value="C10AA01"/>
+      <display value="simvastatin"/>
+    </coding>
+    <text value="Simvastatin 40 MG Disintegrating Oral Tablet"/>
+  </code>
+  <form>
+    <coding>
+      <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+      <code value="1294713"/>
+      <display value="Disintegrating Oral Product"/>
+    </coding>
+    <coding>
+      <system value="http://standardterms.edqm.eu"/>
+      <code value="10219000"/>
+      <display value="Tablet"/>
+    </coding>
+  </form>
+  <ingredient>
+    <itemCodeableConcept>
+      <coding>
+        <system value="http://www.nlm.nih.gov/research/umls/rxnorm"/>
+        <code value="36567"/>
+        <display value="Simvastatin"/>
+      </coding>
+    </itemCodeableConcept>
+    <strength>
+      <numerator>
+        <value value="40"/>
+        <unit value="mcg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </numerator>
+      <denominator>
+        <value value="1"/>
+        <unit value="tablet"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="{tablet}"/>
+      </denominator>
+    </strength>
+  </ingredient>
+</Medication>

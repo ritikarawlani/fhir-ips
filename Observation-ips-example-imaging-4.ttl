@@ -1,0 +1,85 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Observation/ips-example-imaging-4> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "ips-example-imaging-4"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation ips-example-imaging-4</b></p><a name=\"ips-example-imaging-4\"> </a><a name=\"hcips-example-imaging-4\"> </a><a name=\"ips-example-imaging-4-en-US\"> </a><p><b>partOf</b>: <a href=\"ImagingStudy-TII-ImagingStudy-5-1.html\">ImagingStudy: identifier = urn:dicom:uid#DICOM Unique Id#urn:oid:2.16.840.1.113883.2.9.999.1.12345; status = available; procedureCode = SPECT Heart perfusion and wall motion at rest and W stress and W Tl-201 IV and W Tc-99m Sestamibi IV; reasonCode = </a></p><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}\">Imaging</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 79103-8}\">Upper abdomen with the administration of oral and intravenous contrast (example-4)</span></p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>effective</b>: 1995-06-08</p><p><b>performer</b>: </p><ul><li><a href=\"Practitioner-eumfh-39-07.html\">Practitioner Mark Antonio </a></li><li><a href=\"Organization-TII-Organization1.html\">Organization Someplace General Hospital</a></li></ul><p><b>value</b>: 3 cm nodule present in the inferior medial aspect of right liver lobe. Contrast enhancement pattern consistent with the diagnosis of hemangioma.</p><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://dicom.nema.org/resources/ontology/DCM 121065}\">Procedure Description</span></p><p><b>value</b>: Serial imaging was obtained in the upper abdomen with the administration of oral and intravenous contrast.</p></blockquote><blockquote><p><b>component</b></p><p><b>code</b>: <span title=\"Codes:{http://dicom.nema.org/resources/ontology/DCM 121071}\">Finding</span></p><p><b>value</b>: The examination demonstrates a well circumscribed 3 cm lesion present within the medial aspect of the inferior right liver lobe. Initial evaluation demonstrates lack of contrast enhancement. Subsequent imaging (not shown) demonstrated typical contrast enhancement pattern of a benign hemangioma of the liver. The remaining contrast enhancement pattern in the liver is normal. There is normal appearance of the adrenal glands, spleen, kidneys, and pancreas. There is no evidence of liver metastasis.</p></blockquote></div>"
+  ] ; # 
+  fhir:partOf ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/ImagingStudy/TII-ImagingStudy-5-1> ;
+     fhir:reference [ fhir:v "ImagingStudy/TII-ImagingStudy-5-1" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "imaging" ] ;
+       fhir:display [ fhir:v "Imaging" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:79103-8 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "79103-8" ] ;
+       fhir:display [ fhir:v "CT Abdomen W contrast IV" ]
+     ] ) ;
+     fhir:text [ fhir:v "Upper abdomen with the administration of oral and intravenous contrast (example-4)" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ; # 
+  fhir:effective [ fhir:v "1995-06-08"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Practitioner/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Practitioner/eumfh-39-07" ]
+  ] [
+     fhir:link <http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> ;
+     fhir:reference [ fhir:v "Organization/TII-Organization1" ]
+  ] ) ; # 
+  fhir:value [ fhir:v "3 cm nodule present in the inferior medial aspect of right liver lobe. Contrast enhancement pattern consistent with the diagnosis of hemangioma."] ; # 
+  fhir:component ( [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "121065" ] ;
+         fhir:display [ fhir:v "Procedure Description" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "Serial imaging was obtained in the upper abdomen with the administration of oral and intravenous contrast." ]
+  ] [
+     fhir:code [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "121071" ] ;
+         fhir:display [ fhir:v "Finding" ]
+       ] )
+     ] ;
+     fhir:value [ fhir:v "The examination demonstrates a well circumscribed 3 cm lesion present within the medial aspect of the inferior right liver lobe. Initial evaluation demonstrates lack of contrast enhancement. Subsequent imaging (not shown) demonstrated typical contrast enhancement pattern of a benign hemangioma of the liver. The remaining contrast enhancement pattern in the liver is normal. There is normal appearance of the adrenal glands, spleen, kidneys, and pancreas. There is no evidence of liver metastasis." ]
+  ] ) . # 
+
+<http://hl7.org/fhir/uv/ips/ImagingStudy/TII-ImagingStudy-5-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Practitioner/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

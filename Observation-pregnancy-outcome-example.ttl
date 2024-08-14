@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Observation/pregnancy-outcome-example> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pregnancy-outcome-example"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pregnancy-outcome-example</b></p><a name=\"pregnancy-outcome-example\"> </a><a name=\"hcpregnancy-outcome-example\"> </a><a name=\"pregnancy-outcome-example-en-US\"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 11640-0}\">[#] Births total</span></p><p><b>subject</b>: <a href=\"Patient-patient-example-female.html\">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2020-01-10</p><p><b>performer</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 1 1<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code1 = '1')</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11640-0 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11640-0" ] ;
+       fhir:display [ fhir:v "[#] Births total" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/patient-example-female> ;
+     fhir:reference [ fhir:v "Patient/patient-example-female" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2020-01-10"^^xsd:date] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "1"^^xsd:decimal ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "1" ]
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/patient-example-female> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

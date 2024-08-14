@@ -1,0 +1,1842 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.uv.ips"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.ips</b></p><a name="hl7.fhir.uv.ips"> </a><a name="hchl7.fhir.uv.ips"> </a><a name="hl7.fhir.uv.ips-en-US"> </a><h2>InternationalPatientSummaryIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips</pre></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use"/>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+  <version value="2.0.0-ballot"/>
+  <name value="InternationalPatientSummaryIG"/>
+  <title value="International Patient Summary Implementation Guide"/>
+  <status value="active"/>
+  <date value="2024-08-14T14:11:06+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.uv.ips"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="hl7tx">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on HL7 Terminology"/>
+    </extension>
+    <uri value="http://terminology.hl7.org/ImplementationGuide/hl7.terminology"/>
+    <packageId value="hl7.terminology.r4"/>
+    <version value="6.0.2"/>
+  </dependsOn>
+  <dependsOn id="hl7ext">
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment">
+      <valueMarkdown value="Automatically added as a dependency - all IGs depend on the HL7 Extension Pack"/>
+    </extension>
+    <uri value="http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"/>
+    <packageId value="hl7.fhir.uv.extensions.r4"/>
+    <version value="5.1.0"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU 2 Ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/uv/ips/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency">
+      <valueCode value="hl7.fhir.uv.tools#0.1.0"/>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2020+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="STU 2 Ballot"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/uv/ips/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="apply-wg"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="fmm-definition"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7.org/fhir/versions.html#maturity"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="propagate-status"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="excludelogbinaryformat"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueCode value="tabbed-snapshots"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Flag"/>
+      </extension>
+      <reference>
+        <reference value="Flag/546482"/>
+      </reference>
+      <name value="Alert IPS Flag Example"/>
+      <description value="Alert IPS Flag Illustrative Example with Recommended Fields"/>
+      <exampleBoolean value="true"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/AllergyIntolerance-uv-ips"/>
+      </reference>
+      <name value="Allergy Intolerance (IPS)"/>
+      <description value="This profile represents the constraints applied to the AllergyIntolerance resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the patient summary as an instance of an AllergyIntolerance resource constrained by this profile.&#xA;&#xA;It documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/allergy-intolerance-uv-ips"/>
+      </reference>
+      <name value="Allergy Intolerance - IPS"/>
+      <description value="IPS Allergy intolerance codes value set. This value set includes codes from SNOMED CT®: all descendants of 373873005 \|Pharmaceutical / biologic product (product)\|; all descendants of 105590001 \|Substance (substance)\|; all descendants of 420134006 \|Propensity to adverse reaction (finding)\|; all descendants or self of 716186003 \|No known allergy (situation)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 373873005 \|Pharmaceutical / biologic product (product)\| OR &lt; 105590001 \|Substance (substance)\| OR &lt; 420134006 \|Propensity to adverse reaction (finding)\| OR \&lt;\&lt; 716186003 \|No known allergy (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/allergy-reaction-uv-ips"/>
+      </reference>
+      <name value="Allergy Reaction - IPS"/>
+      <description value="IPS allergy reaction value set. This value set includes a set of SNOMED CT codes  and descendants (all top level codes are included in the SNOMED CT IPS Terminology) that may be used to represent allergy or intolerance reactions.&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;\&lt;\&lt; 4386001 |Bronchospasm (finding)| OR \&lt;\&lt; 9826008 |Conjunctivitis (disorder)| OR \&lt;\&lt; 23924001 |Tight chest (finding)| OR \&lt;\&lt; 24079001 |Atopic dermatitis (disorder)| OR \&lt;\&lt; 31996006 |Vasculitis (disorder)| OR \&lt;\&lt; 39579001 |Anaphylaxis (disorder)| OR \&lt;\&lt; 41291007 |Angioedema (disorder)| OR \&lt;\&lt; 43116000 |Eczema (disorder)| OR \&lt;\&lt; 49727002 |Cough (finding)| OR \&lt;\&lt; 51599000 |Edema of larynx (disorder)| OR \&lt;\&lt; 62315008 |Diarrhea (finding)| OR \&lt;\&lt; 70076002 |Rhinitis (disorder)| OR \&lt;\&lt; 73442001 |Stevens-Johnson syndrome (disorder)| OR \&lt;\&lt; 76067001 |Sneezing (finding)| OR \&lt;\&lt; 91175000 |Seizure (finding)| OR \&lt;\&lt; 126485001 |Urticaria (disorder)| OR \&lt;\&lt; 162290004 |Dry eyes (finding)| OR \&lt;\&lt; 195967001 |Asthma (disorder)| OR \&lt;\&lt; 247472004 |Weal (disorder)| OR \&lt;\&lt; 267036007 |Dyspnea (finding)| OR \&lt;\&lt; 271757001 |Papular eruption (disorder)| OR \&lt;\&lt; 271759003 |Bullous eruption (disorder)| OR \&lt;\&lt; 271807003 |Eruption of skin (disorder)| OR \&lt;\&lt; 410430005 |Cardiorespiratory arrest (disorder)| OR \&lt;\&lt; 418363000 |Itching of skin (finding)| OR \&lt;\&lt; 422400008 |Vomiting (disorder)| OR \&lt;\&lt; 422587007 |Nausea (finding)| OR \&lt;\&lt; 698247007 |Cardiac arrhythmia (disorder)| OR \&lt;\&lt; 702809001 |Drug reaction with eosinophilia and systemic symptoms (disorder)| OR \&lt;\&lt; 768962006 |Lyell syndrome (disorder)| OR \&lt;\&lt; 781682005 |Hyperemia of eye (finding)|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
+      <reference>
+        <reference value="AllergyIntolerance/allergyintolerance-multiple-codings"/>
+      </reference>
+      <name value="AllergyIntolerance: multiple codings"/>
+      <description value="AllergyIntolerance: multiple codings"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
+      <reference>
+        <reference value="AllergyIntolerance/eumfh-39-07-1"/>
+      </reference>
+      <name value="AllergyIntolerance: No known allergies"/>
+      <description value="AllergyIntolerance: No known allergies"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="AllergyIntolerance"/>
+      </extension>
+      <reference>
+        <reference value="AllergyIntolerance/allergyintolerance-with-abatement"/>
+      </reference>
+      <name value="AllergyIntolerance: resolved allergy"/>
+      <description value="AllergyIntolerance: resolved allergy"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/body-site-uv-ips"/>
+      </reference>
+      <name value="Body Site - IPS"/>
+      <description value="IPS body site value set. This value set includes a set of codes from SNOMED CT that may be used to represent body sites (e.g., for laboratory specimen collection). This value set includes codes from SNOMED CT®: all descendants of 442083009 \|Anatomical or acquired body structure (body structure)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 442083009 \|Anatomical or acquired body structure (body structure)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Bundle-uv-ips"/>
+      </reference>
+      <name value="Bundle - IPS"/>
+      <description value="This profile represents the constraints applied to the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/CodeableConcept-uv-ips"/>
+      </reference>
+      <name value="Codeable Concept (IPS)"/>
+      <description value="This profile represents the constraint applied to the CodeableConcept data type by the International Patient Summary (IPS) FHIR Implementation Guide to use the Coding-uv-ips data type profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Coding-uv-ips"/>
+      </reference>
+      <name value="Coding with translations"/>
+      <description value="This profile extends the capabilities of the coding data type to support multi-language designations (display).&#xA;It relies on the Translation extension."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Composition-uv-ips"/>
+      </reference>
+      <name value="Composition (IPS)"/>
+      <description value="Clinical document used to represent the International Patient Summary (IPS) data set. &#xA;An International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. &#xA;The IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Condition-uv-ips"/>
+      </reference>
+      <name value="Condition (IPS)"/>
+      <description value="This profile represents the constraints applied to the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/eumfh-39-07-1"/>
+      </reference>
+      <name value="Condition: Acute myeloid leukemia"/>
+      <description value="Condition: Acute myeloid leukemia"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/current-smoking-status-uv-ips"/>
+      </reference>
+      <name value="Current Smoking Status - IPS"/>
+      <description value="HL7 IPS SNOMED value set for smoking status.  This value set includes a set of specific SNOMED CT codes (no subtypes included) that may be used to represent smoking status.&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;449868002 |Smokes tobacco daily (finding)| OR 428041000124106 |Occasional tobacco smoker (finding)| OR 8517006 |Ex-smoker (finding)| OR 266919005 |Never smoked tobacco (finding)| OR 77176002 |Smoker (finding)| OR 266927001 |Tobacco smoking consumption unknown (finding)| OR 230063004 |Heavy cigarette smoker (finding)| OR 230060001 |Light cigarette smoker (finding)|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Device-uv-ips"/>
+      </reference>
+      <name value="Device (IPS)"/>
+      <description value="This profile represents the constraints applied to the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Device-observer-uv-ips"/>
+      </reference>
+      <name value="Device - performer, observer"/>
+      <description value="This profile represents the constraints applied to the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.;&#xA;&#xA;This profile describes a device that plays the role of observer or performer."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DeviceUseStatement-uv-ips"/>
+      </reference>
+      <name value="Device Use Statement (IPS)"/>
+      <description value="This profile represents the constraints applied to the DeviceUseStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A statement about a device used by or implanted on the patient is described in the patient summary as an instance of a DeviceUseStatement resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Device"/>
+      </extension>
+      <reference>
+        <reference value="Device/ips-example-imaging-1"/>
+      </reference>
+      <name value="Device: device observer example"/>
+      <description value="Device: device observer example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Device"/>
+      </extension>
+      <reference>
+        <reference value="Device/eumfh-70-275-1"/>
+      </reference>
+      <name value="Device: No known devices in use"/>
+      <description value="Device: No known devices in use"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DeviceUseStatement"/>
+      </extension>
+      <reference>
+        <reference value="DeviceUseStatement/eumfh-70-275-1"/>
+      </reference>
+      <name value="DeviceUseStatement: No known devices in use"/>
+      <description value="DeviceUseStatement: No known devices in use"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/DiagnosticReport-uv-ips"/>
+      </reference>
+      <name value="DiagnosticReport (IPS)"/>
+      <description value="This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="DiagnosticReport"/>
+      </extension>
+      <reference>
+        <reference value="DiagnosticReport/hemoglobin"/>
+      </reference>
+      <name value="DiagnosticReport: hemoglobin example"/>
+      <description value="DiagnosticReport: hemoglobin example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Flag-alert-uv-ips"/>
+      </reference>
+      <name value="Flag - Alert (IPS)"/>
+      <description value="This profile constrains the Flag resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an alert is represented in the patient summary as an instance of a Flag resource constrained by this profile. &#xA;&#xA;This specialized Flag is used to convey information about an alert specific to an IPS. Information is flagged to raise awareness of potential concerns and/or dangers to/from the subject of the IPS. It brings information to the fore and may reference other information from the summary (through the supportingInfo extension) as well as present obstacles to care."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/healthcare-professional-roles-uv-ips"/>
+      </reference>
+      <name value="Healthcare Professional Roles - IPS"/>
+      <description value="IPS Healthcare Professional Roles"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/ImagingStudy-uv-ips"/>
+      </reference>
+      <name value="Imaging Study (IPS)"/>
+      <description value="This profile represents the constraints applied to the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ImagingStudy"/>
+      </extension>
+      <reference>
+        <reference value="ImagingStudy/TII-ImagingStudy-5-1"/>
+      </reference>
+      <name value="ImagingStudy: referred DICOM study"/>
+      <description value="ImagingStudy: referred DICOM study"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Immunization-uv-ips"/>
+      </reference>
+      <name value="Immunization (IPS)"/>
+      <description value="This profile represents the constraints applied to the Immunization resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an immunization is represented in the patient summary as an instance of an Immunization resource constrained by this profile.&#xA;&#xA;It describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Immunization"/>
+      </extension>
+      <reference>
+        <reference value="Immunization/75680"/>
+      </reference>
+      <name value="Immunization: Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite (Luxembourg)"/>
+      <description value="Immunization: Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite (Luxembourg)"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/IPS-examples-Bundle-01"/>
+      </reference>
+      <name value="IPS Bundle example"/>
+      <description value="IPS Bundle example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-minimal"/>
+      </reference>
+      <name value="IPS Bundle example - minimal"/>
+      <description value="IPS Bundle example - minimal"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/bundle-no-info-required-sections"/>
+      </reference>
+      <name value="IPS Bundle example - no information in required sections"/>
+      <description value="IPS Bundle example - no information in required sections"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/IPS-examples-Bundle-with-immunization"/>
+      </reference>
+      <name value="IPS Bundle example with Immunization"/>
+      <description value="IPS Bundle example with Immunization section"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Composition"/>
+      </extension>
+      <reference>
+        <reference value="Composition/composition-minimal"/>
+      </reference>
+      <name value="IPS Composition example - minimal"/>
+      <description value="IPS Composition example - minimal"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CapabilityStatement"/>
+      </extension>
+      <reference>
+        <reference value="CapabilityStatement/ips-server"/>
+      </reference>
+      <name value="IPS Server Capability Statement"/>
+      <description value="This section describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="OperationDefinition"/>
+      </extension>
+      <reference>
+        <reference value="OperationDefinition/summary"/>
+      </reference>
+      <name value="IPS Summary"/>
+      <description value="This operation is used to return a patient summary using the IPS profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medical-devices-uv-ips"/>
+      </reference>
+      <name value="Medical Devices - IPS"/>
+      <description value="IPS Medical device codes value set.  This value set includes codes from SNOMED CT (SNOMED CT®) that are included in: all descendants of 49062001 \|Device (physical object)\|; all descendants or self of 787483001 \|No known device use (situation)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 49062001 \|Device (physical object)\| OR \&lt;\&lt; 787483001 \|No known device use (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Medication-uv-ips"/>
+      </reference>
+      <name value="Medication (IPS)"/>
+      <description value="This profile represents the constraints applied to the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Medication"/>
+      </extension>
+      <reference>
+        <reference value="Medication/eumfh-39-07-1"/>
+      </reference>
+      <name value="Medication : Simvastatin 40 MG Disintegrating Oral Tablet"/>
+      <description value="Medication : Simvastatin 40 MG Disintegrating Oral Tablet"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationRequest-uv-ips"/>
+      </reference>
+      <name value="Medication Request (IPS)"/>
+      <description value="This profile represents the constraints applied to the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedicationStatement-uv-ips"/>
+      </reference>
+      <name value="Medication Statement (IPS)"/>
+      <description value="This profile represents the constraints applied to the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/eumfh-39-07-1-request"/>
+      </reference>
+      <name value="MedicationRequest: Simvastatin request"/>
+      <description value="MedicationRequest: Simvastatin request"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-example-uv-ips"/>
+      </reference>
+      <name value="Medications - example (IPS)"/>
+      <description value="This value set provides an example of possible medication coded concepts. This value set will be removed in a future release and has been replaced with [medication-uv-ips](./ValueSet-medication-uv-ips.html)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-uv-ips"/>
+      </reference>
+      <name value="Medications - IPS"/>
+      <description value="IPS Medication codes value set.  This value set includes codes from SNOMED CT®: all descendants of 763158003 \|Medicinal product (product)\|; excluding the descendants or self of 787859002 \|Vaccine product (medicinal product)\|; including all descendants or self of 787481004 \|No known medications (situation)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;(&lt; 763158003 \|Medicinal product (product)\| MINUS \&lt;\&lt; 787859002 \|Vaccine product (medicinal product)\|) OR \&lt;\&lt; 787481004 \|No known medications (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/eumfh-39-07-1"/>
+      </reference>
+      <name value="MedicationStatement: on-going Simvastatin treatment"/>
+      <description value="MedicationStatement: on-going Simvastatin treatment"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medicine-active-substances-uv-ips"/>
+      </reference>
+      <name value="Medicine Active Substances - IPS"/>
+      <description value="IPS Medicine active substance codes value set.  This value set includes codes from SNOMED CT®: all descendants of 410942007 \|Drug or medicament (substance)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 410942007 \|Drug or medicament (substance)\|\&#xA;&#xA;Future implementations should consider ISO 11238 Health informatics -- Identification of medicinal products -- Data elements and structures for the unique identification and exchange of regulated information on substances."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medicine-doseform"/>
+      </reference>
+      <name value="Medicine Doseform - IPS"/>
+      <description value="EDQM (European Directorate for the Quality of Medicines and Healthcare) Dose Form codes.  This Value Set includes all the EDQM Standard Terms having:  &#xA;[Concept Status] = ‘Current’ AND  &#xA;[Concept Class] IN (‘PDF’, ‘CMT’, ‘CDF’, ‘PFT') AND  &#xA;[Domain] = 'Human and Veterinary'  &#xA;&#xA;PDF = 'Pharmaceutical dose form'; CMT = 'Combined terms'; CDF = 'Combined pharmaceutical dose form'; PFT = 'Patient Friendly'"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medicine-route-of-administration"/>
+      </reference>
+      <name value="Medicine Route of Administration - IPS"/>
+      <description value="EDQM (European Directorate for the Quality of Medicines and Healthcare) Route of Administration codes.  This Value Set includes all the EDQM Standard Terms having:  &#xA;[Concept Status] = ‘Current’ AND  &#xA;[Concept Class] = 'ROA' AND  &#xA;[Domain] = 'Human and Veterinary'  &#xA;&#xA;ROA = 'Route of administration'"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+      </reference>
+      <name value="Observation - Pregnancy: EDD"/>
+      <description value="This profile constrains the Observation resource to represent the pregnancy expected delivery date."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-pregnancy-outcome-uv-ips"/>
+      </reference>
+      <name value="Observation - Pregnancy: outcome"/>
+      <description value="This profile constrains the Observation resource to represent the history of pregnancy outcomes (summary)."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+      </reference>
+      <name value="Observation - Pregnancy: status"/>
+      <description value="This profile constrains the Observation resource to represent the pregnancy status."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-alcoholuse-uv-ips"/>
+      </reference>
+      <name value="Observation - SH: alcohol use"/>
+      <description value="This profile constrains the Observation resource to represent alcohol use assessment in a patient summary."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-tobaccouse-uv-ips"/>
+      </reference>
+      <name value="Observation - SH: tobacco use"/>
+      <description value="This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+      </reference>
+      <name value="Observation Results: laboratory/pathology (IPS)"/>
+      <description value="This profile constrains the Observation resource to represent results produced by laboratory (including pathology) tests or panels/studies in a patient summary.&#xA;&#xA;This observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as &quot;has-member&quot; child observations."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Observation-results-radiology-uv-ips"/>
+      </reference>
+      <name value="Observation Results: radiology (IPS)"/>
+      <description value="This profile represents the constraints applied to the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. &#xA;&#xA;This observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. &#xA;&#xA;In the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may references the atomic results of the study as &quot;child observations&quot;.&#xA;&#xA;It allows also providing details about the related study using the partOf element referring to an ImagingStudy resource."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pathology-cancer"/>
+      </reference>
+      <name value="Observation: estrogen receptor in tissue example"/>
+      <description value="Observation: estrogen receptor in tissue example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/hemoglobin"/>
+      </reference>
+      <name value="Observation: hemoglobin example"/>
+      <description value="Observation: hemoglobin example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ips-example-imaging-1"/>
+      </reference>
+      <name value="Observation: imaging CT Abdomen W contrast IV"/>
+      <description value="Observation: imaging CT Abdomen W contrast IV"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/ips-example-imaging-4"/>
+      </reference>
+      <name value="Observation: imaging CT Abdomen W contrast IV, sub-observations"/>
+      <description value="Observation: imaging CT Abdomen W contrast IV,sub-observations"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pregnancy-edd-example"/>
+      </reference>
+      <name value="Observation: pregnancy edd example"/>
+      <description value="Observation: pregnancy edd example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pregnancy-outcome-example"/>
+      </reference>
+      <name value="Observation: pregnancy outcome example"/>
+      <description value="Observation: pregnancy outcome example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/pregnancy-status-example"/>
+      </reference>
+      <name value="Observation: pregnancy status example"/>
+      <description value="Observation: pregnancy status example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/serum-creatinine-adult"/>
+      </reference>
+      <name value="Observation: serum creatinine example"/>
+      <description value="Observation: serum creatinine example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/alcohol-use-example"/>
+      </reference>
+      <name value="Observation: SH alcohol use example"/>
+      <description value="Observation: SH alcohol use example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/tobacco-use-example"/>
+      </reference>
+      <name value="Observation: SH tobacco use example"/>
+      <description value="Observation: SH tobacco use example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Observation"/>
+      </extension>
+      <reference>
+        <reference value="Observation/urine-wbc-range"/>
+      </reference>
+      <name value="Observation: urine wbc range example"/>
+      <description value="Observation: urine wbc range example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Organization-uv-ips"/>
+      </reference>
+      <name value="Organization (IPS)"/>
+      <description value="This profile constrains the Organization resource to represent an organization that acts as performer or observer for a result observation (laboratory, pathology or imaging), or as performer for a procedure."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/TII-Organization1"/>
+      </reference>
+      <name value="Organization: example"/>
+      <description value="Organization: example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/lab-org-example"/>
+      </reference>
+      <name value="Organization: lab example"/>
+      <description value="Best Hospital Lab Organization example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Organization"/>
+      </extension>
+      <reference>
+        <reference value="Organization/simple-org"/>
+      </reference>
+      <name value="Organization: simple example"/>
+      <description value="Very Simple Organization example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Patient-uv-ips"/>
+      </reference>
+      <name value="Patient (IPS)"/>
+      <description value="This profile represents the constraints applied to the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/patient-example-female"/>
+      </reference>
+      <name value="Patient: female patient"/>
+      <description value="Patient: female patient"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/eumfh-39-07"/>
+      </reference>
+      <name value="Patient: male patient"/>
+      <description value="Patient: male patient"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Patient"/>
+      </extension>
+      <reference>
+        <reference value="Patient/66033"/>
+      </reference>
+      <name value="Patient: minimal example"/>
+      <description value="Patient: minimal example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/personal-relationship-uv-ips"/>
+      </reference>
+      <name value="Personal Relationship - IPS [Deprecated]"/>
+      <description value="The Value Set is used (optionally) to code the type of contact relationship between a person and the patient. This value set has been deprecated and will be removed in a future release.  It has been replaced with [PersonalRelationshipRoleType](https://terminology.hl7.org/3.1.0/ValueSet-v3-PersonalRelationshipRoleType.html)"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Practitioner-uv-ips"/>
+      </reference>
+      <name value="Practitioner (IPS)"/>
+      <description value="This profile constrains the practitioner resource to represent a practitioner acting as observer for these imaging results."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Practitioner"/>
+      </extension>
+      <reference>
+        <reference value="Practitioner/eumfh-39-07"/>
+      </reference>
+      <name value="Practitioner example"/>
+      <description value="Practitioner example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/PractitionerRole-uv-ips"/>
+      </reference>
+      <name value="PractitionerRole (IPS)"/>
+      <description value="This profile constrains the PractitionerRole resource to represent a practitioner acting as observer for observation results for a specified organization."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="PractitionerRole"/>
+      </extension>
+      <reference>
+        <reference value="PractitionerRole/simple-pr"/>
+      </reference>
+      <name value="PractitionerRole: simple example"/>
+      <description value="Very Simple PractitionerRole example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pregnancies-summary-uv-ips"/>
+      </reference>
+      <name value="Pregnancies Summary - IPS"/>
+      <description value="IPS Pregnancies Summary"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/edd-method-uv-ips"/>
+      </reference>
+      <name value="Pregnancy Expected Delivery Date Method - IPS"/>
+      <description value="IPS Expected Delivery Date Method"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/pregnancy-status-uv-ips"/>
+      </reference>
+      <name value="Pregnancy Status - IPS"/>
+      <description value="IPS pregnancy status codes value set.  This value set includes codes from SNOMED CT®: 77386006 \|Pregnant\|; 60001007 \|Not pregnant\|; 152231000119106 \|Pregnancy not yet confirmed\|; 146799005 \|Possible pregnancy\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;77386006 \|Pregnant\| OR 60001007 \|Not pregnant\| OR 152231000119106 \|Pregnancy not yet confirmed\| OR 146799005 \|Possible pregnancy\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/problem-type-loinc"/>
+      </reference>
+      <name value="Problem Type (LOINC)"/>
+      <description value="This value set indicates the level of medical judgment used to determine the existence of a problem."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/problem-type-uv-ips"/>
+      </reference>
+      <name value="Problem Type - IPS"/>
+      <description value="This value set provides a category for the condition as a clinical problem for inclusion in the patient summary."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/problems-uv-ips"/>
+      </reference>
+      <name value="Problems - IPS"/>
+      <description value="IPS Problem (Condition) codes value set.  This value set includes codes from SNOMED CT®: all descendants of 404684003 \|Clinical finding (finding)\|; all descendants of 243796009 \|Situation with explicit context (situation)\|; all descendants of 272379006 \|Event (event)\|; all descendants or self of 160245001 \|No current problems or disability (situation)\|.  The descendants of 71388002 \|Procedure (procedure)\| (which were included in the CORE problem list) are not included, as they are expected to be represented separately in the History of Procedures Section.&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 404684003 \|Clinical finding (finding)\| OR &lt; 243796009 \|Situation with explicit context (situation)\| OR &lt; 272379006 \|Event (event)\| OR \&lt;\&lt; 160245001 \|No current problems or disability (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Procedure-uv-ips"/>
+      </reference>
+      <name value="Procedure (IPS)"/>
+      <description value="This profile represents the constraints applied to the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Procedure"/>
+      </extension>
+      <reference>
+        <reference value="Procedure/eumfh-39-07-1"/>
+      </reference>
+      <name value="Procedure: Surgical procedure"/>
+      <description value="Procedure: Surgical procedure"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/procedures-uv-ips"/>
+      </reference>
+      <name value="Procedures - IPS"/>
+      <description value="IPS Procedure codes value set.  This value set includes codes from SNOMED CT®: all descendants of 71388002 \|Procedure (procedure)\|; excluding [all descendants or self of 14734007 \|Administrative procedure (procedure)\|; all descendants or self of 59524001 \|Blood bank procedure (procedure)\|; all descendants or self of 389067005 \|Community health procedure (procedure)\|; all descendants or self of 442006003 \|Determination of information related to transfusion (procedure)\|; all descendants or self of 225288009 \|Environmental care procedure (procedure)\|; all descendants or self of 308335008 \|Patient encounter procedure (procedure)\|; all descendants or self of 710135002 \|Promotion (procedure)\|; all descendants or self of 389084004 \|Staff related procedure (procedure)\|]; including all descendants or self of 787480003 \|No known procedures (situation)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;(&lt; 71388002 \|Procedure (procedure)\| MINUS (\&lt;\&lt; 14734007 \|Administrative procedure (procedure)\| OR \&lt;\&lt; 59524001 \|Blood bank procedure (procedure)\| OR \&lt;\&lt; 389067005 \|Community health procedure (procedure)\| OR \&lt;\&lt; 442006003 \|Determination of information related to transfusion (procedure)\| OR \&lt;\&lt; 225288009 \|Environmental care procedure (procedure)\| OR \&lt;\&lt; 308335008 \|Patient encounter procedure (procedure)\| OR \&lt;\&lt; 710135002 \|Promotion (procedure)\| OR \&lt;\&lt; 389084004 \|Staff related procedure (procedure)\|)) OR &lt;&lt; 787480003 \|No known procedures (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Quantity-uv-ips"/>
+      </reference>
+      <name value="Quantity (IPS)"/>
+      <description value="Data type Quantity constrained to use UCUM as the code system for units"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Range-uv-ips"/>
+      </reference>
+      <name value="Range (IPS)"/>
+      <description value="Range constrained to UCUM as the code system for units."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Ratio-uv-ips"/>
+      </reference>
+      <name value="Ratio (IPS)"/>
+      <description value="Ratio data type, constrained to use UCUM as the code system for units."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-coded-values-laboratory-pathology-uv-ips"/>
+      </reference>
+      <name value="Results Coded Values Laboratory/Pathology - IPS"/>
+      <description value="IPS Results Coded Values Laboratory/Pathology value set.  This value set includes codes from SNOMED CT®: all descendants of 365636006 \|Finding of blood group (finding)\|; all descendants of 260411009 \|Presence findings (qualifier value)\|; all descendants of 272519000 \|Absence findings (qualifier value)\|; all descendants of 409822003 \|Domain Bacteria (organism)\|; all descendants of 441649000 \|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\|; all descendants of 414561005 \|Kingdom Fungi (organism)\|; all descendants of 84676004 \|Prion (organism)\|; all descendants of 49872002 \|Virus (organism)\|; all descendants of 417396000 \|Kingdom Protozoa (organism)\|; all descendants of 419036000 \|Domain Archaea (organism)\|; all descendants of 426785004 \|Kingdom Chromista (organism)\|; all descendants of 370570004 \|Kingdom Protoctista (organism)\|; all descendants of 417377004 \|Kingdom Viridiplantae (organism)\|; all descendants of 243565002 \|Slime mold (organism)\|; all descendants of 106253005 \|Histologic grading differentiation AND/OR behavior (qualifier value)\|; all descendants of 373369003 \|Finding of histologic grading differentiation AND/OR behavior (finding)\|; all descendants of 399981008 \|Neoplasm and/or hamartoma (disorder)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 365636006 \|Finding of blood group (finding)\| OR &lt; 260411009 \|Presence findings (qualifier value)\| OR &lt; 272519000 \|Absence findings (qualifier value)\| OR &lt; 409822003 \|Domain Bacteria (organism)\| OR &lt; 441649000 \|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\| OR &lt; 414561005 \|Kingdom Fungi (organism)\| OR &lt; 84676004 \|Prion (organism)\| OR &lt; 49872002 \|Virus (organism)\| OR &lt; 417396000 \|Kingdom Protozoa (organism)\| OR &lt; 419036000 \|Domain Archaea (organism)\| OR &lt; 426785004 \|Kingdom Chromista (organism)\| OR &lt; 370570004 \|Kingdom Protoctista (organism)\| OR &lt; 417377004 \|Kingdom Viridiplantae (organism)\| OR &lt; 243565002 \|Slime mold (organism)\| OR &lt; 106253005 \|Histologic grading differentiation AND/OR behavior (qualifier value)\| OR &lt; 373369003 \|Finding of histologic grading differentiation AND/OR behavior (finding)\| OR &lt; 399981008 \|Neoplasm and/or hamartoma (disorder)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-laboratory-pathology-observations-uv-ips"/>
+      </reference>
+      <name value="Results Laboratory/Pathology Observation - IPS"/>
+      <description value="Value Set Definition: LOINC {STATUS in {ACTIVE}, CLASSTYPE in {Laboratory class (1)}, CLASS exclude {LP62148-9 (NR STATS), LP175679-2 (H&amp;P.HX.LAB), LP7785-1 (CHALSKIN), LP94892-4 (LABORDERS)}}"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-radiology-numobs-uv-ips"/>
+      </reference>
+      <name value="Results Radiology Measurement Observation - IPS"/>
+      <description value="Extensible value set including SNOMED CT and DICOM concepts for Linear, Area and Volume Measurements"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-radiology-observations-uv-ips"/>
+      </reference>
+      <name value="Results Radiology Observation - IPS"/>
+      <description value="Value Set Definition: &#xA;LOINC {STATUS in {ACTIVE}, CLASS in LP29684-5 (\&quot;RAD\&quot;)}"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-radiology-txtobs-uv-ips"/>
+      </reference>
+      <name value="Results Radiology Textual Observation - IPS"/>
+      <description value="IPS Results Radiology Textual Observation"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-specimen-collection-method-uv-ips"/>
+      </reference>
+      <name value="Results Specimen Collection Method - IPS"/>
+      <description value="IPS Specimen collection method codes value set.  This value set includes codes from SNOMED CT®: all descendants or self of 129316008 \|Aspiration - action (qualifier value)\|; all descendants or self of 129314006 \|Biopsy - action (qualifier value)\|; all descendants or self of 129300006 \|Puncture - action (qualifier value)\|; all descendants or self of 129304002 \|Excision - action (qualifier value)\|; all descendants or self of 129323009 \|Scraping - action (qualifier value)\|; all descendants or self of 73416001 \|Urine specimen collection, clean catch (procedure)\|; all descendants or self of 225113003 \|Timed urine collection (procedure)\|; all descendants or self of 70777001 \|Urine specimen collection, catheterized (procedure)\|; all descendants or self of 386089008 \|Collection of coughed sputum (procedure)\|; all descendants or self of 278450005 \|Finger-prick sampling (procedure)\| &#xA;&#xA;SNOMED CT® ECL definition:\&#xA;\&lt;\&lt; 129316008 \|Aspiration - action (qualifier value)\| OR \&lt;\&lt; 129314006 \|Biopsy - action (qualifier value)\| OR \&lt;\&lt; 129300006 \|Puncture - action (qualifier value)\| OR \&lt;\&lt; 129304002 \|Excision - action (qualifier value)\| OR \&lt;\&lt; 129323009 \|Scraping - action (qualifier value)\| OR \&lt;\&lt; 73416001 \|Urine specimen collection, clean catch (procedure)\| OR \&lt;\&lt; 225113003 \|Timed urine collection (procedure)\| OR \&lt;\&lt; 70777001 \|Urine specimen collection, catheterized (procedure)\| OR \&lt;\&lt; 386089008 \|Collection of coughed sputum (procedure)\| OR \&lt;\&lt; 278450005 \|Finger-prick sampling (procedure)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/results-specimen-type-uv-ips"/>
+      </reference>
+      <name value="Results Specimen Type - IPS"/>
+      <description value="IPS Specimen Type codes value set.  This value set includes codes from SNOMED CT®: all descendants of 123038009 \|Specimen (specimen)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 123038009 \|Specimen (specimen)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:complex-type"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/SimpleQuantity-uv-ips"/>
+      </reference>
+      <name value="SimpleQuantity (IPS)"/>
+      <description value="Data type profile SimpleQuantity constrained to use UCUM as the code system for units"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/Specimen-uv-ips"/>
+      </reference>
+      <name value="Specimen (IPS)"/>
+      <description value="This profile constrains the Specimen resource to represent the characteristics of a biological specimens in the context of laboratory results integrated to a patient summary."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Specimen"/>
+      </extension>
+      <reference>
+        <reference value="Specimen/specimen-example-1"/>
+      </reference>
+      <name value="Specimen: example"/>
+      <description value="Specimen: example"/>
+      <exampleCanonical value="http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/target-diseases-uv-ips"/>
+      </reference>
+      <name value="Vaccine Target Diseases - IPS"/>
+      <description value="IPS Vaccine target disease codes value set.  This value set includes codes from SNOMED CT that represent specific vaccine target diseases (descendant concepts, if they exist, are not included).&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;4834000 \|Typhoid fever (disorder)\| OR 6142004 \|Influenza (disorder)\| OR 16541001 \|Yellow fever (disorder)\| OR 14189004 \|Measles (disorder)\| OR 14168008 \|Rabies (disorder)\| OR 18624000 \|Disease caused by Rotavirus (disorder)\| OR 23502006 \|Lyme disease (disorder)\| OR 23511006 \|Meningococcal infectious disease (disorder)\| OR 24662006 \|Influenza caused by Influenza B virus (disorder)\| OR 25225006 \|Disease caused by Adenovirus (disorder)\| OR 27836007 \|Pertussis (disorder)\| OR 32398004 \|Bronchitis (disorder)\| OR 36653000 \|Rubella (disorder)\| OR 36989005 \|Mumps (disorder)\| OR 37246009 \|Disease caused by rickettsiae (disorder)\| OR 38907003 \|Varicella (disorder)\| OR 40468003 \|Viral hepatitis, type A (disorder)\| OR 50711007 \|Viral hepatitis type C (disorder)\| OR 52947006 \|Japanese encephalitis virus disease (disorder)\| OR 56717001 \|Tuberculosis (disorder)\| OR 58750007 \|Plague (disorder)\| OR 63650001 \|Cholera (disorder)\| OR 66071002 \|Viral hepatitis type B (disorder)\| OR 67924001 \|Smallpox (disorder)\| OR 70036007 \|Haemophilus influenzae pneumonia (disorder)\| OR 75702008 \|Brucellosis (disorder)\| OR 76902006 \|Tetanus (disorder)\| OR 85904008 \|Paratyphoid fever (disorder)\| OR 111852003 \|Vaccinia (disorder)\| OR 186150001 \|Enteritis caused by rotavirus (disorder)\| OR 186772009 \|Rocky Mountain spotted fever (disorder)\| OR 186788009 \|Q fever (disorder)\| OR 240532009 \|Human papillomavirus infection (disorder)\| OR 240613006 \|Typhus group rickettsial disease (disorder)\| OR 372244006 \|Malignant melanoma (disorder)\| OR 397430003 \|Diphtheria caused by Corynebacterium diphtheriae (disorder)\| OR 398102009 \|Acute poliomyelitis (disorder)\| OR 398565003 \|Infection caused by Clostridium botulinum (disorder)\| OR 409498004 \|Anthrax (disorder)\| OR 417093003 \|Disease caused by West Nile virus (disorder)\| OR 442438000 \|Influenza caused by Influenza A virus (disorder)\| OR 442696006 \|Influenza caused by Influenza A virus subtype H1N1 (disorder)\| OR 450715004 \|Influenza caused by Influenza A virus subtype H7 (disorder)\| OR 707448003 \|Influenza caused by Influenza A virus subtype H7N9 (disorder)\| OR 709410003 \|Haemophilus influenzae type b infection (disorder)\| OR 712986001 \|Encephalitis caused by tick-borne encephalitis virus (disorder)\| OR 713083002 \|Influenza caused by Influenza A virus subtype H5 (disorder)\| OR 772810003 \|Influenza caused by Influenza A virus subtype H3N2 (disorder)\| OR 772828001 \|Influenza caused by Influenza A virus subtype H5N1 (disorder)\| OR 840539006 \|Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vaccines-uv-ips"/>
+      </reference>
+      <name value="Vaccines - IPS"/>
+      <description value="IPS Vaccine codes value set.  This value set includes codes from SNOMED CT®: all descendants of 787859002 \|Vaccine product (product)\|; all descendants or self of 787482006 \|No known immunizations (situation)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 787859002 \|Vaccine product (product)\| OR \&lt;\&lt; 787482006 \|No known immunizations (situation)\|"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/vaccines-whoatc-uv-ips"/>
+      </reference>
+      <name value="Vaccines WHO ATC - IPS"/>
+      <description value="IPS Vaccine codes value set.  This value set includes codes from the World Health Organization Anatomical Therapeutic Chemical (ATC) classification system: all descendants of J07 &quot;VACCINES&quot;"/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/whoatc-uv-ips"/>
+      </reference>
+      <name value="WHO ATC - IPS"/>
+      <description value="World Health Organization Anatomical Therapeutic Chemical (ATC) classification system."/>
+      <exampleBoolean value="false"/>
+    </resource>
+    <page>
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+        <valueCode value="informative"/>
+      </extension>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+        <valueUrl value="toc.html"/>
+      </extension>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="index.html"/>
+        </extension>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="changes.html"/>
+        </extension>
+        <nameUrl value="changes.html"/>
+        <title value="Changes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="copyrights.html"/>
+        </extension>
+        <nameUrl value="copyrights.html"/>
+        <title value="Copyrights"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="datatypes.html"/>
+        </extension>
+        <nameUrl value="datatypes.html"/>
+        <title value="Datatypes"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Design-Conventions.html"/>
+        </extension>
+        <nameUrl value="Design-Conventions.html"/>
+        <title value="Design Conventions"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="downloads.html"/>
+        </extension>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="examples.html"/>
+        </extension>
+        <nameUrl value="examples.html"/>
+        <title value="Examples"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="General-Principles.html"/>
+        </extension>
+        <nameUrl value="General-Principles.html"/>
+        <title value="General Principles"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Generation-and-Data-Inclusion.html"/>
+        </extension>
+        <nameUrl value="Generation-and-Data-Inclusion.html"/>
+        <title value="Generation and Data Inclusion"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Known-Issues-and-Future-Development.html"/>
+        </extension>
+        <nameUrl value="Known-Issues-and-Future-Development.html"/>
+        <title value="Known Issues and Future Development"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Privacy-and-Security-Considerations.html"/>
+        </extension>
+        <nameUrl value="Privacy-and-Security-Considerations.html"/>
+        <title value="Privacy and Security Considerations"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="profiles.html"/>
+        </extension>
+        <nameUrl value="profiles.html"/>
+        <title value="Profiles"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="Structure-of-the-International-Patient-Summary.html"/>
+        </extension>
+        <nameUrl value="Structure-of-the-International-Patient-Summary.html"/>
+        <title value="Structure of the International Patient Summary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+          <valueCode value="informative"/>
+        </extension>
+        <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-page-name">
+          <valueUrl value="terminology.html"/>
+        </extension>
+        <nameUrl value="terminology.html"/>
+        <title value="Terminology"/>
+        <generation value="markdown"/>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

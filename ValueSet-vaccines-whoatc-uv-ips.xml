@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="vaccines-whoatc-uv-ips"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet vaccines-whoatc-uv-ips</b></p><a name="vaccines-whoatc-uv-ips"> </a><a name="hcvaccines-whoatc-uv-ips"> </a><a name="vaccines-whoatc-uv-ips-en-US"> </a><ul><li>Include codes from<a href="http://www.whocc.no/atc"><code>http://www.whocc.no/atc</code></a> where concept  descends from J07 (VACCINES)</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips"/>
+  <version value="2.0.0-ballot"/>
+  <name value="VaccinesWhoAtcUvIps"/>
+  <title value="Vaccines WHO ATC - IPS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-08-14T14:11:06+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <description value="IPS Vaccine codes value set.  This value set includes codes from the World Health Organization Anatomical Therapeutic Chemical (ATC) classification system: all descendants of J07 &quot;VACCINES&quot;"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This artifact includes content from Anatomical Therapeutic Chemical (ATC) classification system. ATC codes are copyright World Health Organization (WHO) Collaborating Centre for Drug Statistics Methodology. Terms &amp; Conditions in https://www.whocc.no/use_of_atc_ddd/"/>
+  <compose>
+    <include>
+      <system value="http://www.whocc.no/atc"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="J07"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

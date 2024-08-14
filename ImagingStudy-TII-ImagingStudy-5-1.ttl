@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/ImagingStudy/TII-ImagingStudy-5-1> a fhir:ImagingStudy ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "TII-ImagingStudy-5-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImagingStudy TII-ImagingStudy-5-1</b></p><a name=\"TII-ImagingStudy-5-1\"> </a><a name=\"hcTII-ImagingStudy-5-1\"> </a><a name=\"TII-ImagingStudy-5-1-en-US\"> </a><p><b>identifier</b>: <a href=\"http://terminology.hl7.org/6.0.2/NamingSystem-dui.html\" title=\"An OID issued under DICOM OID rules. DICOM OIDs are represented as plain OIDs, with a prefix of &quot;urn:oid:&quot;. See https://www.dicomstandard.org/\">DICOM Unique Id</a>/urn:oid:2.16.840.1.113883.2.9.999.1.12345</p><p><b>status</b>: Available</p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>procedureCode</b>: <span title=\"Codes:{http://loinc.org 49569-7}\">SPECT Heart perfusion and wall motion at rest and W stress and W Tl-201 IV and W Tc-99m Sestamibi IV</span></p><p><b>reasonCode</b>: <span title=\"Codes:\">Chest pain, hypertension, type II diabetes mellitus.</span></p><h3>Series</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>Uid</b></td><td><b>Modality</b></td><td><b>BodySite</b></td></tr><tr><td style=\"display: none\">*</td><td>2.16.840.1.113883.2.9.999.2.12345</td><td><a href=\"http://hl7.org/fhir/R4/codesystem-dicom-dcim.html#dicom-dcim-NM\">DICOM Controlled Terminology Definitions</a> NM: Nuclear Medicine</td><td><a href=\"http://snomed.info/id/80891009\">SNOMED CT (all versions)</a> 80891009: Heart</td></tr></table></div>"
+  ] ; # 
+  fhir:identifier ( [
+     fhir:system [ fhir:v "urn:dicom:uid"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "urn:oid:2.16.840.1.113883.2.9.999.1.12345" ]
+  ] ) ; # 
+  fhir:status [ fhir:v "available"] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ; # 
+  fhir:procedureCode ( [
+     fhir:coding ( [
+       a loinc:49569-7 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "49569-7" ] ;
+       fhir:display [ fhir:v "SPECT Heart perfusion and wall motion at rest and W stress and W Tl-201 IV and W Tc-99m Sestamibi IV" ]
+     ] )
+  ] ) ; # 
+  fhir:reasonCode ( [
+     fhir:text [ fhir:v "Chest pain, hypertension, type II diabetes mellitus." ]
+  ] ) ; # 
+  fhir:series ( [
+     fhir:uid [ fhir:v "2.16.840.1.113883.2.9.999.2.12345" ] ;
+     fhir:modality [
+       fhir:system [ fhir:v "http://dicom.nema.org/resources/ontology/DCM"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "NM" ] ;
+       fhir:display [ fhir:v "Nuclear Medicine" ]
+     ] ;
+     fhir:bodySite [
+       a sct:80891009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "80891009" ] ;
+       fhir:display [ fhir:v "Heart" ]
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

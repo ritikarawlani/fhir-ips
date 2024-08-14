@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="pregnancy-edd-example"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation pregnancy-edd-example</b></p><a name="pregnancy-edd-example"> </a><a name="hcpregnancy-edd-example"> </a><a name="pregnancy-edd-example-en-US"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 11778-8}">Delivery date Estimated</span></p><p><b>subject</b>: <a href="Patient-patient-example-female.html">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2020-01-10</p><p><b>performer</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: 2020-05-02</p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11778-8"/>
+      <display value="Delivery date Estimated"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-example-female"/>
+  </subject>
+  <effectiveDateTime value="2020-01-10"/>
+  <performer>
+    <reference value="Patient/eumfh-39-07"/>
+  </performer>
+  <valueDateTime value="2020-05-02"/>
+</Observation>

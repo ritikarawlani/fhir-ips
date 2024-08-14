@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="results-coded-values-laboratory-pathology-uv-ips"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet results-coded-values-laboratory-pathology-uv-ips</b></p><a name="results-coded-values-laboratory-pathology-uv-ips"> </a><a name="hcresults-coded-values-laboratory-pathology-uv-ips"> </a><a name="results-coded-values-laboratory-pathology-uv-ips-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 365636006 (Blood group)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 260411009 (Presence findings)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 272519000 (Absence findings)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 409822003 (Domain Bacteria (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 441649000 (Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 414561005 (Kingdom Fungi (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 84676004 (Prion)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 49872002 (Virus)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 417396000 (Kingdom Protozoa (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 419036000 (Superkingdom Archaea)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 426785004 (Kingdom Chromista (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 370570004 (Kingdom Protista)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 417377004 (Kingdom Viridiplantae (organism))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 243565002 (Slime mold)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 106253005 (Histologic grading differentiation AND/OR behavior)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 373369003 (Finding of histologic grading differentiation AND/OR behavior (finding))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  descends from 399981008 (Neoplasm and/or hamartoma (disorder))</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips"/>
+  <version value="2.0.0-ballot"/>
+  <name value="ResultsCodedValuesLaboratoryPathologyUvIps"/>
+  <title value="Results Coded Values Laboratory/Pathology - IPS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-08-14T14:11:06+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <description value="IPS Results Coded Values Laboratory/Pathology value set.  This value set includes codes from SNOMED CT®: all descendants of 365636006 \|Finding of blood group (finding)\|; all descendants of 260411009 \|Presence findings (qualifier value)\|; all descendants of 272519000 \|Absence findings (qualifier value)\|; all descendants of 409822003 \|Domain Bacteria (organism)\|; all descendants of 441649000 \|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\|; all descendants of 414561005 \|Kingdom Fungi (organism)\|; all descendants of 84676004 \|Prion (organism)\|; all descendants of 49872002 \|Virus (organism)\|; all descendants of 417396000 \|Kingdom Protozoa (organism)\|; all descendants of 419036000 \|Domain Archaea (organism)\|; all descendants of 426785004 \|Kingdom Chromista (organism)\|; all descendants of 370570004 \|Kingdom Protoctista (organism)\|; all descendants of 417377004 \|Kingdom Viridiplantae (organism)\|; all descendants of 243565002 \|Slime mold (organism)\|; all descendants of 106253005 \|Histologic grading differentiation AND/OR behavior (qualifier value)\|; all descendants of 373369003 \|Finding of histologic grading differentiation AND/OR behavior (finding)\|; all descendants of 399981008 \|Neoplasm and/or hamartoma (disorder)\|&#xA;&#xA;SNOMED CT® ECL definition:\&#xA;&lt; 365636006 \|Finding of blood group (finding)\| OR &lt; 260411009 \|Presence findings (qualifier value)\| OR &lt; 272519000 \|Absence findings (qualifier value)\| OR &lt; 409822003 \|Domain Bacteria (organism)\| OR &lt; 441649000 \|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\| OR &lt; 414561005 \|Kingdom Fungi (organism)\| OR &lt; 84676004 \|Prion (organism)\| OR &lt; 49872002 \|Virus (organism)\| OR &lt; 417396000 \|Kingdom Protozoa (organism)\| OR &lt; 419036000 \|Domain Archaea (organism)\| OR &lt; 426785004 \|Kingdom Chromista (organism)\| OR &lt; 370570004 \|Kingdom Protoctista (organism)\| OR &lt; 417377004 \|Kingdom Viridiplantae (organism)\| OR &lt; 243565002 \|Slime mold (organism)\| OR &lt; 106253005 \|Histologic grading differentiation AND/OR behavior (qualifier value)\| OR &lt; 373369003 \|Finding of histologic grading differentiation AND/OR behavior (finding)\| OR &lt; 399981008 \|Neoplasm and/or hamartoma (disorder)\|"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="365636006"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="260411009"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="272519000"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="409822003"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="441649000"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="414561005"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="84676004"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="49872002"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="417396000"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="419036000"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="426785004"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="370570004"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="417377004"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="243565002"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="106253005"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="373369003"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="descendent-of"/>
+        <value value="399981008"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

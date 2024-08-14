@@ -1,0 +1,62 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/DiagnosticReport/hemoglobin> a fhir:DiagnosticReport ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hemoglobin"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DiagnosticReport hemoglobin</b></p><a name=\"hemoglobin\"> </a><a name=\"hchemoglobin\"> </a><a name=\"hemoglobin-en-US\"> </a><h2><span title=\"Codes:{http://loinc.org 11502-2}\">Laboratory report</span> (<span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}\">Laboratory</span>) </h2><table class=\"grid\"><tr><td>Subject</td><td>Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</td></tr><tr><td>When For</td><td>2017-11-10</td></tr><tr><td>Reported</td><td>2017-11-10 08:20:00+0100</td></tr><tr><td>Performer</td><td> <a href=\"Organization-TII-Organization1.html\">Someplace General Hospital</a></td></tr></table><p><b>Report Details</b></p><table class=\"grid\"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href=\"Observation-hemoglobin.html\"><span title=\"Codes:{http://loinc.org 17856-6}\">Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</span></a></td><td>7.5 %<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code% = '%')</span></td><td>Final</td><td>Above stated goal of 7.0 %</td><td>2017-11-10 08:20:00+0100</td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v2-0074"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "LAB" ] ;
+       fhir:display [ fhir:v "Laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:11502-2 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "11502-2" ] ;
+       fhir:display [ fhir:v "Laboratory report" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2017-11-10"^^xsd:date] ; # 
+  fhir:issued [ fhir:v "2017-11-10T08:20:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> ;
+     fhir:reference [ fhir:v "Organization/TII-Organization1" ] ;
+     fhir:display [ fhir:v "Someplace General Hospital" ]
+  ] ) ; # 
+  fhir:result ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Observation/hemoglobin> ;
+     fhir:reference [ fhir:v "Observation/hemoglobin" ] ;
+     fhir:display [ fhir:v "Above stated goal of 7.0 %" ]
+  ] ) . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/hemoglobin> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

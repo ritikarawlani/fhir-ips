@@ -1,0 +1,80 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Observation/urine-wbc-range> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "urine-wbc-range"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation urine-wbc-range</b></p><a name=\"urine-wbc-range\"> </a><a name=\"hcurine-wbc-range\"> </a><a name=\"urine-wbc-range-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 5821-4}\">Leukocytes [#/area] in Urine sediment by Microscopy high power field</span></p><p><b>subject</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p><p><b>effective</b>: 2018-02-16 09:17:00+0100</p><p><b>performer</b>: <a href=\"Organization-TII-Organization1.html\">Organization Someplace General Hospital</a></p><p><b>value</b>: 10 per HPF<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/[HPF] = '/[HPF]')</span></p><p><b>interpretation</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation H}\">High</span></p><h3>ReferenceRanges</h3><table class=\"grid\"><tr><td style=\"display: none\">-</td><td><b>High</b></td><td><b>Type</b></td></tr><tr><td style=\"display: none\">*</td><td>5 per HPF<span style=\"background: LightGoldenRodYellow\"> (Details: UCUM  code/[HPF] = '/[HPF]')</span></td><td><span title=\"Codes:{http://terminology.hl7.org/CodeSystem/referencerange-meaning normal}\">Normal Range</span></td></tr></table></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:5821-4 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "5821-4" ] ;
+       fhir:display [ fhir:v "Leukocytes [#/area] in Urine sediment by Microscopy high power field" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/66033> ;
+     fhir:reference [ fhir:v "Patient/66033" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2018-02-16T09:17:00+01:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> ;
+     fhir:reference [ fhir:v "Organization/TII-Organization1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:Quantity ;
+     fhir:value [ fhir:v "10"^^xsd:decimal ] ;
+     fhir:unit [ fhir:v "per HPF" ] ;
+     fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+     fhir:code [ fhir:v "/[HPF]" ]
+  ] ; # 
+  fhir:interpretation ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-ObservationInterpretation"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "H" ]
+     ] )
+  ] ) ; # 
+  fhir:referenceRange ( [
+     fhir:high [
+       fhir:value [ fhir:v "5"^^xsd:decimal ] ;
+       fhir:unit [ fhir:v "per HPF" ] ;
+       fhir:system [ fhir:v "http://unitsofmeasure.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "/[HPF]" ]
+     ] ;
+     fhir:type [
+       fhir:coding ( [
+         fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/referencerange-meaning"^^xsd:anyURI ] ;
+         fhir:code [ fhir:v "normal" ] ;
+         fhir:display [ fhir:v "Normal Range" ]
+       ] )
+     ]
+  ] ) . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/66033> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

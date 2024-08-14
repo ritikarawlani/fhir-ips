@@ -1,0 +1,396 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Changes - International Patient Summary Implementation Guide v2.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7.css"/>
+    <link rel="stylesheet" href="assets/css/fhir-ig.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="http://hl7.org">
+            <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">International Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0-ballot - STU 2 Ballot
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">General Principles and Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l183">​</a>
+        <a href="principles.html">General Principles</a>
+      </li>
+      <li><a name="l189">​</a>
+        <a href="design.html">Design Conventions</a>
+      </li>
+      <li><a name="l195">​</a>
+        <a href="ipsGeneration.html">Generation and Data Inclusion</a>
+      </li>
+      <li><a name="l201">​</a>
+        <a href="considerations.html">Privacy and Security Considerations</a>
+      </li>
+      <li><a name="l207">​</a>
+        <a href="knownIssues.html">Known Issues and Future Development</a>
+      </li>
+    </ul>
+  </li>
+  <li><a name="l215">​</a>
+    <a href="ipsStructure.html">The "IPS"</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-Composition-uv-ips.html">The IPS Composition</a>
+      </li>
+      <li>
+        <a href="profiles.html">IPS Library</a>
+      </li>
+      <li>
+        <a href="datatypes.html">Datatypes</a>
+      </li>
+      <li><a name="l248">​</a>
+        <a href="extensions.html">Extensions</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="OperationDefinition-summary.html">Operations</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="copyrights.html">Copyrights</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><b>Changes</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">International Patient Summary Implementation Guide, published by HL7 International / Patient Care. This guide is not an authorized publication; it is the continuous build for version 2.0.0-ballot built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/ritikarawlani/fhir-ips">https://github.com/ritikarawlani/fhir-ips</a> and changes regularly. See the <a href="http://hl7.org/fhir/uv/ips/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Changes</h2>
+  
+
+
+
+
+
+  <table class="colsi">
+    <tr>
+  
+      <td>
+        <i>Page standards status:</i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Informative</a>
+        
+      </td>
+  
+  
+    </tr>
+  </table>
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#stu-20-update" id="markdown-toc-stu-20-update">STU 2.0 Update</a></li>
+  <li><a href="#stu-110-update" id="markdown-toc-stu-110-update">STU 1.1.0 Update</a></li>
+</ul>
+
+</div>
+<h3 id="stu-20-update">STU 2.0 Update</h3>
+
+<p>This change list provides an overview and detail of changes in STU 2.0.  The major categories of revision include:</p>
+
+<p>Detailed change list for 2.0.0 since 1.1.0 includes:</p>
+
+<ul>
+  <li>
+    <p><strong>Compatible, Substantive Changes</strong></p>
+
+    <ul>
+      <li>Reinstate revised ResultsSpecimenCollectionMethodUvIps value set (https://jira.hl7.org/browse/FHIR-46500)</li>
+      <li>Remove "Target Site - IPS" value set (as per <a href="https://jira.hl7.org/browse/FHIR-32809">FHIR-32809</a>)</li>
+    </ul>
+  </li>
+  <li>
+    <p><strong>Non-substantive Changes</strong></p>
+  </li>
+</ul>
+
+<h3 id="stu-110-update">STU 1.1.0 Update</h3>
+
+<p>This change list provides an overview and detail of changes in STU 1.1.  This publication is an unballoted STU 1.1 update which incorporates implementation feedback, terminology updates and publication cleanup. The major categories of revision include:</p>
+<ul>
+  <li>Addition of <a href="./StructureDefinition-Bundle-uv-ips.html">Bundle Profile</a></li>
+  <li>Addition of <a href="./StructureDefinition-MedicationRequest-uv-ips.html">MedicationRequest Profile</a></li>
+  <li>Addition of a $summary operation (Github Branch: https://github.com/HL7/fhir-ips/pull/17)</li>
+  <li>Reduction of Must Support (Github Branch: https://github.com/HL7/fhir-ips/pull/22)</li>
+  <li>Additional narrative guidance (Github Branch: https://github.com/HL7/fhir-ips/pull/27)</li>
+  <li>Terminology Updates (Github Branch: https://github.com/HL7/fhir-ips/pull/30)</li>
+  <li>Publication clean-up (Github Branch: https://github.com/HL7/fhir-ips/pull/23 and commits in Sept/Oct 2022)</li>
+</ul>
+
+<p>Detailed change list for 1.1.0 since 1.0.0 includes:</p>
+
+<ul>
+  <li><strong>Compatible, Substantive Changes</strong>
+    <ul>
+      <li>Condition.category shouldn't be fixed to a particular code (<a href="https://jira.hl7.org/browse/FHIR-23740">FHIR-23740</a>)</li>
+      <li>Remove unneeded PractitionerRole.code slice and replace with preferred binding. (<a href="https://jira.hl7.org/browse/FHIR-39310">FHIR-39310</a>)</li>
+      <li>Remove unneeded profile elements from DeviceUseStatement.bodySite (<a href="https://jira.hl7.org/browse/FHIR-39296">FHIR-39296</a>)</li>
+      <li>Update SNOMED CT based value set definitions and add an extensionally-defined value set from the IPS free set as an additional binding (<a href="https://jira.hl7.org/browse/FHIR-37834">FHIR-37834</a>)</li>
+      <li>Revise the invariant for the patient name (<a href="https://jira.hl7.org/browse/FHIR-31558">FHIR-31558</a>)</li>
+      <li>Patient.contact relationship bound to v2 values (extensible in R4) but v3 values in IPS (<a href="https://jira.hl7.org/browse/FHIR-34817">FHIR-34817</a>)</li>
+      <li>IPS Practitioner Role ValueSet missing WHO/ISCO codes (<a href="https://jira.hl7.org/browse/FHIR-32156">FHIR-32156</a>)</li>
+      <li>ResultsSpecimenCollectionMethodGpsUvIps ValueSet identical to FHIR Core ValueSet (<a href="https://jira.hl7.org/browse/FHIR-32814">FHIR-32814</a>)</li>
+      <li>Clarify Target Site - IPS value set (<a href="https://jira.hl7.org/browse/FHIR-32809">FHIR-32809</a>)</li>
+      <li>Update and rename microorganism value set due to inactivation of SNOMED Microorganism concept (<a href="https://jira.hl7.org/browse/FHIR-26548">FHIR-26548</a>)</li>
+      <li>DiagnosticReport: refer patient and specimen ips profiles (<a href="https://jira.hl7.org/browse/FHIR-26665">FHIR-26665</a>)</li>
+      <li>Observation Performer : relax constraints (<a href="https://jira.hl7.org/browse/FHIR-26668">FHIR-26668</a>)</li>
+      <li>IPS binding on Patient.contact does not allow specifying an emergency contact (<a href="https://jira.hl7.org/browse/FHIR-29963">FHIR-29963</a>)</li>
+      <li>must support should require population if known (<a href="https://jira.hl7.org/browse/FHIR-30077">FHIR-30077</a>)</li>
+      <li>Align the performer cardinality to the base resource (<a href="https://jira.hl7.org/browse/FHIR-31049">FHIR-31049</a>)</li>
+      <li>Change the cardinality of the gender (<a href="https://jira.hl7.org/browse/FHIR-31557">FHIR-31557</a>)</li>
+      <li>Allow for ingredient.itemReference in the Medication resource (<a href="https://jira.hl7.org/browse/FHIR-31561">FHIR-31561</a>)</li>
+      <li>Make Patient contact relationship binding extensible (<a href="https://jira.hl7.org/browse/FHIR-32131">FHIR-32131</a>)</li>
+      <li>Personal Relationship ValueSet missing important relationships (<a href="https://jira.hl7.org/browse/FHIR-32813">FHIR-32813</a>)</li>
+      <li>First element is value set for https://build.fhir.org/ig/HL7/fhir-ips/ValueSet-allergy-reaction-gps-uv-ips.html is for 1985009 Vomitus (substance) and it should be 422400008 Vomiting (disorder) (<a href="https://jira.hl7.org/browse/FHIR-34018">FHIR-34018</a>)</li>
+      <li>0..1 constraint on protocolApplied.targetedDisease too strict (<a href="https://jira.hl7.org/browse/FHIR-34030">FHIR-34030</a>)</li>
+      <li>Replace terminology slices with a base "preferred" binding and "additional binding" extensions. (<a href="https://jira.hl7.org/browse/FHIR-37833">FHIR-37833</a>)</li>
+      <li>Add missing extension sliceName elements and adjust ids for data-absent-reason extension slices (<a href="https://jira.hl7.org/browse/FHIR-37855">FHIR-37855</a>)</li>
+      <li>Comprehensive Review of Must Support (<a href="https://jira.hl7.org/browse/FHIR-38622">FHIR-38622</a>)</li>
+      <li>Addition of Medication Request Profile (<a href="https://jira.hl7.org/browse/FHIR-38624">FHIR-38624</a>)</li>
+      <li>Addition of Bundle profile (<a href="https://jira.hl7.org/browse/FHIR-38625">FHIR-38625</a>)</li>
+      <li>Addition of $summary operation (<a href="https://jira.hl7.org/browse/FHIR-38626">FHIR-38626</a>)</li>
+      <li>Slicing on Immunization.protocolApplied.targetDisease to strict? (<a href="https://jira.hl7.org/browse/FHIR-35876">FHIR-35876</a>)</li>
+      <li>Wrong SNOMED code for vomiting in value set allergy reaction (code from wrong semantic hierarchy) (<a href="https://jira.hl7.org/browse/FHIR-34319">FHIR-34319</a>)</li>
+      <li>ips-1 constraint should only apply to Observation.effectiveDateTime (<a href="https://jira.hl7.org/browse/FHIR-25473">FHIR-25473</a>)</li>
+    </ul>
+  </li>
+  <li><strong>Non-substantive Changes</strong>
+    <ul>
+      <li>Composition.subject is 0..1 (<a href="https://jira.hl7.org/browse/FHIR-33984">FHIR-33984</a>)</li>
+      <li>Add Maturity level (FMM) and Standards status for the IG (<a href="https://jira.hl7.org/browse/FHIR-39315">FHIR-39315</a>)</li>
+      <li>Update the system value for the Belgian CNK code system to the URL (instead of the OID, which is likely unreliable), and update the display string. (<a href="https://jira.hl7.org/browse/FHIR-39313">FHIR-39313</a>)</li>
+      <li>Fix allergy-intolerance-uv-ips value set name and title (<a href="https://jira.hl7.org/browse/FHIR-39299">FHIR-39299</a>)</li>
+      <li>Remove code system fragments used only in examples (<a href="https://jira.hl7.org/browse/FHIR-39295">FHIR-39295</a>)</li>
+      <li>Typo on IPS Structure Page (<a href="https://jira.hl7.org/browse/FHIR-39292">FHIR-39292</a>)</li>
+      <li>Missing MedicationRequest example from examples page (<a href="https://jira.hl7.org/browse/FHIR-39291">FHIR-39291</a>)</li>
+      <li>Add ip-statements, cross-version-analysis, dependency-table and globals-table fragments to IG index page. (<a href="https://jira.hl7.org/browse/FHIR-39281">FHIR-39281</a>)</li>
+      <li>Add R4 and R4B specific packages to Downloads page (<a href="https://jira.hl7.org/browse/FHIR-39284">FHIR-39284</a>)</li>
+      <li>Change list xhtml fragments to 'list-simple-name-' for alphabetical ordering (<a href="https://jira.hl7.org/browse/FHIR-39283">FHIR-39283</a>)</li>
+      <li>Add Composition profile example (<a href="https://jira.hl7.org/browse/FHIR-39272">FHIR-39272</a>)</li>
+      <li>Remove commented out code from example (<a href="https://jira.hl7.org/browse/FHIR-39263">FHIR-39263</a>)</li>
+      <li>Remove declaration of 'global' profiles from IG resource (<a href="https://jira.hl7.org/browse/FHIR-39097">FHIR-39097</a>)</li>
+      <li>Modify profile and value set titles to allow proper Jira spec file generation. (<a href="https://jira.hl7.org/browse/FHIR-38996">FHIR-38996</a>)</li>
+      <li>Fix broken links caused by ConceptMaps (<a href="https://jira.hl7.org/browse/FHIR-38945">FHIR-38945</a>)</li>
+      <li>Remove extra Immunization examples added for testing (<a href="https://jira.hl7.org/browse/FHIR-38944">FHIR-38944</a>)</li>
+      <li>Fix incorrect ICD-11-MMS code system url (<a href="https://jira.hl7.org/browse/FHIR-38916">FHIR-38916</a>)</li>
+      <li>Remove incorrect and unneeded structuredefinition-display-hint extensions (<a href="https://jira.hl7.org/browse/FHIR-38915">FHIR-38915</a>)</li>
+      <li>Remove unneeded DICOM ImagingStudy value sets and ICD-11-MMS and ICD-O-3 code systems (<a href="https://jira.hl7.org/browse/FHIR-38914">FHIR-38914</a>)</li>
+      <li>Add missing 'experimental' elements (<a href="https://jira.hl7.org/browse/FHIR-38913">FHIR-38913</a>)</li>
+      <li>Update IG to version 1.1.0 (<a href="https://jira.hl7.org/browse/FHIR-38910">FHIR-38910</a>)</li>
+      <li>Patient.birthDate should have min cardinality of 0 (<a href="https://jira.hl7.org/browse/FHIR-35092">FHIR-35092</a>)</li>
+      <li>Update Licence Note for Value Sets based on SNOMED GPS (<a href="https://jira.hl7.org/browse/FHIR-25207">FHIR-25207</a>)</li>
+      <li>Fix additional-binding publisher (<a href="https://jira.hl7.org/browse/FHIR-38847">FHIR-38847</a>)</li>
+      <li>Update IG to the new template framework (<a href="https://jira.hl7.org/browse/FHIR-26834">FHIR-26834</a>)</li>
+      <li>Fix incorrect Observation.specimen type constraints (<a href="https://jira.hl7.org/browse/FHIR-27799">FHIR-27799</a>)</li>
+      <li>Should mention joint work with IHE on transport (<a href="https://jira.hl7.org/browse/FHIR-30076">FHIR-30076</a>)</li>
+      <li>please specify how to use doc-ref to access an IPS document (<a href="https://jira.hl7.org/browse/FHIR-34123">FHIR-34123</a>)</li>
+      <li>Remove CodeableConcept.text comment (<a href="https://jira.hl7.org/browse/FHIR-34824">FHIR-34824</a>)</li>
+      <li>What does it mean to support Coding.display.translation (<a href="https://jira.hl7.org/browse/FHIR-36672">FHIR-36672</a>)</li>
+      <li>Broken link in section 1.2 (<a href="https://jira.hl7.org/browse/FHIR-35112">FHIR-35112</a>)</li>
+      <li>Apparent contradiction in IPS Medication example (<a href="https://jira.hl7.org/browse/FHIR-32902">FHIR-32902</a>)</li>
+      <li>Section 1.2 Project Background broken link (<a href="https://jira.hl7.org/browse/FHIR-31396">FHIR-31396</a>)</li>
+    </ul>
+  </li>
+</ul>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.uv.ips#2.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 14:11+0000">2024-08-14</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" href="http://hl7.org/fhir/uv/ips/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

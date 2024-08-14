@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/AllergyIntolerance/allergyintolerance-multiple-codings> a fhir:AllergyIntolerance ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "allergyintolerance-multiple-codings"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: AllergyIntolerance allergyintolerance-multiple-codings</b></p><a name=\"allergyintolerance-multiple-codings\"> </a><a name=\"hcallergyintolerance-multiple-codings\"> </a><a name=\"allergyintolerance-multiple-codings-en-US\"> </a><p><b>clinicalStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}\">Active</span></p><p><b>verificationStatus</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}\">Confirmed</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 764146007}, {http://snomed.info/sct 91936005}, {http://www.nlm.nih.gov/research/umls/rxnorm 7984}, {http://www.whocc.no/atc N03AA02}\">Penicillin (substance)</span></p><p><b>patient</b>: <a href=\"Patient-66033.html\">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p><p><b>onset</b>: Absent because : unknown</p></div>"
+  ] ; # 
+  fhir:clinicalStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "active" ]
+     ] )
+  ] ; # 
+  fhir:verificationStatus [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "confirmed" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:764146007 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "764146007" ] ;
+       fhir:display [ fhir:v "Penicillin (substance)" ]
+     ] [
+       a sct:91936005 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "91936005" ] ;
+       fhir:display [ fhir:v "Allergy to penicillin (finding)" ]
+     ] [
+       fhir:system [ fhir:v "http://www.nlm.nih.gov/research/umls/rxnorm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "7984" ] ;
+       fhir:display [ fhir:v "penicillin V" ]
+     ] [
+       fhir:system [ fhir:v "http://www.whocc.no/atc"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "N03AA02" ] ;
+       fhir:display [ fhir:v "phenobarbital" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/66033> ;
+     fhir:reference [ fhir:v "Patient/66033" ]
+  ] ; # 
+  fhir:onset [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/66033> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

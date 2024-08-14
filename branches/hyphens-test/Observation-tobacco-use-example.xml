@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="tobacco-use-example"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation tobacco-use-example</b></p><a name="tobacco-use-example"> </a><a name="hctobacco-use-example"> </a><a name="tobacco-use-example-en-US"> </a><p><b>status</b>: Final</p><p><b>code</b>: <span title="Codes:{http://loinc.org 72166-2}">Tobacco smoking status</span></p><p><b>subject</b>: <a href="Patient-patient-example-female.html">Martha DeLarosa  Female, DoB: 1992-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</a></p><p><b>effective</b>: 2019-07-15</p><p><b>performer</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>value</b>: <span title="Codes:{http://loinc.org LA15920-4}">Former smoker</span></p></div>
+  </text>
+  <status value="final"/>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="72166-2"/>
+      <display value="Tobacco smoking status"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/patient-example-female"/>
+  </subject>
+  <effectiveDateTime value="2019-07-15"/>
+  <performer>
+    <reference value="Patient/eumfh-39-07"/>
+  </performer>
+  <valueCodeableConcept>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="LA15920-4"/>
+      <display value="Former smoker"/>
+    </coding>
+  </valueCodeableConcept>
+</Observation>

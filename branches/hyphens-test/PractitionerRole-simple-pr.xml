@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<PractitionerRole xmlns="http://hl7.org/fhir">
+  <id value="simple-pr"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: PractitionerRole simple-pr</b></p><a name="simple-pr"> </a><a name="hcsimple-pr"> </a><a name="simple-pr-en-US"> </a><p><b>practitioner</b>: <a href="Practitioner-eumfh-39-07.html">Practitioner Mark Antonio </a></p><p><b>organization</b>: <a href="Organization-simple-org.html">Organization Best Diagnostic Department</a></p></div>
+  </text>
+  <practitioner>
+    <reference value="Practitioner/eumfh-39-07"/>
+  </practitioner>
+  <organization>
+    <reference value="Organization/simple-org"/>
+  </organization>
+</PractitionerRole>

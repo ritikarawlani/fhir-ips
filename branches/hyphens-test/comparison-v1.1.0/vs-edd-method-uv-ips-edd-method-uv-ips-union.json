@@ -1,0 +1,32 @@
+{
+  "resourceType" : "ValueSet",
+  "id" : "470eb801-3c25-4c54-820a-82a3499b4ef0-125",
+  "url" : "http://hl7.org/fhir/comparison/ValueSet/470eb801-3c25-4c54-820a-82a3499b4ef0-125",
+  "name" : "UnionPregnancyExpectedDeliveryDateMethodUvIpsAndPregnancyExpectedDeliveryDateMethodUvIps",
+  "title" : "Union of Pregnancy Expected Delivery Date Method - IPS And Pregnancy Expected Delivery Date Method - IPS",
+  "status" : "active",
+  "date" : "2024-07-31T14:26:38+00:00",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "001",
+      "display" : "World"
+    }]
+  }],
+  "compose" : {
+    "include" : [{
+      "concept" : [{
+        "code" : "11778-8",
+        "display" : "Delivery date Estimated"
+      },
+      {
+        "code" : "11779-6",
+        "display" : "Delivery date Estimated from last menstrual period"
+      },
+      {
+        "code" : "11780-4",
+        "display" : "Delivery date Estimated from ovulation date"
+      }]
+    }]
+  }
+}

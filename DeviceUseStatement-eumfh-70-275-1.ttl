@@ -1,0 +1,44 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/DeviceUseStatement/eumfh-70-275-1> a fhir:DeviceUseStatement ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eumfh-70-275-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: DeviceUseStatement eumfh-70-275-1</b></p><a name=\"eumfh-70-275-1\"> </a><a name=\"hceumfh-70-275-1\"> </a><a name=\"eumfh-70-275-1-en-US\"> </a><p><b>status</b>: Active</p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Annelise Black (inject 70-275)</a></p><p><b>timing</b>: Absent because : unknown</p><p><b>device</b>: <a href=\"Device-eumfh-70-275-1.html\">Device: type = No known device use (situation)</a></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ] ;
+     fhir:display [ fhir:v "Annelise Black (inject 70-275)" ]
+  ] ; # 
+  fhir:timing [
+     a fhir:dateTime ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] )
+  ] ; # 
+  fhir:device [
+     fhir:link <http://hl7.org/fhir/uv/ips/Device/eumfh-70-275-1> ;
+     fhir:reference [ fhir:v "Device/eumfh-70-275-1" ]
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Device/eumfh-70-275-1> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

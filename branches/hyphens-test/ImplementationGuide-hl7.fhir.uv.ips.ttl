@@ -1,0 +1,2333 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips> a fhir:ImplementationGuide ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "hl7.fhir.uv.ips"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ImplementationGuide hl7.fhir.uv.ips</b></p><a name=\"hl7.fhir.uv.ips\"> </a><a name=\"hchl7.fhir.uv.ips\"> </a><a name=\"hl7.fhir.uv.ips-en-US\"> </a><h2>InternationalPatientSummaryIG</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips</pre></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2"^^xsd:integer ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "trial-use" ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "InternationalPatientSummaryIG"] ; # 
+  fhir:title [ fhir:v "International Patient Summary Implementation Guide"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2024-07-31T14:25:49+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:packageId [ fhir:v "hl7.fhir.uv.ips"] ; # 
+  fhir:license [ fhir:v "CC0-1.0"] ; # 
+  fhir:fhirVersion ( [ fhir:v "4.0.1"] ) ; # 
+  fhir:dependsOn ( [
+     fhir:id [ fhir:v "hl7tx" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://terminology.hl7.org/ImplementationGuide/hl7.terminology"^^xsd:anyURI ;
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.terminology.r4" ] ;
+     fhir:version [ fhir:v "6.0.2" ]
+  ] [
+     fhir:id [ fhir:v "hl7ext" ] ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "Automatically added as a dependency - all IGs depend on the HL7 Extension Pack" ]
+     ] ) ;
+     fhir:uri [
+       fhir:v "http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/extensions/ImplementationGuide/hl7.fhir.uv.extensions>
+     ] ;
+     fhir:packageId [ fhir:v "hl7.fhir.uv.extensions.r4" ] ;
+     fhir:version [ fhir:v "5.1.0" ]
+  ] ) ; # 
+  fhir:definition [
+     fhir:extension ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2020+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "STU 2 Ballot" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/uv/ips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "hl7.fhir.uv.tools#0.1.0" ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "copyrightyear" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "2020+" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "releaselabel" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "STU 2 Ballot" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-history" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/uv/ips/history.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "autoload-resources" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-liquid" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/liquid" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-qa" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/qa" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-temp" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "temp/pages" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-output" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "output" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "path-suppressed-warnings" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "input/ignoreWarnings.txt" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-html" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-md" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "template-page-md.html" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-contact" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-context" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-copyright" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-jurisdiction" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-license" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-publisher" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-version" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "apply-wg" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "active-tables" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "fmm-definition" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "http://hl7.org/fhir/versions.html#maturity" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "propagate-status" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "excludelogbinaryformat" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "code"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "tabbed-snapshots" ]
+       ] [
+         fhir:url [ fhir:v "value"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "true" ]
+       ] ) ;
+       fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"^^xsd:anyURI ]
+     ] ) ;
+     fhir:resource ( [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Flag" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Flag/546482> ;
+         fhir:reference [ fhir:v "Flag/546482" ]
+       ] ;
+       fhir:name [ fhir:v "Alert IPS Flag Example" ] ;
+       fhir:description [ fhir:v "Alert IPS Flag Illustrative Example with Recommended Fields" ] ;
+       fhir:example [ fhir:v "true"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/AllergyIntolerance-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the AllergyIntolerance resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an allergy or intolerance is represented in the patient summary as an instance of an AllergyIntolerance resource constrained by this profile.\n\nIt documents the relevant allergies or intolerances (conditions) for a patient, describing the kind of reaction (e.g. rash, anaphylaxis,..); preferably the agents that cause it; and optionally the criticality and the certainty of the allergy." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/allergy-intolerance-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Intolerance - IPS" ] ;
+       fhir:description [ fhir:v "IPS Allergy intolerance codes value set. This value set includes codes from SNOMED CT®: all descendants of 373873005 \\|Pharmaceutical / biologic product (product)\\|; all descendants of 105590001 \\|Substance (substance)\\|; all descendants of 420134006 \\|Propensity to adverse reaction (finding)\\|; all descendants or self of 716186003 \\|No known allergy (situation)\\|\n\nSNOMED CT® ECL definition:\\\n< 373873005 \\|Pharmaceutical / biologic product (product)\\| OR < 105590001 \\|Substance (substance)\\| OR < 420134006 \\|Propensity to adverse reaction (finding)\\| OR \\<\\< 716186003 \\|No known allergy (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/allergy-reaction-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Allergy Reaction - IPS" ] ;
+       fhir:description [ fhir:v "IPS allergy reaction value set. This value set includes a set of SNOMED CT codes  and descendants (all top level codes are included in the SNOMED CT IPS Terminology) that may be used to represent allergy or intolerance reactions.\n\nSNOMED CT® ECL definition:\\\n\\<\\< 4386001 |Bronchospasm (finding)| OR \\<\\< 9826008 |Conjunctivitis (disorder)| OR \\<\\< 23924001 |Tight chest (finding)| OR \\<\\< 24079001 |Atopic dermatitis (disorder)| OR \\<\\< 31996006 |Vasculitis (disorder)| OR \\<\\< 39579001 |Anaphylaxis (disorder)| OR \\<\\< 41291007 |Angioedema (disorder)| OR \\<\\< 43116000 |Eczema (disorder)| OR \\<\\< 49727002 |Cough (finding)| OR \\<\\< 51599000 |Edema of larynx (disorder)| OR \\<\\< 62315008 |Diarrhea (finding)| OR \\<\\< 70076002 |Rhinitis (disorder)| OR \\<\\< 73442001 |Stevens-Johnson syndrome (disorder)| OR \\<\\< 76067001 |Sneezing (finding)| OR \\<\\< 91175000 |Seizure (finding)| OR \\<\\< 126485001 |Urticaria (disorder)| OR \\<\\< 162290004 |Dry eyes (finding)| OR \\<\\< 195967001 |Asthma (disorder)| OR \\<\\< 247472004 |Weal (disorder)| OR \\<\\< 267036007 |Dyspnea (finding)| OR \\<\\< 271757001 |Papular eruption (disorder)| OR \\<\\< 271759003 |Bullous eruption (disorder)| OR \\<\\< 271807003 |Eruption of skin (disorder)| OR \\<\\< 410430005 |Cardiorespiratory arrest (disorder)| OR \\<\\< 418363000 |Itching of skin (finding)| OR \\<\\< 422400008 |Vomiting (disorder)| OR \\<\\< 422587007 |Nausea (finding)| OR \\<\\< 698247007 |Cardiac arrhythmia (disorder)| OR \\<\\< 702809001 |Drug reaction with eosinophilia and systemic symptoms (disorder)| OR \\<\\< 768962006 |Lyell syndrome (disorder)| OR \\<\\< 781682005 |Hyperemia of eye (finding)|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/AllergyIntolerance/allergyintolerance-multiple-codings> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/allergyintolerance-multiple-codings" ]
+       ] ;
+       fhir:name [ fhir:v "AllergyIntolerance: multiple codings" ] ;
+       fhir:description [ fhir:v "AllergyIntolerance: multiple codings" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/AllergyIntolerance/eumfh-39-07-1> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/eumfh-39-07-1" ]
+       ] ;
+       fhir:name [ fhir:v "AllergyIntolerance: No known allergies" ] ;
+       fhir:description [ fhir:v "AllergyIntolerance: No known allergies" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "AllergyIntolerance" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/AllergyIntolerance/allergyintolerance-with-abatement> ;
+         fhir:reference [ fhir:v "AllergyIntolerance/allergyintolerance-with-abatement" ]
+       ] ;
+       fhir:name [ fhir:v "AllergyIntolerance: resolved allergy" ] ;
+       fhir:description [ fhir:v "AllergyIntolerance: resolved allergy" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/body-site-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Body Site - IPS" ] ;
+       fhir:description [ fhir:v "IPS body site value set. This value set includes a set of codes from SNOMED CT that may be used to represent body sites (e.g., for laboratory specimen collection). This value set includes codes from SNOMED CT®: all descendants of 442083009 \\|Anatomical or acquired body structure (body structure)\\|\n\nSNOMED CT® ECL definition:\\\n< 442083009 \\|Anatomical or acquired body structure (body structure)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Bundle-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Bundle - IPS" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Bundle resource by the International Patient Summary (IPS) FHIR Implementation Guide." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/CodeableConcept-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Codeable Concept (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraint applied to the CodeableConcept data type by the International Patient Summary (IPS) FHIR Implementation Guide to use the Coding-uv-ips data type profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Coding-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Coding-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Coding with translations" ] ;
+       fhir:description [ fhir:v "This profile extends the capabilities of the coding data type to support multi-language designations (display).\nIt relies on the Translation extension." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Composition-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Composition (IPS)" ] ;
+       fhir:description [ fhir:v "Clinical document used to represent the International Patient Summary (IPS) data set. \nAn International Patient Summary (IPS) document is an electronic health record extract containing essential healthcare information about a subject of care. \nThe IPS dataset is minimal and non-exhaustive; specialty-agnostic and condition-independent; but still clinically relevant. As specified in EN 17269 and ISO 27269, it is designed for supporting the use case scenario for ‘unplanned, cross border care’, but it is not limited to it. It is intended to be international, i.e., to provide generic solutions for global application beyond a particular region or country." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Condition-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Condition (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Condition resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of a problem is represented in the patient summary as an instance of the Condition resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Condition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Condition/eumfh-39-07-1> ;
+         fhir:reference [ fhir:v "Condition/eumfh-39-07-1" ]
+       ] ;
+       fhir:name [ fhir:v "Condition: Acute myocardial infarction of anterior wall" ] ;
+       fhir:description [ fhir:v "Condition: Acute myocardial infarction of anterior wall" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/current-smoking-status-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Current Smoking Status - IPS" ] ;
+       fhir:description [ fhir:v "HL7 IPS SNOMED value set for smoking status.  This value set includes a set of specific SNOMED CT codes (no subtypes included) that may be used to represent smoking status.\n\nSNOMED CT® ECL definition:\\\n449868002 |Smokes tobacco daily (finding)| OR 428041000124106 |Occasional tobacco smoker (finding)| OR 8517006 |Ex-smoker (finding)| OR 266919005 |Never smoked tobacco (finding)| OR 77176002 |Smoker (finding)| OR 266927001 |Tobacco smoking consumption unknown (finding)| OR 230063004 |Heavy cigarette smoker (finding)| OR 230060001 |Light cigarette smoker (finding)|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Device-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Device (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Device resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A device used by or implanted on the patient is described in the patient summary as an instance of a Device resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Device-observer-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Device - performer, observer" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Device resource by the IPS project, which specifies an international patient summary based on the FHIR standard R4.;\n\nThis profile describes a device that plays the role of observer or performer." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/DeviceUseStatement-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Device Use Statement (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the DeviceUseStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A statement about a device used by or implanted on the patient is described in the patient summary as an instance of a DeviceUseStatement resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Device/ips-example-imaging-1> ;
+         fhir:reference [ fhir:v "Device/ips-example-imaging-1" ]
+       ] ;
+       fhir:name [ fhir:v "Device: device observer example" ] ;
+       fhir:description [ fhir:v "Device: device observer example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Device" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Device/eumfh-70-275-1> ;
+         fhir:reference [ fhir:v "Device/eumfh-70-275-1" ]
+       ] ;
+       fhir:name [ fhir:v "Device: No known devices in use" ] ;
+       fhir:description [ fhir:v "Device: No known devices in use" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DeviceUseStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/DeviceUseStatement/eumfh-70-275-1> ;
+         fhir:reference [ fhir:v "DeviceUseStatement/eumfh-70-275-1" ]
+       ] ;
+       fhir:name [ fhir:v "DeviceUseStatement: No known devices in use" ] ;
+       fhir:description [ fhir:v "DeviceUseStatement: No known devices in use" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/DiagnosticReport-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the DiagnosticReport resource to represent diagnostic test and procedure reports in a patient summary." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "DiagnosticReport" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/DiagnosticReport/hemoglobin> ;
+         fhir:reference [ fhir:v "DiagnosticReport/hemoglobin" ]
+       ] ;
+       fhir:name [ fhir:v "DiagnosticReport: hemoglobin example" ] ;
+       fhir:description [ fhir:v "DiagnosticReport: hemoglobin example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Flag-alert-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Flag - Alert (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Flag resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an alert is represented in the patient summary as an instance of a Flag resource constrained by this profile. \n\nThis specialized Flag is used to convey information about an alert specific to an IPS. Information is flagged to raise awareness of potential concerns and/or dangers to/from the subject of the IPS. It brings information to the fore and may reference other information from the summary (through the supportingInfo extension) as well as present obstacles to care." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/healthcare-professional-roles-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/healthcare-professional-roles-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Healthcare Professional Roles - IPS" ] ;
+       fhir:description [ fhir:v "IPS Healthcare Professional Roles" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/ImagingStudy-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Imaging Study (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the ImagingStudy resource by the IPS project, which specifies the information on a DICOM imaging study this imaging result is part of." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ImagingStudy" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ImagingStudy/TII-ImagingStudy-5-1> ;
+         fhir:reference [ fhir:v "ImagingStudy/TII-ImagingStudy-5-1" ]
+       ] ;
+       fhir:name [ fhir:v "ImagingStudy: referred DICOM study" ] ;
+       fhir:description [ fhir:v "ImagingStudy: referred DICOM study" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Immunization-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Immunization resource by the International Patient Summary (IPS) FHIR Implementation Guide. A record of an immunization is represented in the patient summary as an instance of an Immunization resource constrained by this profile.\n\nIt describes the event of a patient being administered a vaccination or a record of a vaccination as reported by a patient, a clinician or another party." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Immunization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Immunization/75680> ;
+         fhir:reference [ fhir:v "Immunization/75680" ]
+       ] ;
+       fhir:name [ fhir:v "Immunization: Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite (Luxembourg)" ] ;
+       fhir:description [ fhir:v "Immunization: Vaccin anti diphtérie-coqueluche-tétanos-poliomyélite (Luxembourg)" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Bundle/IPS-examples-Bundle-01> ;
+         fhir:reference [ fhir:v "Bundle/IPS-examples-Bundle-01" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Bundle example" ] ;
+       fhir:description [ fhir:v "IPS Bundle example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Bundle/bundle-minimal> ;
+         fhir:reference [ fhir:v "Bundle/bundle-minimal" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Bundle example - minimal" ] ;
+       fhir:description [ fhir:v "IPS Bundle example - minimal" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Bundle/bundle-no-info-required-sections> ;
+         fhir:reference [ fhir:v "Bundle/bundle-no-info-required-sections" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Bundle example - no information in required sections" ] ;
+       fhir:description [ fhir:v "IPS Bundle example - no information in required sections" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Bundle" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Bundle/IPS-examples-Bundle-with-immunization> ;
+         fhir:reference [ fhir:v "Bundle/IPS-examples-Bundle-with-immunization" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Bundle example with Immunization" ] ;
+       fhir:description [ fhir:v "IPS Bundle example with Immunization section" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Composition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Composition/composition-minimal> ;
+         fhir:reference [ fhir:v "Composition/composition-minimal" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Composition example - minimal" ] ;
+       fhir:description [ fhir:v "IPS Composition example - minimal" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "CapabilityStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/CapabilityStatement/ips-server> ;
+         fhir:reference [ fhir:v "CapabilityStatement/ips-server" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Server Capability Statement" ] ;
+       fhir:description [ fhir:v "This section describes the expected capabilities of the IPS Server actor which is responsible for providing responses to the queries submitted for IPS documents. The list of FHIR profiles and operations supported by IPS Servers are defined." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "OperationDefinition" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/OperationDefinition/summary> ;
+         fhir:reference [ fhir:v "OperationDefinition/summary" ]
+       ] ;
+       fhir:name [ fhir:v "IPS Summary" ] ;
+       fhir:description [ fhir:v "This operation is used to return a patient summary using the IPS profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/medical-devices-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medical Devices - IPS" ] ;
+       fhir:description [ fhir:v "IPS Medical device codes value set.  This value set includes codes from SNOMED CT (SNOMED CT®) that are included in: all descendants of 49062001 \\|Device (physical object)\\|; all descendants or self of 787483001 \\|No known device use (situation)\\|\n\nSNOMED CT® ECL definition:\\\n< 49062001 \\|Device (physical object)\\| OR \\<\\< 787483001 \\|No known device use (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Medication-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medication (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Medication resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A medication is described in the patient summary as an instance of a Medication resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Medication" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Medication/eumfh-39-07-1> ;
+         fhir:reference [ fhir:v "Medication/eumfh-39-07-1" ]
+       ] ;
+       fhir:name [ fhir:v "Medication : Simvastatin 40 MG Disintegrating Oral Tablet" ] ;
+       fhir:description [ fhir:v "Medication : Simvastatin 40 MG Disintegrating Oral Tablet" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationRequest-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Request (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the MedicationRequest resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication request is represented in the patient summary as an instance of a MedicationRequest resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/MedicationStatement-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medication Statement (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the MedicationStatement resource by the International Patient Summary (IPS) FHIR Implementation Guide, based on FHIR R4. A record of a medication statement is represented in the patient summary as an instance of a MedicationStatement resource constrained by this profile." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationRequest" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/MedicationRequest/eumfh-39-07-1-request> ;
+         fhir:reference [ fhir:v "MedicationRequest/eumfh-39-07-1-request" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationRequest: Simvastatin request" ] ;
+       fhir:description [ fhir:v "MedicationRequest: Simvastatin request" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medication-example-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/medication-example-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medications - example (IPS)" ] ;
+       fhir:description [ fhir:v "This value set provides an example of possible medication coded concepts. This value set will be removed in a future release and has been replaced with [medication-uv-ips](./ValueSet-medication-uv-ips.html)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/medication-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medications - IPS" ] ;
+       fhir:description [ fhir:v "IPS Medication codes value set.  This value set includes codes from SNOMED CT®: all descendants of 763158003 \\|Medicinal product (product)\\|; excluding the descendants or self of 787859002 \\|Vaccine product (medicinal product)\\|; including all descendants or self of 787481004 \\|No known medications (situation)\\|\n\nSNOMED CT® ECL definition:\\\n(< 763158003 \\|Medicinal product (product)\\| MINUS \\<\\< 787859002 \\|Vaccine product (medicinal product)\\|) OR \\<\\< 787481004 \\|No known medications (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "MedicationStatement" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/MedicationStatement/eumfh-39-07-1> ;
+         fhir:reference [ fhir:v "MedicationStatement/eumfh-39-07-1" ]
+       ] ;
+       fhir:name [ fhir:v "MedicationStatement: on-going Simvastatin treatment" ] ;
+       fhir:description [ fhir:v "MedicationStatement: on-going Simvastatin treatment" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/medicine-active-substances-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Medicine Active Substances - IPS" ] ;
+       fhir:description [ fhir:v "IPS Medicine active substance codes value set.  This value set includes codes from SNOMED CT®: all descendants of 410942007 \\|Drug or medicament (substance)\\|\n\nSNOMED CT® ECL definition:\\\n< 410942007 \\|Drug or medicament (substance)\\|\\\n\nFuture implementations should consider ISO 11238 Health informatics -- Identification of medicinal products -- Data elements and structures for the unique identification and exchange of regulated information on substances." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform> ;
+         fhir:reference [ fhir:v "ValueSet/medicine-doseform" ]
+       ] ;
+       fhir:name [ fhir:v "Medicine Doseform - IPS" ] ;
+       fhir:description [ fhir:v "EDQM (European Directorate for the Quality of Medicines and Healthcare) Dose Form codes.  This Value Set includes all the EDQM Standard Terms having:  \n[Concept Status] = ‘Current’ AND  \n[Concept Class] IN (‘PDF’, ‘CMT’, ‘CDF’, ‘PFT') AND  \n[Domain] = 'Human and Veterinary'  \n\nPDF = 'Pharmaceutical dose form'; CMT = 'Combined terms'; CDF = 'Combined pharmaceutical dose form'; PFT = 'Patient Friendly'" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration> ;
+         fhir:reference [ fhir:v "ValueSet/medicine-route-of-administration" ]
+       ] ;
+       fhir:name [ fhir:v "Medicine Route of Administration - IPS" ] ;
+       fhir:description [ fhir:v "EDQM (European Directorate for the Quality of Medicines and Healthcare) Route of Administration codes.  This Value Set includes all the EDQM Standard Terms having:  \n[Concept Status] = ‘Current’ AND  \n[Concept Class] = 'ROA' AND  \n[Domain] = 'Human and Veterinary'  \n\nROA = 'Route of administration'" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-pregnancy-edd-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - Pregnancy: EDD" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent the pregnancy expected delivery date." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-pregnancy-outcome-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - Pregnancy: outcome" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent the history of pregnancy outcomes (summary)." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-pregnancy-status-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - Pregnancy: status" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent the pregnancy status." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-alcoholuse-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - SH: alcohol use" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent alcohol use assessment in a patient summary." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-tobaccouse-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation - SH: tobacco use" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent Tobacco use assessment in a patient summary." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-results-laboratory-pathology-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation Results: laboratory/pathology (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Observation resource to represent results produced by laboratory (including pathology) tests or panels/studies in a patient summary.\n\nThis observation may represent the result of a simple laboratory test such as hematocrit or it may group the set of results produced by a multi-test study or panel such as a complete blood count, a dynamic function test, a urine specimen study. In the latter case, the observation carries the overall conclusion of the study and or a global interpretation by the producer of the study, in the comment element; and references the atomic results of the study as \"has-member\" child observations." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Observation-results-radiology-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Observation Results: radiology (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Observation resource by the IPS project, which specifies a radiology observation for the international patient summary based on the FHIR standard R4. \n\nThis observation may represent the conclusions of a diagnostic procedure such a Chest RX, or it may group the set of results produced by that single or multi-modality procedure. \n\nIn the latter case, the main observation (this one) carries the overall conclusion of the study and/or a global interpretation by the observer of the study as value of this observation; and may references the atomic results of the study as \"child observations\".\n\nIt allows also providing details about the related study using the partOf element referring to an ImagingStudy resource." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/pathology-cancer> ;
+         fhir:reference [ fhir:v "Observation/pathology-cancer" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: estrogen receptor in tissue example" ] ;
+       fhir:description [ fhir:v "Observation: estrogen receptor in tissue example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/hemoglobin> ;
+         fhir:reference [ fhir:v "Observation/hemoglobin" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: hemoglobin example" ] ;
+       fhir:description [ fhir:v "Observation: hemoglobin example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/ips-example-imaging-1> ;
+         fhir:reference [ fhir:v "Observation/ips-example-imaging-1" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: imaging CT Abdomen W contrast IV" ] ;
+       fhir:description [ fhir:v "Observation: imaging CT Abdomen W contrast IV" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/ips-example-imaging-4> ;
+         fhir:reference [ fhir:v "Observation/ips-example-imaging-4" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: imaging CT Abdomen W contrast IV, sub-observations" ] ;
+       fhir:description [ fhir:v "Observation: imaging CT Abdomen W contrast IV,sub-observations" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/pregnancy-edd-example> ;
+         fhir:reference [ fhir:v "Observation/pregnancy-edd-example" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: pregnancy edd example" ] ;
+       fhir:description [ fhir:v "Observation: pregnancy edd example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/pregnancy-outcome-example> ;
+         fhir:reference [ fhir:v "Observation/pregnancy-outcome-example" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: pregnancy outcome example" ] ;
+       fhir:description [ fhir:v "Observation: pregnancy outcome example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/pregnancy-status-example> ;
+         fhir:reference [ fhir:v "Observation/pregnancy-status-example" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: pregnancy status example" ] ;
+       fhir:description [ fhir:v "Observation: pregnancy status example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/serum-creatinine-adult> ;
+         fhir:reference [ fhir:v "Observation/serum-creatinine-adult" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: serum creatinine example" ] ;
+       fhir:description [ fhir:v "Observation: serum creatinine example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/alcohol-use-example> ;
+         fhir:reference [ fhir:v "Observation/alcohol-use-example" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: SH alcohol use example" ] ;
+       fhir:description [ fhir:v "Observation: SH alcohol use example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/tobacco-use-example> ;
+         fhir:reference [ fhir:v "Observation/tobacco-use-example" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: SH tobacco use example" ] ;
+       fhir:description [ fhir:v "Observation: SH tobacco use example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Observation" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Observation/urine-wbc-range> ;
+         fhir:reference [ fhir:v "Observation/urine-wbc-range" ]
+       ] ;
+       fhir:name [ fhir:v "Observation: urine wbc range example" ] ;
+       fhir:description [ fhir:v "Observation: urine wbc range example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Organization-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Organization (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Organization resource to represent an organization that acts as performer or observer for a result observation (laboratory, pathology or imaging), or as performer for a procedure." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> ;
+         fhir:reference [ fhir:v "Organization/TII-Organization1" ]
+       ] ;
+       fhir:name [ fhir:v "Organization: example" ] ;
+       fhir:description [ fhir:v "Organization: example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Organization/lab-org-example> ;
+         fhir:reference [ fhir:v "Organization/lab-org-example" ]
+       ] ;
+       fhir:name [ fhir:v "Organization: lab example" ] ;
+       fhir:description [ fhir:v "Best Hospital Lab Organization example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Organization" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Organization/simple-org> ;
+         fhir:reference [ fhir:v "Organization/simple-org" ]
+       ] ;
+       fhir:name [ fhir:v "Organization: simple example" ] ;
+       fhir:description [ fhir:v "Very Simple Organization example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Patient-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Patient (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Patient resource by the International Patient Summary (IPS) FHIR Implementation Guide and describes the minimum expectations for the Patient resource when used in the IPS composition or in one of the referred resources." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Patient/patient-example-female> ;
+         fhir:reference [ fhir:v "Patient/patient-example-female" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: female patient" ] ;
+       fhir:description [ fhir:v "Patient: female patient" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+         fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: male patient" ] ;
+       fhir:description [ fhir:v "Patient: male patient" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Patient" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Patient/66033> ;
+         fhir:reference [ fhir:v "Patient/66033" ]
+       ] ;
+       fhir:name [ fhir:v "Patient: minimal example" ] ;
+       fhir:description [ fhir:v "Patient: minimal example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/personal-relationship-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/personal-relationship-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Personal Relationship - IPS [Deprecated]" ] ;
+       fhir:description [ fhir:v "The Value Set is used (optionally) to code the type of contact relationship between a person and the patient. This value set has been deprecated and will be removed in a future release.  It has been replaced with [PersonalRelationshipRoleType](https://terminology.hl7.org/3.1.0/ValueSet-v3-PersonalRelationshipRoleType.html)" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Practitioner-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the practitioner resource to represent a practitioner acting as observer for these imaging results." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Practitioner" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Practitioner/eumfh-39-07> ;
+         fhir:reference [ fhir:v "Practitioner/eumfh-39-07" ]
+       ] ;
+       fhir:name [ fhir:v "Practitioner example" ] ;
+       fhir:description [ fhir:v "Practitioner example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/PractitionerRole-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the PractitionerRole resource to represent a practitioner acting as observer for observation results for a specified organization." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "PractitionerRole" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/PractitionerRole/simple-pr> ;
+         fhir:reference [ fhir:v "PractitionerRole/simple-pr" ]
+       ] ;
+       fhir:name [ fhir:v "PractitionerRole: simple example" ] ;
+       fhir:description [ fhir:v "Very Simple PractitionerRole example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/pregnancies-summary-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Pregnancies Summary - IPS" ] ;
+       fhir:description [ fhir:v "IPS Pregnancies Summary" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/edd-method-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Pregnancy Expected Delivery Date Method - IPS" ] ;
+       fhir:description [ fhir:v "IPS Expected Delivery Date Method" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/pregnancy-status-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Pregnancy Status - IPS" ] ;
+       fhir:description [ fhir:v "IPS pregnancy status codes value set.  This value set includes codes from SNOMED CT®: 77386006 \\|Pregnant\\|; 60001007 \\|Not pregnant\\|; 152231000119106 \\|Pregnancy not yet confirmed\\|; 146799005 \\|Possible pregnancy\\|\n\nSNOMED CT® ECL definition:\\\n77386006 \\|Pregnant\\| OR 60001007 \\|Not pregnant\\| OR 152231000119106 \\|Pregnancy not yet confirmed\\| OR 146799005 \\|Possible pregnancy\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/problem-type-loinc> ;
+         fhir:reference [ fhir:v "ValueSet/problem-type-loinc" ]
+       ] ;
+       fhir:name [ fhir:v "Problem Type (LOINC)" ] ;
+       fhir:description [ fhir:v "This value set indicates the level of medical judgment used to determine the existence of a problem." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/problem-type-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Problem Type - IPS" ] ;
+       fhir:description [ fhir:v "This value set provides a category for the condition as a clinical problem for inclusion in the patient summary." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/problems-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Problems - IPS" ] ;
+       fhir:description [ fhir:v "IPS Problem (Condition) codes value set.  This value set includes codes from SNOMED CT®: all descendants of 404684003 \\|Clinical finding (finding)\\|; all descendants of 243796009 \\|Situation with explicit context (situation)\\|; all descendants of 272379006 \\|Event (event)\\|; all descendants or self of 160245001 \\|No current problems or disability (situation)\\|.  The descendants of 71388002 \\|Procedure (procedure)\\| (which were included in the CORE problem list) are not included, as they are expected to be represented separately in the History of Procedures Section.\n\nSNOMED CT® ECL definition:\\\n< 404684003 \\|Clinical finding (finding)\\| OR < 243796009 \\|Situation with explicit context (situation)\\| OR < 272379006 \\|Event (event)\\| OR \\<\\< 160245001 \\|No current problems or disability (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Procedure-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure (IPS)" ] ;
+       fhir:description [ fhir:v "This profile represents the constraints applied to the Procedure resource by the IPS project, which specifies an entry of the History of Procedure for the international patient summary based on the FHIR standard R4." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Procedure" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Procedure/eumfh-39-07-1> ;
+         fhir:reference [ fhir:v "Procedure/eumfh-39-07-1" ]
+       ] ;
+       fhir:name [ fhir:v "Procedure: Surgical procedure" ] ;
+       fhir:description [ fhir:v "Procedure: Surgical procedure" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/procedures-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Procedures - IPS" ] ;
+       fhir:description [ fhir:v "IPS Procedure codes value set.  This value set includes codes from SNOMED CT®: all descendants of 71388002 \\|Procedure (procedure)\\|; excluding [all descendants or self of 14734007 \\|Administrative procedure (procedure)\\|; all descendants or self of 59524001 \\|Blood bank procedure (procedure)\\|; all descendants or self of 389067005 \\|Community health procedure (procedure)\\|; all descendants or self of 442006003 \\|Determination of information related to transfusion (procedure)\\|; all descendants or self of 225288009 \\|Environmental care procedure (procedure)\\|; all descendants or self of 308335008 \\|Patient encounter procedure (procedure)\\|; all descendants or self of 710135002 \\|Promotion (procedure)\\|; all descendants or self of 389084004 \\|Staff related procedure (procedure)\\|]; including all descendants or self of 787480003 \\|No known procedures (situation)\\|\n\nSNOMED CT® ECL definition:\\\n(< 71388002 \\|Procedure (procedure)\\| MINUS (\\<\\< 14734007 \\|Administrative procedure (procedure)\\| OR \\<\\< 59524001 \\|Blood bank procedure (procedure)\\| OR \\<\\< 389067005 \\|Community health procedure (procedure)\\| OR \\<\\< 442006003 \\|Determination of information related to transfusion (procedure)\\| OR \\<\\< 225288009 \\|Environmental care procedure (procedure)\\| OR \\<\\< 308335008 \\|Patient encounter procedure (procedure)\\| OR \\<\\< 710135002 \\|Promotion (procedure)\\| OR \\<\\< 389084004 \\|Staff related procedure (procedure)\\|)) OR << 787480003 \\|No known procedures (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Quantity-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Quantity (IPS)" ] ;
+       fhir:description [ fhir:v "Data type Quantity constrained to use UCUM as the code system for units" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Range-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Range (IPS)" ] ;
+       fhir:description [ fhir:v "Range constrained to UCUM as the code system for units." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Ratio-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Ratio (IPS)" ] ;
+       fhir:description [ fhir:v "Ratio data type, constrained to use UCUM as the code system for units." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-coded-values-laboratory-pathology-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Coded Values Laboratory/Pathology - IPS" ] ;
+       fhir:description [ fhir:v "IPS Results Coded Values Laboratory/Pathology value set.  This value set includes codes from SNOMED CT®: all descendants of 365636006 \\|Finding of blood group (finding)\\|; all descendants of 260411009 \\|Presence findings (qualifier value)\\|; all descendants of 272519000 \\|Absence findings (qualifier value)\\|; all descendants of 409822003 \\|Domain Bacteria (organism)\\|; all descendants of 441649000 \\|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\\|; all descendants of 414561005 \\|Kingdom Fungi (organism)\\|; all descendants of 84676004 \\|Prion (organism)\\|; all descendants of 49872002 \\|Virus (organism)\\|; all descendants of 417396000 \\|Kingdom Protozoa (organism)\\|; all descendants of 419036000 \\|Domain Archaea (organism)\\|; all descendants of 426785004 \\|Kingdom Chromista (organism)\\|; all descendants of 370570004 \\|Kingdom Protoctista (organism)\\|; all descendants of 417377004 \\|Kingdom Viridiplantae (organism)\\|; all descendants of 243565002 \\|Slime mold (organism)\\|; all descendants of 106253005 \\|Histologic grading differentiation AND/OR behavior (qualifier value)\\|; all descendants of 373369003 \\|Finding of histologic grading differentiation AND/OR behavior (finding)\\|; all descendants of 399981008 \\|Neoplasm and/or hamartoma (disorder)\\|\n\nSNOMED CT® ECL definition:\\\n< 365636006 \\|Finding of blood group (finding)\\| OR < 260411009 \\|Presence findings (qualifier value)\\| OR < 272519000 \\|Absence findings (qualifier value)\\| OR < 409822003 \\|Domain Bacteria (organism)\\| OR < 441649000 \\|Class Cestoda and/or Class Trematoda and/or Phylum Nemata (organism)\\| OR < 414561005 \\|Kingdom Fungi (organism)\\| OR < 84676004 \\|Prion (organism)\\| OR < 49872002 \\|Virus (organism)\\| OR < 417396000 \\|Kingdom Protozoa (organism)\\| OR < 419036000 \\|Domain Archaea (organism)\\| OR < 426785004 \\|Kingdom Chromista (organism)\\| OR < 370570004 \\|Kingdom Protoctista (organism)\\| OR < 417377004 \\|Kingdom Viridiplantae (organism)\\| OR < 243565002 \\|Slime mold (organism)\\| OR < 106253005 \\|Histologic grading differentiation AND/OR behavior (qualifier value)\\| OR < 373369003 \\|Finding of histologic grading differentiation AND/OR behavior (finding)\\| OR < 399981008 \\|Neoplasm and/or hamartoma (disorder)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-laboratory-pathology-observations-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Laboratory/Pathology Observation - IPS" ] ;
+       fhir:description [ fhir:v "Value Set Definition: LOINC {STATUS in {ACTIVE}, CLASSTYPE in {Laboratory class (1)}, CLASS exclude {LP62148-9 (NR STATS), LP175679-2 (H&P.HX.LAB), LP7785-1 (CHALSKIN), LP94892-4 (LABORDERS)}}" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-numobs-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-radiology-numobs-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Radiology Measurement Observation - IPS" ] ;
+       fhir:description [ fhir:v "Extensible value set including SNOMED CT and DICOM concepts for Linear, Area and Volume Measurements" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-observations-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-radiology-observations-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Radiology Observation - IPS" ] ;
+       fhir:description [ fhir:v "Value Set Definition: \nLOINC {STATUS in {ACTIVE}, CLASS in LP29684-5 (\\\"RAD\\\")}" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-txtobs-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-radiology-txtobs-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Radiology Textual Observation - IPS" ] ;
+       fhir:description [ fhir:v "IPS Results Radiology Textual Observation" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-collection-method-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-specimen-collection-method-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Specimen Collection Method - IPS" ] ;
+       fhir:description [ fhir:v "IPS Specimen collection method codes value set.  This value set includes codes from SNOMED CT®: all descendants or self of 129316008 \\|Aspiration - action (qualifier value)\\|; all descendants or self of 129314006 \\|Biopsy - action (qualifier value)\\|; all descendants or self of 129300006 \\|Puncture - action (qualifier value)\\|; all descendants or self of 129304002 \\|Excision - action (qualifier value)\\|; all descendants or self of 129323009 \\|Scraping - action (qualifier value)\\|; all descendants or self of 73416001 \\|Urine specimen collection, clean catch (procedure)\\|; all descendants or self of 225113003 \\|Timed urine collection (procedure)\\|; all descendants or self of 70777001 \\|Urine specimen collection, catheterized (procedure)\\|; all descendants or self of 386089008 \\|Collection of coughed sputum (procedure)\\|; all descendants or self of 278450005 \\|Finger-prick sampling (procedure)\\| \n\nSNOMED CT® ECL definition:\\\n\\<\\< 129316008 \\|Aspiration - action (qualifier value)\\| OR \\<\\< 129314006 \\|Biopsy - action (qualifier value)\\| OR \\<\\< 129300006 \\|Puncture - action (qualifier value)\\| OR \\<\\< 129304002 \\|Excision - action (qualifier value)\\| OR \\<\\< 129323009 \\|Scraping - action (qualifier value)\\| OR \\<\\< 73416001 \\|Urine specimen collection, clean catch (procedure)\\| OR \\<\\< 225113003 \\|Timed urine collection (procedure)\\| OR \\<\\< 70777001 \\|Urine specimen collection, catheterized (procedure)\\| OR \\<\\< 386089008 \\|Collection of coughed sputum (procedure)\\| OR \\<\\< 278450005 \\|Finger-prick sampling (procedure)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-type-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/results-specimen-type-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Results Specimen Type - IPS" ] ;
+       fhir:description [ fhir:v "IPS Specimen Type codes value set.  This value set includes codes from SNOMED CT®: all descendants of 123038009 \\|Specimen (specimen)\\|\n\nSNOMED CT® ECL definition:\\\n< 123038009 \\|Specimen (specimen)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:complex-type" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/SimpleQuantity-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "SimpleQuantity (IPS)" ] ;
+       fhir:description [ fhir:v "Data type profile SimpleQuantity constrained to use UCUM as the code system for units" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "StructureDefinition:resource" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips> ;
+         fhir:reference [ fhir:v "StructureDefinition/Specimen-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen (IPS)" ] ;
+       fhir:description [ fhir:v "This profile constrains the Specimen resource to represent the characteristics of a biological specimens in the context of laboratory results integrated to a patient summary." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "Specimen" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/Specimen/specimen-example-1> ;
+         fhir:reference [ fhir:v "Specimen/specimen-example-1" ]
+       ] ;
+       fhir:name [ fhir:v "Specimen: example" ] ;
+       fhir:description [ fhir:v "Specimen: example" ] ;
+       fhir:example [
+         fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips"^^xsd:anyURI ;
+         fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips>
+       ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/target-diseases-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccine Target Diseases - IPS" ] ;
+       fhir:description [ fhir:v "IPS Vaccine target disease codes value set.  This value set includes codes from SNOMED CT that represent specific vaccine target diseases (descendant concepts, if they exist, are not included).\n\nSNOMED CT® ECL definition:\\\n4834000 \\|Typhoid fever (disorder)\\| OR 6142004 \\|Influenza (disorder)\\| OR 16541001 \\|Yellow fever (disorder)\\| OR 14189004 \\|Measles (disorder)\\| OR 14168008 \\|Rabies (disorder)\\| OR 18624000 \\|Disease caused by Rotavirus (disorder)\\| OR 23502006 \\|Lyme disease (disorder)\\| OR 23511006 \\|Meningococcal infectious disease (disorder)\\| OR 24662006 \\|Influenza caused by Influenza B virus (disorder)\\| OR 25225006 \\|Disease caused by Adenovirus (disorder)\\| OR 27836007 \\|Pertussis (disorder)\\| OR 32398004 \\|Bronchitis (disorder)\\| OR 36653000 \\|Rubella (disorder)\\| OR 36989005 \\|Mumps (disorder)\\| OR 37246009 \\|Disease caused by rickettsiae (disorder)\\| OR 38907003 \\|Varicella (disorder)\\| OR 40468003 \\|Viral hepatitis, type A (disorder)\\| OR 50711007 \\|Viral hepatitis type C (disorder)\\| OR 52947006 \\|Japanese encephalitis virus disease (disorder)\\| OR 56717001 \\|Tuberculosis (disorder)\\| OR 58750007 \\|Plague (disorder)\\| OR 63650001 \\|Cholera (disorder)\\| OR 66071002 \\|Viral hepatitis type B (disorder)\\| OR 67924001 \\|Smallpox (disorder)\\| OR 70036007 \\|Haemophilus influenzae pneumonia (disorder)\\| OR 75702008 \\|Brucellosis (disorder)\\| OR 76902006 \\|Tetanus (disorder)\\| OR 85904008 \\|Paratyphoid fever (disorder)\\| OR 111852003 \\|Vaccinia (disorder)\\| OR 186150001 \\|Enteritis caused by rotavirus (disorder)\\| OR 186772009 \\|Rocky Mountain spotted fever (disorder)\\| OR 186788009 \\|Q fever (disorder)\\| OR 240532009 \\|Human papillomavirus infection (disorder)\\| OR 240613006 \\|Typhus group rickettsial disease (disorder)\\| OR 372244006 \\|Malignant melanoma (disorder)\\| OR 397430003 \\|Diphtheria caused by Corynebacterium diphtheriae (disorder)\\| OR 398102009 \\|Acute poliomyelitis (disorder)\\| OR 398565003 \\|Infection caused by Clostridium botulinum (disorder)\\| OR 409498004 \\|Anthrax (disorder)\\| OR 417093003 \\|Disease caused by West Nile virus (disorder)\\| OR 442438000 \\|Influenza caused by Influenza A virus (disorder)\\| OR 442696006 \\|Influenza caused by Influenza A virus subtype H1N1 (disorder)\\| OR 450715004 \\|Influenza caused by Influenza A virus subtype H7 (disorder)\\| OR 707448003 \\|Influenza caused by Influenza A virus subtype H7N9 (disorder)\\| OR 709410003 \\|Haemophilus influenzae type b infection (disorder)\\| OR 712986001 \\|Encephalitis caused by tick-borne encephalitis virus (disorder)\\| OR 713083002 \\|Influenza caused by Influenza A virus subtype H5 (disorder)\\| OR 772810003 \\|Influenza caused by Influenza A virus subtype H3N2 (disorder)\\| OR 772828001 \\|Influenza caused by Influenza A virus subtype H5N1 (disorder)\\| OR 840539006 \\|Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/vaccines-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccines - IPS" ] ;
+       fhir:description [ fhir:v "IPS Vaccine codes value set.  This value set includes codes from SNOMED CT®: all descendants of 787859002 \\|Vaccine product (product)\\|; all descendants or self of 787482006 \\|No known immunizations (situation)\\|\n\nSNOMED CT® ECL definition:\\\n< 787859002 \\|Vaccine product (product)\\| OR \\<\\< 787482006 \\|No known immunizations (situation)\\|" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/vaccines-whoatc-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "Vaccines WHO ATC - IPS" ] ;
+       fhir:description [ fhir:v "IPS Vaccine codes value set.  This value set includes codes from the World Health Organization Anatomical Therapeutic Chemical (ATC) classification system: all descendants of J07 \"VACCINES\"" ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/resource-information"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "ValueSet" ]
+       ] ) ;
+       fhir:reference [
+         fhir:link <http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips> ;
+         fhir:reference [ fhir:v "ValueSet/whoatc-uv-ips" ]
+       ] ;
+       fhir:name [ fhir:v "WHO ATC - IPS" ] ;
+       fhir:description [ fhir:v "World Health Organization Anatomical Therapeutic Chemical (ATC) classification system." ] ;
+       fhir:example [ fhir:v "false"^^xsd:boolean ]
+     ] ) ;
+     fhir:page [
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "informative" ]
+       ] [
+         fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+         fhir:value [ fhir:v "toc.html"^^xsd:anyURI ]
+       ] ) ;
+       fhir:name [ fhir:v "toc.html"^^xsd:anyURI ] ;
+       fhir:title [ fhir:v "Table of Contents" ] ;
+       fhir:generation [ fhir:v "html" ] ;
+       fhir:page ( [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "index.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "index.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Home" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "changes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "changes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Changes" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "copyrights.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "copyrights.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Copyrights" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "datatypes.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "datatypes.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Datatypes" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Design-Conventions.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Design-Conventions.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Design Conventions" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "downloads.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "downloads.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Downloads" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "examples.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "examples.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Examples" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "General-Principles.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "General-Principles.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "General Principles" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Generation-and-Data-Inclusion.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Generation-and-Data-Inclusion.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Generation and Data Inclusion" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Known-Issues-and-Future-Development.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Known-Issues-and-Future-Development.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Known Issues and Future Development" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Privacy-and-Security-Considerations.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Privacy-and-Security-Considerations.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Privacy and Security Considerations" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "profiles.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "profiles.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Profiles" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "Structure-of-the-International-Patient-Summary.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "Structure-of-the-International-Patient-Summary.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Structure of the International Patient Summary" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] [
+         fhir:extension ( [
+           fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "informative" ]
+         ] [
+           fhir:url [ fhir:v "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name"^^xsd:anyURI ] ;
+           fhir:value [ fhir:v "terminology.html"^^xsd:anyURI ]
+         ] ) ;
+         fhir:name [ fhir:v "terminology.html"^^xsd:anyURI ] ;
+         fhir:title [ fhir:v "Terminology" ] ;
+         fhir:generation [ fhir:v "markdown" ]
+       ] )
+     ] ;
+     fhir:parameter ( [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/capabilities" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/examples" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/extensions" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/models" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/operations" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/profiles" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/vocabulary" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/maps" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/testing" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "input/history" ]
+     ] [
+       fhir:code [ fhir:v "path-resource" ] ;
+       fhir:value [ fhir:v "fsh-generated/resources" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "template/config" ]
+     ] [
+       fhir:code [ fhir:v "path-pages" ] ;
+       fhir:value [ fhir:v "input/images" ]
+     ] [
+       fhir:code [ fhir:v "path-tx-cache" ] ;
+       fhir:value [ fhir:v "input-cache/txcache" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Flag/546482> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/allergy-intolerance-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/allergy-reaction-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/AllergyIntolerance/allergyintolerance-multiple-codings> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/AllergyIntolerance/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/AllergyIntolerance/allergyintolerance-with-abatement> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/body-site-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/CodeableConcept-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Coding-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Condition/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/current-smoking-status-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Device/ips-example-imaging-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Device/eumfh-70-275-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/DeviceUseStatement/eumfh-70-275-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/DiagnosticReport/hemoglobin> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/healthcare-professional-roles-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ImagingStudy/TII-ImagingStudy-5-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Immunization/75680> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Bundle/IPS-examples-Bundle-01> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Bundle/bundle-minimal> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Bundle/bundle-no-info-required-sections> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Bundle/IPS-examples-Bundle-with-immunization> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Composition/composition-minimal> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/CapabilityStatement/ips-server> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/OperationDefinition/summary> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medical-devices-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Medication/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/MedicationRequest/eumfh-39-07-1-request> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medication-example-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medication-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/MedicationStatement/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medicine-active-substances-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/medicine-route-of-administration> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/pathology-cancer> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/hemoglobin> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/ips-example-imaging-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/ips-example-imaging-4> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/pregnancy-edd-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/pregnancy-outcome-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/pregnancy-status-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/serum-creatinine-adult> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/alcohol-use-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/tobacco-use-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Observation/urine-wbc-range> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/lab-org-example> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/simple-org> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/patient-example-female> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Patient/66033> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/personal-relationship-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Practitioner/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/PractitionerRole/simple-pr> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/pregnancies-summary-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/edd-method-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/pregnancy-status-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/problem-type-loinc> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/problem-type-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/problems-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Procedure/eumfh-39-07-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/procedures-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Quantity-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Range-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Ratio-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-coded-values-laboratory-pathology-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-laboratory-pathology-observations-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-numobs-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-observations-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-radiology-txtobs-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-collection-method-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-type-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/SimpleQuantity-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Specimen/specimen-example-1> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/vaccines-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/vaccines-whoatc-uv-ips> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/ValueSet/whoatc-uv-ips> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

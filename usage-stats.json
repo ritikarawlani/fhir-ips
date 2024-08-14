@@ -1,0 +1,280 @@
+{
+  "package": "hl7.fhir.uv.ips",
+  "version": "2.0.0-ballot",
+  "fhirVersion": "4.0.1",
+  "jurisdiction": "001",
+  "extensions": [],
+  "profiles": {
+    "AllergyIntolerance": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/AllergyIntolerance-uv-ips",
+        "title": "Allergy Intolerance (IPS)"
+      }
+    ],
+    "Bundle": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips",
+        "title": "Bundle - IPS"
+      }
+    ],
+    "Composition": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Composition-uv-ips",
+        "title": "Composition (IPS)"
+      }
+    ],
+    "Condition": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Condition-uv-ips",
+        "title": "Condition (IPS)"
+      }
+    ],
+    "Device": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-observer-uv-ips",
+        "title": "Device - performer, observer"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips",
+        "title": "Device (IPS)"
+      }
+    ],
+    "DeviceUseStatement": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/DeviceUseStatement-uv-ips",
+        "title": "Device Use Statement (IPS)"
+      }
+    ],
+    "DiagnosticReport": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips",
+        "title": "DiagnosticReport (IPS)"
+      }
+    ],
+    "Flag": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Flag-alert-uv-ips",
+        "title": "Flag - Alert (IPS)"
+      }
+    ],
+    "ImagingStudy": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/ImagingStudy-uv-ips",
+        "title": "Imaging Study (IPS)"
+      }
+    ],
+    "Immunization": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Immunization-uv-ips",
+        "title": "Immunization (IPS)"
+      }
+    ],
+    "Medication": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Medication-uv-ips",
+        "title": "Medication (IPS)"
+      }
+    ],
+    "MedicationRequest": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips",
+        "title": "Medication Request (IPS)"
+      }
+    ],
+    "MedicationStatement": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationStatement-uv-ips",
+        "title": "Medication Statement (IPS)"
+      }
+    ],
+    "Observation": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-alcoholuse-uv-ips",
+        "title": "Observation - SH: alcohol use"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-edd-uv-ips",
+        "title": "Observation - Pregnancy: EDD"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-outcome-uv-ips",
+        "title": "Observation - Pregnancy: outcome"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-pregnancy-status-uv-ips",
+        "title": "Observation - Pregnancy: status"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips",
+        "title": "Observation Results: laboratory/pathology (IPS)"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips",
+        "title": "Observation Results: radiology (IPS)"
+      },
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-tobaccouse-uv-ips",
+        "title": "Observation - SH: tobacco use"
+      }
+    ],
+    "Organization": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Organization-uv-ips",
+        "title": "Organization (IPS)"
+      }
+    ],
+    "Patient": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Patient-uv-ips",
+        "title": "Patient (IPS)"
+      }
+    ],
+    "Practitioner": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Practitioner-uv-ips",
+        "title": "Practitioner (IPS)"
+      }
+    ],
+    "PractitionerRole": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/PractitionerRole-uv-ips",
+        "title": "PractitionerRole (IPS)"
+      }
+    ],
+    "Procedure": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips",
+        "title": "Procedure (IPS)"
+      }
+    ],
+    "Specimen": [
+      {
+        "url": "http://hl7.org/fhir/uv/ips/StructureDefinition/Specimen-uv-ips",
+        "title": "Specimen (IPS)"
+      }
+    ]
+  },
+  "usage": {
+    "http://hl7.org/fhir/StructureDefinition/allergyintolerance-abatement": [
+      "AllergyIntolerance"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/capabilitystatement-expectation": [
+      "CapabilityStatement.rest.resource",
+      "CapabilityStatement.rest.resource.operation",
+      "CapabilityStatement.rest.resource.supportedProfile"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/data-absent-reason": [
+      "AllergyIntolerance.onsetDateTime",
+      "DeviceUseStatement.timingDateTime",
+      "DeviceUseStatement.timing[x]",
+      "DiagnosticReport.effective[x]",
+      "Immunization.occurrence[x]",
+      "MedicationRequest.dispenseRequest.validityPeriod",
+      "MedicationStatement.effective[x]",
+      "Observation.effective[x]",
+      "Procedure.performedPeriod",
+      "Procedure.performed[x]"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice-explanation": [
+      "StructureDefinition.snapshot.element.constraint"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet": [
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-translatable": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/elementdefinition-type-must-support": [
+      "StructureDefinition.differential.element.type",
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/flag-priority": [
+      "Flag"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/note": [
+      "Composition.section"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/patient-citizenship": [
+      "Patient"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/regex": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-category": [
+      "StructureDefinition"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-display-hint": [
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-explicit-type-name": [
+      "StructureDefinition.differential.element",
+      "StructureDefinition.snapshot.element"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm": [
+      "CapabilityStatement",
+      "ImplementationGuide",
+      "OperationDefinition",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy": [
+      "StructureDefinition.snapshot.element.type"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status": [
+      "CapabilityStatement",
+      "ImplementationGuide",
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page",
+      "OperationDefinition",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg": [
+      "CapabilityStatement",
+      "ImplementationGuide",
+      "OperationDefinition",
+      "StructureDefinition",
+      "ValueSet"
+    ],
+    "http://hl7.org/fhir/StructureDefinition/translation": [
+      "Bundle.entry.resource.code.coding.display",
+      "Bundle.entry.resource.route.coding.display",
+      "Bundle.entry.resource.site.coding.display",
+      "Bundle.entry.resource.vaccineCode.coding.display",
+      "Coding.display",
+      "Immunization.route.coding.display",
+      "Immunization.site.coding.display",
+      "Immunization.vaccineCode.coding.display"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/additional-binding": [
+      "StructureDefinition.differential.element.binding",
+      "StructureDefinition.snapshot.element.binding"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-internal-dependency": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-page-name": [
+      "ImplementationGuide.definition.page",
+      "ImplementationGuide.definition.page.page"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter": [
+      "ImplementationGuide.definition"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment": [
+      "ImplementationGuide.dependsOn"
+    ],
+    "http://hl7.org/fhir/tools/StructureDefinition/resource-information": [
+      "ImplementationGuide.definition.resource"
+    ]
+  }
+}

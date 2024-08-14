@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="medicine-doseform"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet medicine-doseform</b></p><a name="medicine-doseform"> </a><a name="hcmedicine-doseform"> </a><a name="medicine-doseform-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = PDF and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = CMT and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = CDF and domain  = Human and Veterinary</li><li>Include codes from<code>http://standardterms.edqm.eu</code> where status  = Current, class  = PFT and domain  = Human and Veterinary</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ValueSet/medicine-doseform"/>
+  <identifier>
+    <use value="official"/>
+    <system value="http://art-decor.org/ns/oids/vs"/>
+    <value value="2.16.840.1.113883.11.22.25"/>
+  </identifier>
+  <version value="2.0.0-ballot"/>
+  <name value="MedicineDoseFormUvIps"/>
+  <title value="Medicine Doseform - IPS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-08-14T14:11:06+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <description value="EDQM (European Directorate for the Quality of Medicines and Healthcare) Dose Form codes.  This Value Set includes all the EDQM Standard Terms having:  &#xA;[Concept Status] = ‘Current’ AND  &#xA;[Concept Class] IN (‘PDF’, ‘CMT’, ‘CDF’, ‘PFT') AND  &#xA;[Domain] = 'Human and Veterinary'  &#xA;&#xA;PDF = 'Pharmaceutical dose form'; CMT = 'Combined terms'; CDF = 'Combined pharmaceutical dose form'; PFT = 'Patient Friendly'"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This artifact includes content from EDQM Standard Terms. EDQM Standard Terms are copyright European Directorate for the Quality of Medicines. Terms &amp; Conditions in https://www.edqm.eu/en/standard-terms-database"/>
+  <compose>
+    <include>
+      <system value="http://standardterms.edqm.eu"/>
+      <filter>
+        <property value="status"/>
+        <op value="="/>
+        <value value="Current"/>
+      </filter>
+      <filter>
+        <property value="class"/>
+        <op value="="/>
+        <value value="PDF"/>
+      </filter>
+      <filter>
+        <property value="domain"/>
+        <op value="="/>
+        <value value="Human and Veterinary"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://standardterms.edqm.eu"/>
+      <filter>
+        <property value="status"/>
+        <op value="="/>
+        <value value="Current"/>
+      </filter>
+      <filter>
+        <property value="class"/>
+        <op value="="/>
+        <value value="CMT"/>
+      </filter>
+      <filter>
+        <property value="domain"/>
+        <op value="="/>
+        <value value="Human and Veterinary"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://standardterms.edqm.eu"/>
+      <filter>
+        <property value="status"/>
+        <op value="="/>
+        <value value="Current"/>
+      </filter>
+      <filter>
+        <property value="class"/>
+        <op value="="/>
+        <value value="CDF"/>
+      </filter>
+      <filter>
+        <property value="domain"/>
+        <op value="="/>
+        <value value="Human and Veterinary"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://standardterms.edqm.eu"/>
+      <filter>
+        <property value="status"/>
+        <op value="="/>
+        <value value="Current"/>
+      </filter>
+      <filter>
+        <property value="class"/>
+        <op value="="/>
+        <value value="PFT"/>
+      </filter>
+      <filter>
+        <property value="domain"/>
+        <op value="="/>
+        <value value="Human and Veterinary"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

@@ -1,0 +1,70 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix loinc: <https://loinc.org/rdf/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Observation/pathology-cancer> a fhir:Observation ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "pathology-cancer"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-laboratory-pathology-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Observation pathology-cancer</b></p><a name=\"pathology-cancer\"> </a><a name=\"hcpathology-cancer\"> </a><a name=\"pathology-cancer-en-US\"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title=\"Codes:{http://terminology.hl7.org/CodeSystem/observation-category laboratory}\">Laboratory</span></p><p><b>code</b>: <span title=\"Codes:{http://loinc.org 16112-5}\">Estrogen receptor [Interpretation] in Tissue</span></p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>effective</b>: 2020-04-22 19:20:00+0200</p><p><b>performer</b>: <a href=\"Organization-TII-Organization1.html\">Organization Someplace General Hospital</a></p><p><b>value</b>: <span title=\"Codes:{http://snomed.info/sct 416053008}\">Estrogen receptor positive tumor</span></p><p><b>method</b>: <span title=\"Codes:{http://snomed.info/sct 117259009}\">Microscopy</span></p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "final"] ; # 
+  fhir:category ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/observation-category"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "laboratory" ]
+     ] )
+  ] ) ; # 
+  fhir:code [
+     fhir:coding ( [
+       a loinc:16112-5 ;
+       fhir:system [ fhir:v "http://loinc.org"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "16112-5" ] ;
+       fhir:display [ fhir:v "Estrogen receptor [Interpretation] in Tissue" ]
+     ] )
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ]
+  ] ; # 
+  fhir:effective [ fhir:v "2020-04-22T19:20:00+02:00"^^xsd:dateTime] ; # 
+  fhir:performer ( [
+     fhir:link <http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> ;
+     fhir:reference [ fhir:v "Organization/TII-Organization1" ]
+  ] ) ; # 
+  fhir:value [
+     a fhir:CodeableConcept ;
+     fhir:coding ( [
+       a sct:416053008 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "416053008" ] ;
+       fhir:display [ fhir:v "Estrogen receptor positive tumor" ]
+     ] )
+  ] ; # 
+  fhir:method [
+     fhir:coding ( [
+       a sct:117259009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "117259009" ] ;
+       fhir:display [ fhir:v "Microscopy" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+<http://hl7.org/fhir/uv/ips/Organization/TII-Organization1> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

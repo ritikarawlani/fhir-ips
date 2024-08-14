@@ -1,0 +1,61 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Procedure/eumfh-39-07-1> a fhir:Procedure ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eumfh-39-07-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Procedure-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Procedure eumfh-39-07-1</b></p><a name=\"eumfh-39-07-1\"> </a><a name=\"hceumfh-39-07-1\"> </a><a name=\"eumfh-39-07-1-en-US\"> </a><p><b>status</b>: Completed</p><p><b>category</b>: <span title=\"Codes:{http://snomed.info/sct 387713003}\">Surgical procedure</span></p><p><b>code</b>: <span title=\"Codes:{http://snomed.info/sct 36969009}, {http://snomed.info/sct 233258006}\">Previous balloon angioplasty on mid-LAD stenosis with STENT Implantation</span></p><p><b>subject</b>: <a href=\"Patient-eumfh-39-07.html\">Alexander Heig (inject 39-07)</a></p><p><b>performed</b>: ?? --&gt; (ongoing)</p></div>"
+  ] ; # 
+  fhir:status [ fhir:v "completed"] ; # 
+  fhir:category [
+     fhir:coding ( [
+       a sct:387713003 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "387713003" ] ;
+       fhir:display [ fhir:v "Surgical procedure" ]
+     ] )
+  ] ; # 
+  fhir:code [
+     fhir:coding ( [
+       a sct:36969009 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "36969009" ] ;
+       fhir:display [ fhir:v "Placement of stent in coronary artery" ]
+     ] [
+       a sct:233258006 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "233258006" ] ;
+       fhir:display [ fhir:v "Balloon angioplasty of artery" ]
+     ] ) ;
+     fhir:text [ fhir:v "Previous balloon angioplasty on mid-LAD stenosis with STENT Implantation" ]
+  ] ; # 
+  fhir:subject [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ] ;
+     fhir:display [ fhir:v "Alexander Heig (inject 39-07)" ]
+  ] ; # 
+  fhir:performed [
+     a fhir:Period ;
+     fhir:extension ( [
+       fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/data-absent-reason"^^xsd:anyURI ] ;
+       fhir:value [ fhir:v "unknown" ]
+     ] )
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

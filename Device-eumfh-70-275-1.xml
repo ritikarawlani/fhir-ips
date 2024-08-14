@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Device xmlns="http://hl7.org/fhir">
+  <id value="eumfh-70-275-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Device eumfh-70-275-1</b></p><a name="eumfh-70-275-1"> </a><a name="hceumfh-70-275-1"> </a><a name="eumfh-70-275-1-en-US"> </a><p><b>type</b>: <span title="Codes:{http://snomed.info/sct 787483001}">No known device use (situation)</span></p><p><b>patient</b>: <a href="Patient-eumfh-39-07.html">Annelise Black (inject 70-275)</a></p></div>
+  </text>
+  <type>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="787483001"/>
+      <display value="No known device use (situation)"/>
+    </coding>
+  </type>
+  <patient>
+    <reference value="Patient/eumfh-39-07"/>
+    <display value="Annelise Black (inject 70-275)"/>
+  </patient>
+</Device>

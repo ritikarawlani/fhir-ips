@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Flag xmlns="http://hl7.org/fhir">
+  <id value="546482"/>
+  <language value="en-US"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US"><p class="res-header-id"><b>Generated Narrative: Flag 546482</b></p><a name="546482"> </a><a name="hc546482"> </a><a name="546482-en-US"> </a><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Language: en-US</p></div><p><b>status</b>: Active</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/flag-category contact}">Subject Contact</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 370388006}">Patient Immunocompromised</span></p><p><b>subject</b>: <a href="Patient-66033.html">Marie Lux-Brennard  Female, DoB: 1998-04-17 ( urn:oid:1.3.182.4.4#1998041799999)</a></p></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/flag-priority">
+    <valueCodeableConcept>
+      <coding>
+        <system value="http://hl7.org/fhir/flag-priority-code"/>
+        <code value="PH"/>
+        <display value="High priority"/>
+      </coding>
+    </valueCodeableConcept>
+  </extension>
+  <status value="active"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/flag-category"/>
+      <code value="contact"/>
+      <display value="Subject Contact"/>
+    </coding>
+    <text value="Subject Contact"/>
+  </category>
+  <code>
+    <coding>
+      <system value="http://snomed.info/sct"/>
+      <code value="370388006"/>
+      <display value="Patient immunocompromised (finding)"/>
+    </coding>
+    <text value="Patient Immunocompromised"/>
+  </code>
+  <subject>
+    <reference value="Patient/66033"/>
+  </subject>
+</Flag>

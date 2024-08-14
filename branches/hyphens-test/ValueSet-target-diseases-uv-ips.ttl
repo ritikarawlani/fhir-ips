@@ -1,0 +1,232 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "target-diseases-uv-ips"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet target-diseases-uv-ips</b></p><a name=\"target-diseases-uv-ips\"> </a><a name=\"hctarget-diseases-uv-ips\"> </a><a name=\"target-diseases-uv-ips-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://www.snomed.org/\"><code>http://snomed.info/sct</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href=\"http://snomed.info/id/4834000\">4834000</a></td><td>Typhoid fever (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/6142004\">6142004</a></td><td>Influenza (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/16541001\">16541001</a></td><td>Yellow fever (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/14189004\">14189004</a></td><td>Measles (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/14168008\">14168008</a></td><td>Rabies (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/18624000\">18624000</a></td><td>Disease caused by Rotavirus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/23502006\">23502006</a></td><td>Lyme disease (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/23511006\">23511006</a></td><td>Meningococcal infectious disease (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/24662006\">24662006</a></td><td>Influenza caused by Influenza B virus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/25225006\">25225006</a></td><td>Disease caused by Adenovirus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/27836007\">27836007</a></td><td>Pertussis (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/32398004\">32398004</a></td><td>Bronchitis (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/36653000\">36653000</a></td><td>Rubella (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/36989005\">36989005</a></td><td>Mumps (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/37246009\">37246009</a></td><td>Disease caused by rickettsiae (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/38907003\">38907003</a></td><td>Varicella (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/40468003\">40468003</a></td><td>Viral hepatitis, type A (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/50711007\">50711007</a></td><td>Viral hepatitis type C (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/52947006\">52947006</a></td><td>Japanese encephalitis virus disease (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/56717001\">56717001</a></td><td>Tuberculosis (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/58750007\">58750007</a></td><td>Plague (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/63650001\">63650001</a></td><td>Cholera (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/66071002\">66071002</a></td><td>Viral hepatitis type B (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/67924001\">67924001</a></td><td>Smallpox (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/70036007\">70036007</a></td><td>Haemophilus influenzae pneumonia (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/75702008\">75702008</a></td><td>Brucellosis (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/76902006\">76902006</a></td><td>Tetanus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/85904008\">85904008</a></td><td>Paratyphoid fever (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/111852003\">111852003</a></td><td>Vaccinia (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/186150001\">186150001</a></td><td>Enteritis caused by rotavirus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/186772009\">186772009</a></td><td>Rocky Mountain spotted fever (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/186788009\">186788009</a></td><td>Q fever (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/240532009\">240532009</a></td><td>Human papillomavirus infection (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/240613006\">240613006</a></td><td>Typhus group rickettsial disease (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/372244006\">372244006</a></td><td>Malignant melanoma (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/397430003\">397430003</a></td><td>Diphtheria caused by Corynebacterium diphtheriae (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/398102009\">398102009</a></td><td>Acute poliomyelitis (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/398565003\">398565003</a></td><td>Infection caused by Clostridium botulinum (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/409498004\">409498004</a></td><td>Anthrax (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/417093003\">417093003</a></td><td>Disease caused by West Nile virus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/442438000\">442438000</a></td><td>Influenza caused by Influenza A virus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/442696006\">442696006</a></td><td>Influenza caused by Influenza A virus subtype H1N1 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/450715004\">450715004</a></td><td>Influenza caused by Influenza A virus subtype H7 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/707448003\">707448003</a></td><td>Influenza caused by Influenza A virus subtype H7N9 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/709410003\">709410003</a></td><td>Haemophilus influenzae type b infection (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/712986001\">712986001</a></td><td>Encephalitis caused by tick-borne encephalitis virus (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/713083002\">713083002</a></td><td>Influenza caused by Influenza A virus subtype H5 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/772810003\">772810003</a></td><td>Influenza caused by Influenza A virus subtype H3N2 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/772828001\">772828001</a></td><td>Influenza caused by Influenza A virus subtype H5N1 (disorder)</td></tr><tr><td><a href=\"http://snomed.info/id/840539006\">840539006</a></td><td>Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "VaccineTargetDiseasesUvIps"] ; # 
+  fhir:title [ fhir:v "Vaccine Target Diseases - IPS"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-07-31T14:25:49+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "IPS Vaccine target disease codes value set.  This value set includes codes from SNOMED CT that represent specific vaccine target diseases (descendant concepts, if they exist, are not included).\n\nSNOMED CT® ECL definition:\\\n4834000 \\|Typhoid fever (disorder)\\| OR 6142004 \\|Influenza (disorder)\\| OR 16541001 \\|Yellow fever (disorder)\\| OR 14189004 \\|Measles (disorder)\\| OR 14168008 \\|Rabies (disorder)\\| OR 18624000 \\|Disease caused by Rotavirus (disorder)\\| OR 23502006 \\|Lyme disease (disorder)\\| OR 23511006 \\|Meningococcal infectious disease (disorder)\\| OR 24662006 \\|Influenza caused by Influenza B virus (disorder)\\| OR 25225006 \\|Disease caused by Adenovirus (disorder)\\| OR 27836007 \\|Pertussis (disorder)\\| OR 32398004 \\|Bronchitis (disorder)\\| OR 36653000 \\|Rubella (disorder)\\| OR 36989005 \\|Mumps (disorder)\\| OR 37246009 \\|Disease caused by rickettsiae (disorder)\\| OR 38907003 \\|Varicella (disorder)\\| OR 40468003 \\|Viral hepatitis, type A (disorder)\\| OR 50711007 \\|Viral hepatitis type C (disorder)\\| OR 52947006 \\|Japanese encephalitis virus disease (disorder)\\| OR 56717001 \\|Tuberculosis (disorder)\\| OR 58750007 \\|Plague (disorder)\\| OR 63650001 \\|Cholera (disorder)\\| OR 66071002 \\|Viral hepatitis type B (disorder)\\| OR 67924001 \\|Smallpox (disorder)\\| OR 70036007 \\|Haemophilus influenzae pneumonia (disorder)\\| OR 75702008 \\|Brucellosis (disorder)\\| OR 76902006 \\|Tetanus (disorder)\\| OR 85904008 \\|Paratyphoid fever (disorder)\\| OR 111852003 \\|Vaccinia (disorder)\\| OR 186150001 \\|Enteritis caused by rotavirus (disorder)\\| OR 186772009 \\|Rocky Mountain spotted fever (disorder)\\| OR 186788009 \\|Q fever (disorder)\\| OR 240532009 \\|Human papillomavirus infection (disorder)\\| OR 240613006 \\|Typhus group rickettsial disease (disorder)\\| OR 372244006 \\|Malignant melanoma (disorder)\\| OR 397430003 \\|Diphtheria caused by Corynebacterium diphtheriae (disorder)\\| OR 398102009 \\|Acute poliomyelitis (disorder)\\| OR 398565003 \\|Infection caused by Clostridium botulinum (disorder)\\| OR 409498004 \\|Anthrax (disorder)\\| OR 417093003 \\|Disease caused by West Nile virus (disorder)\\| OR 442438000 \\|Influenza caused by Influenza A virus (disorder)\\| OR 442696006 \\|Influenza caused by Influenza A virus subtype H1N1 (disorder)\\| OR 450715004 \\|Influenza caused by Influenza A virus subtype H7 (disorder)\\| OR 707448003 \\|Influenza caused by Influenza A virus subtype H7N9 (disorder)\\| OR 709410003 \\|Haemophilus influenzae type b infection (disorder)\\| OR 712986001 \\|Encephalitis caused by tick-borne encephalitis virus (disorder)\\| OR 713083002 \\|Influenza caused by Influenza A virus subtype H5 (disorder)\\| OR 772810003 \\|Influenza caused by Influenza A virus subtype H3N2 (disorder)\\| OR 772828001 \\|Influenza caused by Influenza A virus subtype H5N1 (disorder)\\| OR 840539006 \\|Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)\\|"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:copyright [ fhir:v "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "4834000" ] ;
+         fhir:display [ fhir:v "Typhoid fever (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "6142004" ] ;
+         fhir:display [ fhir:v "Influenza (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "16541001" ] ;
+         fhir:display [ fhir:v "Yellow fever (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "14189004" ] ;
+         fhir:display [ fhir:v "Measles (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "14168008" ] ;
+         fhir:display [ fhir:v "Rabies (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "18624000" ] ;
+         fhir:display [ fhir:v "Disease caused by Rotavirus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "23502006" ] ;
+         fhir:display [ fhir:v "Lyme disease (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "23511006" ] ;
+         fhir:display [ fhir:v "Meningococcal infectious disease (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "24662006" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza B virus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "25225006" ] ;
+         fhir:display [ fhir:v "Disease caused by Adenovirus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "27836007" ] ;
+         fhir:display [ fhir:v "Pertussis (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "32398004" ] ;
+         fhir:display [ fhir:v "Bronchitis (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "36653000" ] ;
+         fhir:display [ fhir:v "Rubella (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "36989005" ] ;
+         fhir:display [ fhir:v "Mumps (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "37246009" ] ;
+         fhir:display [ fhir:v "Disease caused by rickettsiae (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "38907003" ] ;
+         fhir:display [ fhir:v "Varicella (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "40468003" ] ;
+         fhir:display [ fhir:v "Viral hepatitis, type A (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "50711007" ] ;
+         fhir:display [ fhir:v "Viral hepatitis type C (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "52947006" ] ;
+         fhir:display [ fhir:v "Japanese encephalitis virus disease (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "56717001" ] ;
+         fhir:display [ fhir:v "Tuberculosis (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "58750007" ] ;
+         fhir:display [ fhir:v "Plague (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "63650001" ] ;
+         fhir:display [ fhir:v "Cholera (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "66071002" ] ;
+         fhir:display [ fhir:v "Viral hepatitis type B (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "67924001" ] ;
+         fhir:display [ fhir:v "Smallpox (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "70036007" ] ;
+         fhir:display [ fhir:v "Haemophilus influenzae pneumonia (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "75702008" ] ;
+         fhir:display [ fhir:v "Brucellosis (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "76902006" ] ;
+         fhir:display [ fhir:v "Tetanus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "85904008" ] ;
+         fhir:display [ fhir:v "Paratyphoid fever (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "111852003" ] ;
+         fhir:display [ fhir:v "Vaccinia (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "186150001" ] ;
+         fhir:display [ fhir:v "Enteritis caused by rotavirus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "186772009" ] ;
+         fhir:display [ fhir:v "Rocky Mountain spotted fever (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "186788009" ] ;
+         fhir:display [ fhir:v "Q fever (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "240532009" ] ;
+         fhir:display [ fhir:v "Human papillomavirus infection (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "240613006" ] ;
+         fhir:display [ fhir:v "Typhus group rickettsial disease (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "372244006" ] ;
+         fhir:display [ fhir:v "Malignant melanoma (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "397430003" ] ;
+         fhir:display [ fhir:v "Diphtheria caused by Corynebacterium diphtheriae (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "398102009" ] ;
+         fhir:display [ fhir:v "Acute poliomyelitis (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "398565003" ] ;
+         fhir:display [ fhir:v "Infection caused by Clostridium botulinum (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "409498004" ] ;
+         fhir:display [ fhir:v "Anthrax (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "417093003" ] ;
+         fhir:display [ fhir:v "Disease caused by West Nile virus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "442438000" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "442696006" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H1N1 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "450715004" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H7 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "707448003" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H7N9 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "709410003" ] ;
+         fhir:display [ fhir:v "Haemophilus influenzae type b infection (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "712986001" ] ;
+         fhir:display [ fhir:v "Encephalitis caused by tick-borne encephalitis virus (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "713083002" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H5 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "772810003" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H3N2 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "772828001" ] ;
+         fhir:display [ fhir:v "Influenza caused by Influenza A virus subtype H5N1 (disorder)" ]
+       ] [
+         fhir:code [ fhir:v "840539006" ] ;
+         fhir:display [ fhir:v "Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

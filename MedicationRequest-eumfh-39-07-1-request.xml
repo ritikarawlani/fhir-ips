@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="eumfh-39-07-1-request"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/MedicationRequest-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: MedicationRequest eumfh-39-07-1-request</b></p><a name="eumfh-39-07-1-request"> </a><a name="hceumfh-39-07-1-request"> </a><a name="eumfh-39-07-1-request-en-US"> </a><p><b>status</b>: Active</p><p><b>intent</b>: Order</p><p><b>medication</b>: <a href="Medication-eumfh-39-07-1.html">simvastatin</a></p><p><b>subject</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig (inject 39-07)</a></p><blockquote><p><b>dosageInstruction</b></p></blockquote><h3>DispenseRequests</h3><table class="grid"><tr><td style="display: none">-</td><td><b>ValidityPeriod</b></td></tr><tr><td style="display: none">*</td><td>2021-01-01 --&gt; (ongoing)</td></tr></table></div>
+  </text>
+  <status value="active"/>
+  <intent value="order"/>
+  <medicationReference>
+    <reference value="Medication/eumfh-39-07-1"/>
+    <display value="simvastatin"/>
+  </medicationReference>
+  <subject>
+    <reference value="Patient/eumfh-39-07"/>
+    <display value="Alexander Heig (inject 39-07)"/>
+  </subject>
+  <dosageInstruction>
+    <text value="40 mg/day"/>
+    <timing>
+      <repeat>
+        <frequency value="1"/>
+        <period value="1"/>
+        <periodUnit value="d"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="40"/>
+        <unit value="mg"/>
+        <system value="http://unitsofmeasure.org"/>
+        <code value="mg"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+  <dispenseRequest>
+    <validityPeriod>
+      <start value="2021-01-01"/>
+    </validityPeriod>
+  </dispenseRequest>
+</MedicationRequest>

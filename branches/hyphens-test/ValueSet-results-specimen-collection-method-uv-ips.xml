@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="results-specimen-collection-method-uv-ips"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/StructureDefinition/shareablevalueset"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: ValueSet results-specimen-collection-method-uv-ips</b></p><a name="results-specimen-collection-method-uv-ips"> </a><a name="hcresults-specimen-collection-method-uv-ips"> </a><a name="results-specimen-collection-method-uv-ips-en-US"> </a><p>This value set includes codes based on the following rules:</p><ul><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 129316008 (Aspiration - action)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 129314006 (Biopsy - action)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 129300006 (Puncture - action)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 129304002 (Excision - action)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 129323009 (Scraping - action)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 73416001 (Urine specimen collection, clean catch)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 225113003 (Timed urine collection)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 70777001 (Urine specimen collection, catheterized)</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 386089008 (Collection of coughed sputum (procedure))</li><li>Include codes from<a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a> where concept  is-a 278450005 (Finger stick)</li></ul></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-wg">
+    <valueCode value="pc"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm">
+    <valueInteger value="2">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueInteger>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status">
+    <valueCode value="trial-use">
+      <extension url="http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom">
+        <valueCanonical value="http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"/>
+      </extension>
+    </valueCode>
+  </extension>
+  <url value="http://hl7.org/fhir/uv/ips/ValueSet/results-specimen-collection-method-uv-ips"/>
+  <version value="2.0.0-ballot"/>
+  <name value="ResultsSpecimenCollectionMethodUvIps"/>
+  <title value="Results Specimen Collection Method - IPS"/>
+  <status value="active"/>
+  <experimental value="false"/>
+  <date value="2024-07-31T14:25:49+00:00"/>
+  <publisher value="HL7 International / Patient Care"/>
+  <contact>
+    <name value="HL7 International / Patient Care"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://www.hl7.org/Special/committees/patientcare"/>
+    </telecom>
+  </contact>
+  <description value="IPS Specimen collection method codes value set.  This value set includes codes from SNOMED CT®: all descendants or self of 129316008 \|Aspiration - action (qualifier value)\|; all descendants or self of 129314006 \|Biopsy - action (qualifier value)\|; all descendants or self of 129300006 \|Puncture - action (qualifier value)\|; all descendants or self of 129304002 \|Excision - action (qualifier value)\|; all descendants or self of 129323009 \|Scraping - action (qualifier value)\|; all descendants or self of 73416001 \|Urine specimen collection, clean catch (procedure)\|; all descendants or self of 225113003 \|Timed urine collection (procedure)\|; all descendants or self of 70777001 \|Urine specimen collection, catheterized (procedure)\|; all descendants or self of 386089008 \|Collection of coughed sputum (procedure)\|; all descendants or self of 278450005 \|Finger-prick sampling (procedure)\| &#xA;&#xA;SNOMED CT® ECL definition:\&#xA;\&lt;\&lt; 129316008 \|Aspiration - action (qualifier value)\| OR \&lt;\&lt; 129314006 \|Biopsy - action (qualifier value)\| OR \&lt;\&lt; 129300006 \|Puncture - action (qualifier value)\| OR \&lt;\&lt; 129304002 \|Excision - action (qualifier value)\| OR \&lt;\&lt; 129323009 \|Scraping - action (qualifier value)\| OR \&lt;\&lt; 73416001 \|Urine specimen collection, clean catch (procedure)\| OR \&lt;\&lt; 225113003 \|Timed urine collection (procedure)\| OR \&lt;\&lt; 70777001 \|Urine specimen collection, catheterized (procedure)\| OR \&lt;\&lt; 386089008 \|Collection of coughed sputum (procedure)\| OR \&lt;\&lt; 278450005 \|Finger-prick sampling (procedure)\|"/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <immutable value="false"/>
+  <copyright value="This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement"/>
+  <compose>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="129316008"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="129314006"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="129300006"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="129304002"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="129323009"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="73416001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="225113003"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="70777001"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="386089008"/>
+      </filter>
+    </include>
+    <include>
+      <system value="http://snomed.info/sct"/>
+      <filter>
+        <property value="concept"/>
+        <op value="is-a"/>
+        <value value="278450005"/>
+      </filter>
+    </include>
+  </compose>
+</ValueSet>

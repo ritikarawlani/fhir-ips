@@ -1,0 +1,39 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/Device/eumfh-70-275-1> a fhir:Device ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "eumfh-70-275-1"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/uv/ips/StructureDefinition/Device-uv-ips>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: Device eumfh-70-275-1</b></p><a name=\"eumfh-70-275-1\"> </a><a name=\"hceumfh-70-275-1\"> </a><a name=\"eumfh-70-275-1-en-US\"> </a><p><b>type</b>: <span title=\"Codes:{http://snomed.info/sct 787483001}\">No known device use (situation)</span></p><p><b>patient</b>: <a href=\"Patient-eumfh-39-07.html\">Annelise Black (inject 70-275)</a></p></div>"
+  ] ; # 
+  fhir:type [
+     fhir:coding ( [
+       a sct:787483001 ;
+       fhir:system [ fhir:v "http://snomed.info/sct"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "787483001" ] ;
+       fhir:display [ fhir:v "No known device use (situation)" ]
+     ] )
+  ] ; # 
+  fhir:patient [
+     fhir:link <http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> ;
+     fhir:reference [ fhir:v "Patient/eumfh-39-07" ] ;
+     fhir:display [ fhir:v "Annelise Black (inject 70-275)" ]
+  ] . # 
+
+<http://hl7.org/fhir/uv/ips/Patient/eumfh-39-07> a fhir:uv .
+
+# -------------------------------------------------------------------------------------
+

@@ -1,0 +1,204 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7.org/fhir/uv/ips/ValueSet/personal-relationship-uv-ips> a fhir:ValueSet ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "personal-relationship-uv-ips"] ; # 
+  fhir:meta [
+     fhir:profile ( [
+       fhir:v "http://hl7.org/fhir/StructureDefinition/shareablevalueset"^^xsd:anyURI ;
+       fhir:link <http://hl7.org/fhir/StructureDefinition/shareablevalueset>
+     ] )
+  ] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "extensions" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p class=\"res-header-id\"><b>Generated Narrative: ValueSet personal-relationship-uv-ips</b></p><a name=\"personal-relationship-uv-ips\"> </a><a name=\"hcpersonal-relationship-uv-ips\"> </a><a name=\"personal-relationship-uv-ips-en-US\"> </a><ul><li>Include these codes as defined in <a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html\"><code>http://terminology.hl7.org/CodeSystem/v3-RoleCode</code></a><table class=\"none\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-AUNT\">AUNT</a></td><td>aunt</td><td>The player of the role is a sister of the scoping person's mother or father.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHILD\">CHILD</a></td><td>child</td><td>The player of the role is a child of the scoping entity.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHLDADOPT\">CHLDADOPT</a></td><td>adopted child</td><td>The player of the role is a child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHLDFOST\">CHLDFOST</a></td><td>foster child</td><td>The player of the role is a child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-CHLDINLAW\">CHLDINLAW</a></td><td>child in-law</td><td>The player of the role is the spouse of scoping person's child.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-COUSN\">COUSN</a></td><td>cousin</td><td>The player of the role is a relative of the scoping person descended from a common ancestor, such as a grandparent, by two or more steps in a diverging line.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DAU\">DAU</a></td><td>natural daughter</td><td>The player of the role is a female offspring of the scoping entity (parent).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DAUADOPT\">DAUADOPT</a></td><td>adopted daughter</td><td>The player of the role is a female child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DAUC\">DAUC</a></td><td>daughter</td><td>**Description:** The player of the role is a female child (of any type) of scoping entity (parent)</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DAUFOST\">DAUFOST</a></td><td>foster daughter</td><td>The player of the role is a female child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DAUINLAW\">DAUINLAW</a></td><td>daughter in-law</td><td>The player of the role is the wife of scoping person's son.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-DOMPART\">DOMPART</a></td><td>domestic partner</td><td>The player of the role cohabits with the scoping person but is not the scoping person's spouse.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-FAMMEMB\">FAMMEMB</a></td><td>family member</td><td>A relationship between two people characterizing their &quot;familial&quot; relationship</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-FRND\">FRND</a></td><td>unrelated friend</td><td>The player of the role is a person who is known, liked, and trusted by the scoping person.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTH\">FTH</a></td><td>father</td><td>The player of the role is a male who begets or raises or nurtures the scoping entity (child).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-FTHINLAW\">FTHINLAW</a></td><td>father-in-law</td><td>The player of the role is the father of the scoping person's husband or wife.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-GGRPRN\">GGRPRN</a></td><td>great grandparent</td><td>The player of the role is a parent of the scoping person's grandparent.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-GRNDCHILD\">GRNDCHILD</a></td><td>grandchild</td><td>The player of the role is a child of the scoping person's son or daughter.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-GRPRN\">GRPRN</a></td><td>grandparent</td><td>The player of the role is a parent of the scoping person's mother or father.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTH\">MTH</a></td><td>mother</td><td>The player of the role is a female who conceives, gives birth to, or raises and nurtures the scoping entity (child).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-MTHINLAW\">MTHINLAW</a></td><td>mother-in-law</td><td>The player of the role is the mother of the scoping person's husband or wife.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-NBOR\">NBOR</a></td><td>neighbor</td><td>The player of the role lives near or next to the scoping person.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-NCHILD\">NCHILD</a></td><td>natural child</td><td>The player of the role is an offspring of the scoping entity as determined by birth.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-NIENEPH\">NIENEPH</a></td><td>niece/nephew</td><td>The player of the role is a child of scoping person's brother or sister or of the brother or sister of the scoping person's spouse.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRN\">PRN</a></td><td>parent</td><td>The player of the role is one who begets, gives birth to, or nurtures and raises the scoping entity (child).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-PRNINLAW\">PRNINLAW</a></td><td>parent in-law</td><td>The player of the role is the parent of scoping person's husband or wife.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-ROOM\">ROOM</a></td><td>roomate</td><td>One who shares living quarters with the subject.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SIB\">SIB</a></td><td>sibling</td><td>The player of the role shares one or both parents in common with the scoping entity.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SIGOTHR\">SIGOTHR</a></td><td>significant other</td><td>A person who is important to one's well being; especially a spouse or one in a similar relationship. (The player is the one who is important)</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SON\">SON</a></td><td>natural son</td><td>The player of the role is a male offspring of the scoping entity (parent).</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SONADOPT\">SONADOPT</a></td><td>adopted son</td><td>The player of the role is a male child taken into a family through legal means and raised by the scoping person (parent) as his or her own child.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SONC\">SONC</a></td><td>son</td><td>**Description:** The player of the role is a male child (of any type) of scoping entity (parent)</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SONFOST\">SONFOST</a></td><td>foster son</td><td>The player of the role is a male child receiving parental care and nurture from the scoping person (parent) but not related to him or her through legal or blood ties.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SONINLAW\">SONINLAW</a></td><td>son in-law</td><td>The player of the role is the husband of scoping person's daughter.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-SPS\">SPS</a></td><td>spouse</td><td>The player of the role is a marriage partner of the scoping person.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-STPCHLD\">STPCHLD</a></td><td>step child</td><td>The player of the role is a child of the scoping person's spouse by a previous union.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-STPDAU\">STPDAU</a></td><td>stepdaughter</td><td>The player of the role is a daughter of the scoping person's spouse by a previous union.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-STPSON\">STPSON</a></td><td>stepson</td><td>The player of the role is a son of the scoping person's spouse by a previous union.</td></tr><tr><td><a href=\"http://terminology.hl7.org/6.0.2/CodeSystem-v3-RoleCode.html#v3-RoleCode-UNCLE\">UNCLE</a></td><td>uncle</td><td>The player of the role is a brother of the scoping person's mother or father.</td></tr></table></li></ul></div>"
+  ] ; # 
+  fhir:extension ( [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-wg"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "pc" ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-fmm"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "2"^^xsd:integer ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] [
+     fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-standards-status"^^xsd:anyURI ] ;
+     fhir:value [
+       fhir:v "trial-use" ;
+       fhir:extension ( [
+         fhir:url [ fhir:v "http://hl7.org/fhir/StructureDefinition/structuredefinition-conformance-derivedFrom"^^xsd:anyURI ] ;
+         fhir:value [
+           fhir:v "http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips"^^xsd:anyURI ;
+           fhir:link <http://hl7.org/fhir/uv/ips/ImplementationGuide/hl7.fhir.uv.ips>
+         ]
+       ] )
+     ]
+  ] ) ; # 
+  fhir:url [ fhir:v "http://hl7.org/fhir/uv/ips/ValueSet/personal-relationship-uv-ips"^^xsd:anyURI] ; # 
+  fhir:identifier ( [
+     fhir:use [ fhir:v "official" ] ;
+     fhir:system [ fhir:v "http://art-decor.org/ns/oids/vs"^^xsd:anyURI ] ;
+     fhir:value [ fhir:v "2.16.840.1.113883.11.22.54" ]
+  ] ) ; # 
+  fhir:version [ fhir:v "2.0.0-ballot"] ; # 
+  fhir:name [ fhir:v "PersonalRelationshipUvIps"] ; # 
+  fhir:title [ fhir:v "Personal Relationship - IPS [Deprecated]"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2024-08-14T14:11:06+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 International / Patient Care"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 International / Patient Care" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://www.hl7.org/Special/committees/patientcare" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "The Value Set is used (optionally) to code the type of contact relationship between a person and the patient. This value set has been deprecated and will be removed in a future release.  It has been replaced with [PersonalRelationshipRoleType](https://terminology.hl7.org/3.1.0/ValueSet-v3-PersonalRelationshipRoleType.html)"] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "001" ] ;
+       fhir:display [ fhir:v "World" ]
+     ] )
+  ] ) ; # 
+  fhir:immutable [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:copyright [ fhir:v "Produced by HL7 under the terms of HL7® Governance and Operations Manual relating to Intellectual Property (Section 16), specifically its copyright, trademark and patent provisions."] ; # 
+  fhir:compose [
+     fhir:include ( [
+       fhir:system [ fhir:v "http://terminology.hl7.org/CodeSystem/v3-RoleCode"^^xsd:anyURI ] ;
+       fhir:concept ( [
+         fhir:code [ fhir:v "AUNT" ] ;
+         fhir:display [ fhir:v "aunt" ]
+       ] [
+         fhir:code [ fhir:v "CHILD" ] ;
+         fhir:display [ fhir:v "child" ]
+       ] [
+         fhir:code [ fhir:v "CHLDADOPT" ] ;
+         fhir:display [ fhir:v "adopted child" ]
+       ] [
+         fhir:code [ fhir:v "CHLDFOST" ] ;
+         fhir:display [ fhir:v "foster child" ]
+       ] [
+         fhir:code [ fhir:v "CHLDINLAW" ] ;
+         fhir:display [ fhir:v "child in-law" ]
+       ] [
+         fhir:code [ fhir:v "COUSN" ] ;
+         fhir:display [ fhir:v "cousin" ]
+       ] [
+         fhir:code [ fhir:v "DAU" ] ;
+         fhir:display [ fhir:v "natural daughter" ]
+       ] [
+         fhir:code [ fhir:v "DAUADOPT" ] ;
+         fhir:display [ fhir:v "adopted daughter" ]
+       ] [
+         fhir:code [ fhir:v "DAUC" ] ;
+         fhir:display [ fhir:v "daughter" ]
+       ] [
+         fhir:code [ fhir:v "DAUFOST" ] ;
+         fhir:display [ fhir:v "foster daughter" ]
+       ] [
+         fhir:code [ fhir:v "DAUINLAW" ] ;
+         fhir:display [ fhir:v "daughter in-law" ]
+       ] [
+         fhir:code [ fhir:v "DOMPART" ] ;
+         fhir:display [ fhir:v "domestic partner" ]
+       ] [
+         fhir:code [ fhir:v "FAMMEMB" ] ;
+         fhir:display [ fhir:v "family member" ]
+       ] [
+         fhir:code [ fhir:v "FRND" ] ;
+         fhir:display [ fhir:v "unrelated friend" ]
+       ] [
+         fhir:code [ fhir:v "FTH" ] ;
+         fhir:display [ fhir:v "father" ]
+       ] [
+         fhir:code [ fhir:v "FTHINLAW" ] ;
+         fhir:display [ fhir:v "father-in-law" ]
+       ] [
+         fhir:code [ fhir:v "GGRPRN" ] ;
+         fhir:display [ fhir:v "great grandparent" ]
+       ] [
+         fhir:code [ fhir:v "GRNDCHILD" ] ;
+         fhir:display [ fhir:v "grandchild" ]
+       ] [
+         fhir:code [ fhir:v "GRPRN" ] ;
+         fhir:display [ fhir:v "grandparent" ]
+       ] [
+         fhir:code [ fhir:v "MTH" ] ;
+         fhir:display [ fhir:v "mother" ]
+       ] [
+         fhir:code [ fhir:v "MTHINLAW" ] ;
+         fhir:display [ fhir:v "mother-in-law" ]
+       ] [
+         fhir:code [ fhir:v "NBOR" ] ;
+         fhir:display [ fhir:v "neighbor" ]
+       ] [
+         fhir:code [ fhir:v "NCHILD" ] ;
+         fhir:display [ fhir:v "natural child" ]
+       ] [
+         fhir:code [ fhir:v "NIENEPH" ] ;
+         fhir:display [ fhir:v "niece/nephew" ]
+       ] [
+         fhir:code [ fhir:v "PRN" ] ;
+         fhir:display [ fhir:v "parent" ]
+       ] [
+         fhir:code [ fhir:v "PRNINLAW" ] ;
+         fhir:display [ fhir:v "parent in-law" ]
+       ] [
+         fhir:code [ fhir:v "ROOM" ] ;
+         fhir:display [ fhir:v "roomate" ]
+       ] [
+         fhir:code [ fhir:v "SIB" ] ;
+         fhir:display [ fhir:v "sibling" ]
+       ] [
+         fhir:code [ fhir:v "SIGOTHR" ] ;
+         fhir:display [ fhir:v "significant other" ]
+       ] [
+         fhir:code [ fhir:v "SON" ] ;
+         fhir:display [ fhir:v "natural son" ]
+       ] [
+         fhir:code [ fhir:v "SONADOPT" ] ;
+         fhir:display [ fhir:v "adopted son" ]
+       ] [
+         fhir:code [ fhir:v "SONC" ] ;
+         fhir:display [ fhir:v "son" ]
+       ] [
+         fhir:code [ fhir:v "SONFOST" ] ;
+         fhir:display [ fhir:v "foster son" ]
+       ] [
+         fhir:code [ fhir:v "SONINLAW" ] ;
+         fhir:display [ fhir:v "son in-law" ]
+       ] [
+         fhir:code [ fhir:v "SPS" ] ;
+         fhir:display [ fhir:v "spouse" ]
+       ] [
+         fhir:code [ fhir:v "STPCHLD" ] ;
+         fhir:display [ fhir:v "step child" ]
+       ] [
+         fhir:code [ fhir:v "STPDAU" ] ;
+         fhir:display [ fhir:v "stepdaughter" ]
+       ] [
+         fhir:code [ fhir:v "STPSON" ] ;
+         fhir:display [ fhir:v "stepson" ]
+       ] [
+         fhir:code [ fhir:v "UNCLE" ] ;
+         fhir:display [ fhir:v "uncle" ]
+       ] )
+     ] )
+  ] . # 
+
+# -------------------------------------------------------------------------------------
+

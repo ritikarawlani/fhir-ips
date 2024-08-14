@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Organization xmlns="http://hl7.org/fhir">
+  <id value="simple-org"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Organization simple-org</b></p><a name="simple-org"> </a><a name="hcsimple-org"> </a><a name="simple-org-en-US"> </a><p><b>name</b>: Best Diagnostic Department</p></div>
+  </text>
+  <name value="Best Diagnostic Department"/>
+</Organization>

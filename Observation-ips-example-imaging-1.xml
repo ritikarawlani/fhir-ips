@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Observation xmlns="http://hl7.org/fhir">
+  <id value="ips-example-imaging-1"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Observation-results-radiology-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: Observation ips-example-imaging-1</b></p><a name="ips-example-imaging-1"> </a><a name="hcips-example-imaging-1"> </a><a name="ips-example-imaging-1-en-US"> </a><p><b>status</b>: Final</p><p><b>category</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/observation-category imaging}">Imaging</span></p><p><b>code</b>: <span title="Codes:{http://loinc.org 79103-8}">Upper abdomen with the administration of oral and intravenous contrast (example-4)</span></p><p><b>subject</b>: <a href="Patient-eumfh-39-07.html">Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</a></p><p><b>effective</b>: 1995-06-08</p><p><b>performer</b>: </p><ul><li><a href="Practitioner-eumfh-39-07.html">Practitioner Mark Antonio </a></li><li><a href="Organization-TII-Organization1.html">Organization Someplace General Hospital</a></li></ul><p><b>value</b>: 3 cm nodule present in the inferior medial aspect of right liver lobe. Contrast enhancement pattern consistent with the diagnosis of hemangioma.</p></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/observation-category"/>
+      <code value="imaging"/>
+      <display value="Imaging"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="79103-8"/>
+      <display value="CT Abdomen W contrast IV"/>
+    </coding>
+    <text value="Upper abdomen with the administration of oral and intravenous contrast (example-4)"/>
+  </code>
+  <subject>
+    <reference value="Patient/eumfh-39-07"/>
+  </subject>
+  <effectiveDateTime value="1995-06-08"/>
+  <performer>
+    <reference value="Practitioner/eumfh-39-07"/>
+  </performer>
+  <performer>
+    <reference value="Organization/TII-Organization1"/>
+  </performer>
+  <valueString value="3 cm nodule present in the inferior medial aspect of right liver lobe. Contrast enhancement pattern consistent with the diagnosis of hemangioma."/>
+</Observation>

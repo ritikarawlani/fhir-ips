@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<DiagnosticReport xmlns="http://hl7.org/fhir">
+  <id value="hemoglobin"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/DiagnosticReport-uv-ips"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p class="res-header-id"><b>Generated Narrative: DiagnosticReport hemoglobin</b></p><a name="hemoglobin"> </a><a name="hchemoglobin"> </a><a name="hemoglobin-en-US"> </a><h2><span title="Codes:{http://loinc.org 11502-2}">Laboratory report</span> (<span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0074 LAB}">Laboratory</span>) </h2><table class="grid"><tr><td>Subject</td><td>Alexander Heig  Male, DoB: 1957 ( http://trilliumbridge.eu/fhir/demos/eumfh/inject#39-07)</td></tr><tr><td>When For</td><td>2017-11-10</td></tr><tr><td>Reported</td><td>2017-11-10 08:20:00+0100</td></tr><tr><td>Performer</td><td> <a href="Organization-TII-Organization1.html">Someplace General Hospital</a></td></tr></table><p><b>Report Details</b></p><table class="grid"><tr><td><b>Code</b></td><td><b>Value</b></td><td><b>Flags</b></td><td><b>Note</b></td><td><b>When For</b></td></tr><tr><td><a href="Observation-hemoglobin.html"><span title="Codes:{http://loinc.org 17856-6}">Hemoglobin A1c/Hemoglobin.total in Blood by HPLC</span></a></td><td>7.5 %<span style="background: LightGoldenRodYellow"> (Details: UCUM  code% = '%')</span></td><td>Final</td><td>Above stated goal of 7.0 %</td><td>2017-11-10 08:20:00+0100</td></tr></table></div>
+  </text>
+  <status value="final"/>
+  <category>
+    <coding>
+      <system value="http://terminology.hl7.org/CodeSystem/v2-0074"/>
+      <code value="LAB"/>
+      <display value="Laboratory"/>
+    </coding>
+  </category>
+  <code>
+    <coding>
+      <system value="http://loinc.org"/>
+      <code value="11502-2"/>
+      <display value="Laboratory report"/>
+    </coding>
+  </code>
+  <subject>
+    <reference value="Patient/eumfh-39-07"/>
+  </subject>
+  <effectiveDateTime value="2017-11-10"/>
+  <issued value="2017-11-10T08:20:00+01:00"/>
+  <performer>
+    <reference value="Organization/TII-Organization1"/>
+    <display value="Someplace General Hospital"/>
+  </performer>
+  <result>
+    <reference value="Observation/hemoglobin"/>
+    <display value="Above stated goal of 7.0 %"/>
+  </result>
+</DiagnosticReport>

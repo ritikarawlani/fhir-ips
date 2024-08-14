@@ -1,0 +1,413 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Vaccine Target Diseases - IPS - International Patient Summary Implementation Guide v2.0.0-ballot</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+    <link rel="stylesheet" href="assets/css/hl7.css"/>
+    <link rel="stylesheet" href="assets/css/fhir-ig.css"/>
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+    <script src="assets/js/mermaid.js" type="text/javascript"></script>
+    <script src="assets/js/mermaid-init.js" type="text/javascript"></script>
+    <style type="text/css">h2{--heading-prefix:"15.62"}
+    h3,h4,h5,h6{--heading-prefix:"15.62"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        <div id="hl7-nav">
+          <a no-external="true" id="hl7-logo" href="http://hl7.org">
+            <img src="assets/images/hl7-logo-header.png" alt="Visit the HL7 website" height="50"/>
+          </a>
+        </div>
+        <div id="family-nav">
+          <a no-external="true" id="family-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+        </div>
+        <div id="hl7-search">
+          <a no-external="true" id="hl7-search-lnk" href="searchform.html"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">International Patient Summary Implementation Guide</span>
+            <br/>
+            <span style="display:inline-block;">2.0.0-ballot - STU 2 Ballot
+
+
+
+  <img src="assets/images/001.svg" alt="International flag" title="International" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R4/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+                <!-- menu.xml -->
+
+<ul class="nav navbar-nav">
+  <li>
+    <a href="index.html">Home</a>
+  </li>
+  <li>
+    <a href="toc.html">Table of Contents</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">General Principles and Design
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li><a name="l183">​</a>
+        <a href="principles.html">General Principles</a>
+      </li>
+      <li><a name="l189">​</a>
+        <a href="design.html">Design Conventions</a>
+      </li>
+      <li><a name="l195">​</a>
+        <a href="ipsGeneration.html">Generation and Data Inclusion</a>
+      </li>
+      <li><a name="l201">​</a>
+        <a href="considerations.html">Privacy and Security Considerations</a>
+      </li>
+      <li><a name="l207">​</a>
+        <a href="knownIssues.html">Known Issues and Future Development</a>
+      </li>
+    </ul>
+  </li>
+  <li><a name="l215">​</a>
+    <a href="ipsStructure.html">The "IPS"</a>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">FHIR Artifacts
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="StructureDefinition-Composition-uv-ips.html">The IPS Composition</a>
+      </li>
+      <li>
+        <a href="profiles.html">IPS Library</a>
+      </li>
+      <li>
+        <a href="datatypes.html">Datatypes</a>
+      </li>
+      <li><a name="l248">​</a>
+        <a href="extensions.html">Extensions</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="OperationDefinition-summary.html">Operations</a>
+      </li>
+      <li>
+        <a href="examples.html">Examples</a>
+      </li>
+    </ul>
+  </li>
+  <li>
+    <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="copyrights.html">Copyrights</a>
+  </li>
+  <li>
+    <a href="changes.html">Change Log</a>
+  </li>
+</ul>
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Vaccine Target Diseases - IPS</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">International Patient Summary Implementation Guide, published by HL7 International / Patient Care. This guide is not an authorized publication; it is the continuous build for version 2.0.0-ballot built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/ritikarawlani/fhir-ips">https://github.com/ritikarawlani/fhir-ips</a> and changes regularly. See the <a href="http://hl7.org/fhir/uv/ips/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li class="active">
+    <a href="#">Narrative Content</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="ValueSet-target-diseases-uv-ips.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-target-diseases-uv-ips.json.html">JSON</a>
+    </li>
+  
+
+
+  
+    <li>
+      <a href="ValueSet-target-diseases-uv-ips.ttl.html">TTL</a>
+    </li>
+  
+
+
+
+</ul>
+
+  <a name="root"> </a>
+  <h2 id="root">ValueSet: Vaccine Target Diseases - IPS
+
+  </h2>
+  <table class="colstu">
+
+    <tr>
+      <td colspan="4"><i>Official URL</i>: <span class="copy-text">http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips<button data-clipboard-text="http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips" title="Click to copy URL" class="btn-copy"></button></span>
+      </td>
+      <td><i>Version</i>:
+      <span class="copy-text">2.0.0-ballot<button data-clipboard-text="http://hl7.org/fhir/uv/ips/ValueSet/target-diseases-uv-ips|2.0.0-ballot" title="Click to copy versioned URL" class="btn-copy"></button></span>
+      </td>
+    </tr>
+
+    <tr>
+
+
+
+
+
+
+
+      <td colspan="3">
+        
+          <i>
+            
+            Standards status:
+          </i> <a href="http://hl7.org/fhir/R4/versions.html#std-process" title="Standard Status">Trial-use</a>
+          
+        
+      </td>
+
+      <td>
+        <a href="http://hl7.org/fhir/versions.html#maturity">Maturity Level</a>: 2
+        
+      </td>
+
+
+
+      <td><i>Computable Name</i>: <span style="font-family: monospace;">VaccineTargetDiseasesUvIps</span></td>
+    </tr>
+
+
+
+
+    <tr>
+      <td colspan="5"><p><em>Copyright/Legal</em>: This value set includes content from SNOMED CT, which is copyright &copy; 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement</p>
+</td>
+    </tr>
+
+  </table>
+
+<p>
+<p>IPS Vaccine target disease codes value set.  This value set includes codes from SNOMED CT that represent specific vaccine target diseases (descendant concepts, if they exist, are not included).</p>
+
+<p>SNOMED CT&reg; ECL definition:<br/>
+4834000 |Typhoid fever (disorder)| OR 6142004 |Influenza (disorder)| OR 16541001 |Yellow fever (disorder)| OR 14189004 |Measles (disorder)| OR 14168008 |Rabies (disorder)| OR 18624000 |Disease caused by Rotavirus (disorder)| OR 23502006 |Lyme disease (disorder)| OR 23511006 |Meningococcal infectious disease (disorder)| OR 24662006 |Influenza caused by Influenza B virus (disorder)| OR 25225006 |Disease caused by Adenovirus (disorder)| OR 27836007 |Pertussis (disorder)| OR 32398004 |Bronchitis (disorder)| OR 36653000 |Rubella (disorder)| OR 36989005 |Mumps (disorder)| OR 37246009 |Disease caused by rickettsiae (disorder)| OR 38907003 |Varicella (disorder)| OR 40468003 |Viral hepatitis, type A (disorder)| OR 50711007 |Viral hepatitis type C (disorder)| OR 52947006 |Japanese encephalitis virus disease (disorder)| OR 56717001 |Tuberculosis (disorder)| OR 58750007 |Plague (disorder)| OR 63650001 |Cholera (disorder)| OR 66071002 |Viral hepatitis type B (disorder)| OR 67924001 |Smallpox (disorder)| OR 70036007 |Haemophilus influenzae pneumonia (disorder)| OR 75702008 |Brucellosis (disorder)| OR 76902006 |Tetanus (disorder)| OR 85904008 |Paratyphoid fever (disorder)| OR 111852003 |Vaccinia (disorder)| OR 186150001 |Enteritis caused by rotavirus (disorder)| OR 186772009 |Rocky Mountain spotted fever (disorder)| OR 186788009 |Q fever (disorder)| OR 240532009 |Human papillomavirus infection (disorder)| OR 240613006 |Typhus group rickettsial disease (disorder)| OR 372244006 |Malignant melanoma (disorder)| OR 397430003 |Diphtheria caused by Corynebacterium diphtheriae (disorder)| OR 398102009 |Acute poliomyelitis (disorder)| OR 398565003 |Infection caused by Clostridium botulinum (disorder)| OR 409498004 |Anthrax (disorder)| OR 417093003 |Disease caused by West Nile virus (disorder)| OR 442438000 |Influenza caused by Influenza A virus (disorder)| OR 442696006 |Influenza caused by Influenza A virus subtype H1N1 (disorder)| OR 450715004 |Influenza caused by Influenza A virus subtype H7 (disorder)| OR 707448003 |Influenza caused by Influenza A virus subtype H7N9 (disorder)| OR 709410003 |Haemophilus influenzae type b infection (disorder)| OR 712986001 |Encephalitis caused by tick-borne encephalitis virus (disorder)| OR 713083002 |Influenza caused by Influenza A virus subtype H5 (disorder)| OR 772810003 |Influenza caused by Influenza A virus subtype H3N2 (disorder)| OR 772828001 |Influenza caused by Influenza A virus subtype H5N1 (disorder)| OR 840539006 |Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)|</p>
+
+</p>
+
+
+  <p>
+    <b>References</b>
+  </p>
+  
+<ul>
+ <li><a href="StructureDefinition-Immunization-uv-ips.html">Immunization (IPS)</a></li>
+</ul>
+
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <a name="definition"> </a>
+
+  <!-- Content Logical Definition heading in the fragment -->
+  <h3>Logical Definition (CLD)</h3>
+<div><p class="res-header-id"><b>Generated Narrative: ValueSet target-diseases-uv-ips</b></p><a name="target-diseases-uv-ips"> </a><a name="hctarget-diseases-uv-ips"> </a><a name="target-diseases-uv-ips-und"> </a>
+<ul><li>Include these codes as defined in <a href="http://www.snomed.org/"><code>http://snomed.info/sct</code></a><table class="none"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td><a href="http://snomed.info/id/4834000">4834000</a></td><td>Typhoid fever (disorder)</td></tr><tr><td><a href="http://snomed.info/id/6142004">6142004</a></td><td>Influenza (disorder)</td></tr><tr><td><a href="http://snomed.info/id/16541001">16541001</a></td><td>Yellow fever (disorder)</td></tr><tr><td><a href="http://snomed.info/id/14189004">14189004</a></td><td>Measles (disorder)</td></tr><tr><td><a href="http://snomed.info/id/14168008">14168008</a></td><td>Rabies (disorder)</td></tr><tr><td><a href="http://snomed.info/id/18624000">18624000</a></td><td>Disease caused by Rotavirus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/23502006">23502006</a></td><td>Lyme disease (disorder)</td></tr><tr><td><a href="http://snomed.info/id/23511006">23511006</a></td><td>Meningococcal infectious disease (disorder)</td></tr><tr><td><a href="http://snomed.info/id/24662006">24662006</a></td><td>Influenza caused by Influenza B virus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/25225006">25225006</a></td><td>Disease caused by Adenovirus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/27836007">27836007</a></td><td>Pertussis (disorder)</td></tr><tr><td><a href="http://snomed.info/id/32398004">32398004</a></td><td>Bronchitis (disorder)</td></tr><tr><td><a href="http://snomed.info/id/36653000">36653000</a></td><td>Rubella (disorder)</td></tr><tr><td><a href="http://snomed.info/id/36989005">36989005</a></td><td>Mumps (disorder)</td></tr><tr><td><a href="http://snomed.info/id/37246009">37246009</a></td><td>Disease caused by rickettsiae (disorder)</td></tr><tr><td><a href="http://snomed.info/id/38907003">38907003</a></td><td>Varicella (disorder)</td></tr><tr><td><a href="http://snomed.info/id/40468003">40468003</a></td><td>Viral hepatitis, type A (disorder)</td></tr><tr><td><a href="http://snomed.info/id/50711007">50711007</a></td><td>Viral hepatitis type C (disorder)</td></tr><tr><td><a href="http://snomed.info/id/52947006">52947006</a></td><td>Japanese encephalitis virus disease (disorder)</td></tr><tr><td><a href="http://snomed.info/id/56717001">56717001</a></td><td>Tuberculosis (disorder)</td></tr><tr><td><a href="http://snomed.info/id/58750007">58750007</a></td><td>Plague (disorder)</td></tr><tr><td><a href="http://snomed.info/id/63650001">63650001</a></td><td>Cholera (disorder)</td></tr><tr><td><a href="http://snomed.info/id/66071002">66071002</a></td><td>Viral hepatitis type B (disorder)</td></tr><tr><td><a href="http://snomed.info/id/67924001">67924001</a></td><td>Smallpox (disorder)</td></tr><tr><td><a href="http://snomed.info/id/70036007">70036007</a></td><td>Haemophilus influenzae pneumonia (disorder)</td></tr><tr><td><a href="http://snomed.info/id/75702008">75702008</a></td><td>Brucellosis (disorder)</td></tr><tr><td><a href="http://snomed.info/id/76902006">76902006</a></td><td>Tetanus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/85904008">85904008</a></td><td>Paratyphoid fever (disorder)</td></tr><tr><td><a href="http://snomed.info/id/111852003">111852003</a></td><td>Vaccinia (disorder)</td></tr><tr><td><a href="http://snomed.info/id/186150001">186150001</a></td><td>Enteritis caused by rotavirus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/186772009">186772009</a></td><td>Rocky Mountain spotted fever (disorder)</td></tr><tr><td><a href="http://snomed.info/id/186788009">186788009</a></td><td>Q fever (disorder)</td></tr><tr><td><a href="http://snomed.info/id/240532009">240532009</a></td><td>Human papillomavirus infection (disorder)</td></tr><tr><td><a href="http://snomed.info/id/240613006">240613006</a></td><td>Typhus group rickettsial disease (disorder)</td></tr><tr><td><a href="http://snomed.info/id/372244006">372244006</a></td><td>Malignant melanoma (disorder)</td></tr><tr><td><a href="http://snomed.info/id/397430003">397430003</a></td><td>Diphtheria caused by Corynebacterium diphtheriae (disorder)</td></tr><tr><td><a href="http://snomed.info/id/398102009">398102009</a></td><td>Acute poliomyelitis (disorder)</td></tr><tr><td><a href="http://snomed.info/id/398565003">398565003</a></td><td>Infection caused by Clostridium botulinum (disorder)</td></tr><tr><td><a href="http://snomed.info/id/409498004">409498004</a></td><td>Anthrax (disorder)</td></tr><tr><td><a href="http://snomed.info/id/417093003">417093003</a></td><td>Disease caused by West Nile virus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/442438000">442438000</a></td><td>Influenza caused by Influenza A virus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/442696006">442696006</a></td><td>Influenza caused by Influenza A virus subtype H1N1 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/450715004">450715004</a></td><td>Influenza caused by Influenza A virus subtype H7 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/707448003">707448003</a></td><td>Influenza caused by Influenza A virus subtype H7N9 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/709410003">709410003</a></td><td>Haemophilus influenzae type b infection (disorder)</td></tr><tr><td><a href="http://snomed.info/id/712986001">712986001</a></td><td>Encephalitis caused by tick-borne encephalitis virus (disorder)</td></tr><tr><td><a href="http://snomed.info/id/713083002">713083002</a></td><td>Influenza caused by Influenza A virus subtype H5 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/772810003">772810003</a></td><td>Influenza caused by Influenza A virus subtype H3N2 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/772828001">772828001</a></td><td>Influenza caused by Influenza A virus subtype H5N1 (disorder)</td></tr><tr><td><a href="http://snomed.info/id/840539006">840539006</a></td><td>Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)</td></tr></table></li></ul></div>
+
+  <p>&nbsp;</p>
+  <a name="expansion"> </a>
+  <h3 id="expansion">Expansion</h3>
+
+  <div><p class="res-header-id"><b>Generated Narrative: ValueSet </b></p><p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on SNOMED CT International edition 01-Feb 2024</p><p>This value set contains 50 concepts</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-4834000"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/4834000">4834000</a></td><td>http://snomed.info/sct</td><td>Typhoid fever</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-6142004"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/6142004">6142004</a></td><td>http://snomed.info/sct</td><td>Influenza</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-16541001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/16541001">16541001</a></td><td>http://snomed.info/sct</td><td>Yellow fever</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-14189004"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/14189004">14189004</a></td><td>http://snomed.info/sct</td><td>Measles</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-14168008"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/14168008">14168008</a></td><td>http://snomed.info/sct</td><td>Rabies</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-18624000"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/18624000">18624000</a></td><td>http://snomed.info/sct</td><td>Disease caused by Rotavirus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-23502006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/23502006">23502006</a></td><td>http://snomed.info/sct</td><td>Lyme disease</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-23511006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/23511006">23511006</a></td><td>http://snomed.info/sct</td><td>Meningococcal infectious disease</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-24662006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/24662006">24662006</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza B virus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-25225006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/25225006">25225006</a></td><td>http://snomed.info/sct</td><td>Disease caused by Adenovirus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-27836007"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/27836007">27836007</a></td><td>http://snomed.info/sct</td><td>Pertussis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-32398004"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/32398004">32398004</a></td><td>http://snomed.info/sct</td><td>Bronchitis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-36653000"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/36653000">36653000</a></td><td>http://snomed.info/sct</td><td>Rubella</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-36989005"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/36989005">36989005</a></td><td>http://snomed.info/sct</td><td>Mumps</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-37246009"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/37246009">37246009</a></td><td>http://snomed.info/sct</td><td>Disease caused by rickettsiae (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-38907003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/38907003">38907003</a></td><td>http://snomed.info/sct</td><td>Varicella</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-40468003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/40468003">40468003</a></td><td>http://snomed.info/sct</td><td>Viral hepatitis, type A</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-50711007"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/50711007">50711007</a></td><td>http://snomed.info/sct</td><td>Viral hepatitis C</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-52947006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/52947006">52947006</a></td><td>http://snomed.info/sct</td><td>Japanese encephalitis virus disease</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-56717001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/56717001">56717001</a></td><td>http://snomed.info/sct</td><td>Tuberculosis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-58750007"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/58750007">58750007</a></td><td>http://snomed.info/sct</td><td>Plague</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-63650001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/63650001">63650001</a></td><td>http://snomed.info/sct</td><td>Cholera</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-66071002"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/66071002">66071002</a></td><td>http://snomed.info/sct</td><td>Type B viral hepatitis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-67924001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/67924001">67924001</a></td><td>http://snomed.info/sct</td><td>Smallpox</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-70036007"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/70036007">70036007</a></td><td>http://snomed.info/sct</td><td>Haemophilus influenzae pneumonia</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-75702008"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/75702008">75702008</a></td><td>http://snomed.info/sct</td><td>Brucellosis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-76902006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/76902006">76902006</a></td><td>http://snomed.info/sct</td><td>Tetanus</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-85904008"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/85904008">85904008</a></td><td>http://snomed.info/sct</td><td>Paratyphoid fever</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-111852003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/111852003">111852003</a></td><td>http://snomed.info/sct</td><td>Vaccinia</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-186150001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/186150001">186150001</a></td><td>http://snomed.info/sct</td><td>Enteritis caused by rotavirus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-186772009"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/186772009">186772009</a></td><td>http://snomed.info/sct</td><td>RMSF - Rocky Mountain spotted fever</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-186788009"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/186788009">186788009</a></td><td>http://snomed.info/sct</td><td>Q fever</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-240532009"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/240532009">240532009</a></td><td>http://snomed.info/sct</td><td>Human papilloma virus infection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-240613006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/240613006">240613006</a></td><td>http://snomed.info/sct</td><td>Typhus group rickettsial disease</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-372244006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/372244006">372244006</a></td><td>http://snomed.info/sct</td><td>Malignant melanoma (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-397430003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/397430003">397430003</a></td><td>http://snomed.info/sct</td><td>Diphtheria caused by Corynebacterium diphtheriae (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-398102009"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/398102009">398102009</a></td><td>http://snomed.info/sct</td><td>Acute poliomyelitis (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-398565003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/398565003">398565003</a></td><td>http://snomed.info/sct</td><td>Infection caused by Clostridium botulinum (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-409498004"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/409498004">409498004</a></td><td>http://snomed.info/sct</td><td>Anthrax (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-417093003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/417093003">417093003</a></td><td>http://snomed.info/sct</td><td>Disease caused by West Nile virus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442438000"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/442438000">442438000</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-442696006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/442696006">442696006</a></td><td>http://snomed.info/sct</td><td>Influenza A (H1N1)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-450715004"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/450715004">450715004</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus subtype H7 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-707448003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/707448003">707448003</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus subtype H7N9 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-709410003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/709410003">709410003</a></td><td>http://snomed.info/sct</td><td>Haemophilus influenzae type b infection</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-712986001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/712986001">712986001</a></td><td>http://snomed.info/sct</td><td>Tickborne encephalitis</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-713083002"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/713083002">713083002</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus subtype H5 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-772810003"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/772810003">772810003</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus subtype H3N2 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-772828001"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/772828001">772828001</a></td><td>http://snomed.info/sct</td><td>Influenza caused by Influenza A virus subtype H5N1 (disorder)</td></tr><tr><td style="white-space:nowrap"><a name="x-http://snomed.info/sct-840539006"> </a>&nbsp;&nbsp;<a href="http://snomed.info/id/840539006">840539006</a></td><td>http://snomed.info/sct</td><td>Disease caused by severe acute respiratory syndrome coronavirus 2 (disorder)</td></tr></table></div>
+
+  <hr/>
+  <p>
+    Explanation of the columns that may appear on this page:
+  </p>
+  <table class="grid">
+    <tr>
+      <td>Level</td>
+      <td>A few code lists that FHIR defines are hierarchical - each code is assigned a level.
+          In this scheme, some codes are under other codes, and imply that the code they are under also applies</td>
+    </tr>
+    <tr>
+      <td>System</td>
+      <td>The source of the definition of the code (when the value set draws in codes defined elsewhere)</td>
+    </tr>
+    <tr>
+      <td>Code</td>
+      <td>The code (used as the code in the resource instance)</td>
+    </tr>
+    <tr>
+      <td>Display</td>
+      <td>The display (used in the <i>display</i> element of a <a href="http://hl7.org/fhir/R4/datatypes.html#Coding">Coding</a>). If there is no display, implementers should not simply display the code, but map the concept into their application</td>
+    </tr>
+    <tr>
+      <td>Definition</td>
+      <td>An explanation of the meaning of the concept</td>
+    </tr>
+    <tr>
+      <td>Comments</td>
+      <td>Additional notes about how to use the code</td>
+    </tr>
+  </table>
+
+  
+
+    <!-- insert notes if present -->
+  
+
+
+
+  
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script src="assets/js/window-hash.js" type="text/javascript"> </script>
+  <a name="bottom"> </a>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2020+ <a style="color:var(--footer-hyperlink-text-color)" href="http://www.hl7.org/Special/committees/patientcare">HL7 International / Patient Care</a>.  Package hl7.fhir.uv.ips#2.0.0-ballot based on <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Wed, Aug 14, 2024 14:11+0000">2024-08-14</span>
+          <br/>
+          <span style="color: var(--footer-highlight-text-color)">
+                      Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a>
+                 
+                
+                 | <a style="color: #81BEF7" href="http://hl7.org/fhir/uv/ips/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: #81BEF7" href="http://hl7.org/fhir/R4/license.html"><img src="cc0.png" alt="CC0" style="border-style: none;"/></a> |
+                   <!-- <a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+                 <a style="color: #81BEF7" href="http://hl7.org/fhir-issues" target="_blank">Propose a change</a>
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard.min.js" type="text/javascript"> </script>
+  <script src="assets/js/clipboard-btn.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor-hover.js" type="text/javascript"> </script>
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,433 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="bundle-minimal"/>
+  <meta>
+    <profile value="http://hl7.org/fhir/uv/ips/StructureDefinition/Bundle-uv-ips"/>
+  </meta>
+  <language value="en-US"/>
+  <identifier>
+    <system value="urn:oid:2.16.724.4.8.10.200.10"/>
+    <value value="28b95815-76ce-457b-b7ae-a972e527db40"/>
+  </identifier>
+  <type value="document"/>
+  <timestamp value="2020-12-11T14:30:00+01:00"/>
+  <entry>
+    <fullUrl value="urn:uuid:6e1fb74a-742b-4c7b-8487-171dacb88766"/>
+    <resource>
+      <Composition>
+        <id value="6e1fb74a-742b-4c7b-8487-171dacb88766"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Composition_6e1fb74a-742b-4c7b-8487-171dacb88766"> </a><p class="res-header-id"><b>Generated Narrative: Composition 6e1fb74a-742b-4c7b-8487-171dacb88766</b></p><a name="6e1fb74a-742b-4c7b-8487-171dacb88766"> </a><a name="hc6e1fb74a-742b-4c7b-8487-171dacb88766"> </a><a name="6e1fb74a-742b-4c7b-8487-171dacb88766-en-US"> </a><p><b>status</b>: Final</p><p><b>type</b>: <span title="Codes:{http://loinc.org 60591-5}">Patient summary Document</span></p><p><b>date</b>: 2020-12-11 14:30:00+0100</p><p><b>author</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-98315ba9-ffea-41ef-b59b-a836c039858f">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><p><b>title</b>: Patient Summary as of December 11, 2020 14:30</p><p><b>confidentiality</b>: normal</p><blockquote><p><b>attester</b></p><p><b>mode</b>: Legal</p><p><b>time</b>: 2020-12-11 14:30:00+0100</p><p><b>party</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-98315ba9-ffea-41ef-b59b-a836c039858f">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p></blockquote><blockquote><p><b>attester</b></p><p><b>mode</b>: Legal</p><p><b>time</b>: 2020-12-11 14:30:00+0100</p><p><b>party</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p></blockquote><p><b>custodian</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><h3>RelatesTos</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Target[x]</b></td></tr><tr><td style="display: none">*</td><td>Appends</td><td><code>urn:oid:2.16.724.4.8.10.200.10</code>/20e12ce3-857f-49c0-b888-cb670597f191</td></tr></table><h3>Events</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td><td><b>Period</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v3-ActClass PCPR}">care provision</span></td><td>?? --&gt; 2020-12-11 14:30:00+0100</td></tr></table></div>
+        </text>
+        <status value="final"/>
+        <type>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="60591-5"/>
+            <display value="Patient summary Document"/>
+          </coding>
+        </type>
+        <subject>
+          <reference value="urn:uuid:7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+        </subject>
+        <date value="2020-12-11T14:30:00+01:00"/>
+        <author>
+          <reference value="urn:uuid:98315ba9-ffea-41ef-b59b-a836c039858f"/>
+        </author>
+        <title value="Patient Summary as of December 11, 2020 14:30"/>
+        <confidentiality value="N"/>
+        <attester>
+          <mode value="legal"/>
+          <time value="2020-12-11T14:30:00+01:00"/>
+          <party>
+            <reference value="urn:uuid:98315ba9-ffea-41ef-b59b-a836c039858f"/>
+          </party>
+        </attester>
+        <attester>
+          <mode value="legal"/>
+          <time value="2020-12-11T14:30:00+01:00"/>
+          <party>
+            <reference value="urn:uuid:bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"/>
+          </party>
+        </attester>
+        <custodian>
+          <reference value="urn:uuid:bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"/>
+        </custodian>
+        <relatesTo>
+          <code value="appends"/>
+          <targetIdentifier>
+            <system value="urn:oid:2.16.724.4.8.10.200.10"/>
+            <value value="20e12ce3-857f-49c0-b888-cb670597f191"/>
+          </targetIdentifier>
+        </relatesTo>
+        <event>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-ActClass"/>
+              <code value="PCPR"/>
+            </coding>
+          </code>
+          <period>
+            <end value="2020-12-11T14:30:00+01:00"/>
+          </period>
+        </event>
+        <section>
+          <title value="Active Problems"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="11450-4"/>
+              <display value="Problem list - Reported"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Condition Name</b>: Menopausal Flushing</div><div><b>Code</b>: <span>198436008</span></div><div><b>Status</b>: <span>Active</span></div></li></ul></div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:ad84b7a2-b4dd-474e-bef3-0779e6cb595f"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Medication"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="10160-0"/>
+              <display value="History of Medication use Narrative"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Medication Name</b>: Oral anastrozole 1mg tablet</div><div><b>Code</b>: <span></span></div><div><b>Status</b>: <span>Active, started March 2015</span></div><div>Instructions: Take 1 time per day</div></li></ul></div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:6e883e5e-7648-485a-86de-3640a61601fe"/>
+          </entry>
+        </section>
+        <section>
+          <title value="Allergies and Intolerances"/>
+          <code>
+            <coding>
+              <system value="http://loinc.org"/>
+              <code value="48765-2"/>
+              <display value="Allergies and adverse reactions Document"/>
+            </coding>
+          </code>
+          <text>
+            <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li><div><b>Allergy Name</b>: Pencillins</div><div><b>Verification Status</b>: Confirmed</div><div><b>Reaction</b>: <span>no information</span></div></li></ul></div>
+          </text>
+          <entry>
+            <reference value="urn:uuid:fe2769fd-22c9-4307-9122-ee0466e5aebb"/>
+          </entry>
+        </section>
+      </Composition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+    <resource>
+      <Patient>
+        <id value="7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Patient_7685713c-e29e-4a75-8a90-45be7ba3be94"> </a><p class="res-header-id"><b>Generated Narrative: Patient 7685713c-e29e-4a75-8a90-45be7ba3be94</b></p><a name="7685713c-e29e-4a75-8a90-45be7ba3be94"> </a><a name="hc7685713c-e29e-4a75-8a90-45be7ba3be94"> </a><a name="7685713c-e29e-4a75-8a90-45be7ba3be94-en-US"> </a><p style="border: 1px #661aff solid; background-color: #e6e6ff; padding: 10px;">Martha DeLarosa  Female, DoB: 1972-05-01 ( urn:oid:2.16.840.1.113883.2.4.6.3#574687583)</p><hr/><table class="grid"><tr><td style="background-color: #f3f5da" title="Record is active">Active:</td><td colspan="3">true</td></tr><tr><td style="background-color: #f3f5da" title="Ways to contact the Patient">Contact Detail</td><td colspan="3"><ul><li><a href="tel:+31788700800">+31788700800</a></li><li>Laan Van Europa 1600 Dordrecht 3317 DB NL </li></ul></td></tr><tr><td style="background-color: #f3f5da" title="Nominated Contact: mother">mother:</td><td colspan="3"><ul><li>Martha Mum </li><li>Promenade des Anglais 111 Lyon 69001 FR </li><li><a href="tel:+33-555-20036">+33-555-20036</a></li></ul></td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.840.1.113883.2.4.6.3"/>
+          <value value="574687583"/>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <family value="DeLarosa"/>
+          <given value="Martha"/>
+        </name>
+        <telecom>
+          <system value="phone"/>
+          <value value="+31788700800"/>
+          <use value="home"/>
+        </telecom>
+        <gender value="female"/>
+        <birthDate value="1972-05-01"/>
+        <address>
+          <line value="Laan Van Europa 1600"/>
+          <city value="Dordrecht"/>
+          <postalCode value="3317 DB"/>
+          <country value="NL"/>
+        </address>
+        <contact>
+          <relationship>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v3-RoleCode"/>
+              <code value="MTH"/>
+            </coding>
+          </relationship>
+          <name>
+            <family value="Mum"/>
+            <given value="Martha"/>
+          </name>
+          <telecom>
+            <system value="phone"/>
+            <value value="+33-555-20036"/>
+            <use value="home"/>
+          </telecom>
+          <address>
+            <line value="Promenade des Anglais 111"/>
+            <city value="Lyon"/>
+            <postalCode value="69001"/>
+            <country value="FR"/>
+          </address>
+        </contact>
+      </Patient>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:98315ba9-ffea-41ef-b59b-a836c039858f"/>
+    <resource>
+      <Practitioner>
+        <id value="98315ba9-ffea-41ef-b59b-a836c039858f"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Practitioner_98315ba9-ffea-41ef-b59b-a836c039858f"> </a><p class="res-header-id"><b>Generated Narrative: Practitioner 98315ba9-ffea-41ef-b59b-a836c039858f</b></p><a name="98315ba9-ffea-41ef-b59b-a836c039858f"> </a><a name="hc98315ba9-ffea-41ef-b59b-a836c039858f"> </a><a name="98315ba9-ffea-41ef-b59b-a836c039858f-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.528.1.1007.3.1</code>/129854633</p><p><b>active</b>: true</p><p><b>name</b>: Beetje van Hulp </p><h3>Qualifications</h3><table class="grid"><tr><td style="display: none">-</td><td><b>Code</b></td></tr><tr><td style="display: none">*</td><td><span title="Codes:{http://terminology.hl7.org/CodeSystem/v2-0360 MD}">Doctor of Medicine</span></td></tr></table></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.528.1.1007.3.1"/>
+          <value value="129854633"/>
+          <assigner>
+            <display value="CIBG"/>
+          </assigner>
+        </identifier>
+        <active value="true"/>
+        <name>
+          <family value="van Hulp"/>
+          <given value="Beetje"/>
+        </name>
+        <qualification>
+          <code>
+            <coding>
+              <system value="http://terminology.hl7.org/CodeSystem/v2-0360"/>
+              <version value="2.7"/>
+              <code value="MD"/>
+              <display value="Doctor of Medicine"/>
+            </coding>
+          </code>
+        </qualification>
+      </Practitioner>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"/>
+    <resource>
+      <Organization>
+        <id value="bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Organization_bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"> </a><p class="res-header-id"><b>Generated Narrative: Organization bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d</b></p><a name="bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"> </a><a name="hcbb6bdf4f-7fcb-4d44-96a5-b858ad031d1d"> </a><a name="bb6bdf4f-7fcb-4d44-96a5-b858ad031d1d-en-US"> </a><p><b>identifier</b>: <code>urn:oid:2.16.528.1.1007.3.3</code>/564738757</p><p><b>active</b>: true</p><p><b>name</b>: Anorg Aniza Tion BV / The best custodian ever</p><p><b>telecom</b>: <a href="tel:+31-51-34343400">+31-51-34343400</a></p><p><b>address</b>: Houttuinen 27 Dordrecht 3311 CE NL (work)</p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:2.16.528.1.1007.3.3"/>
+          <value value="564738757"/>
+        </identifier>
+        <active value="true"/>
+        <name value="Anorg Aniza Tion BV / The best custodian ever"/>
+        <telecom>
+          <system value="phone"/>
+          <value value="+31-51-34343400"/>
+          <use value="work"/>
+        </telecom>
+        <address>
+          <use value="work"/>
+          <line value="Houttuinen 27"/>
+          <city value="Dordrecht"/>
+          <postalCode value="3311 CE"/>
+          <country value="NL"/>
+        </address>
+      </Organization>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:ad84b7a2-b4dd-474e-bef3-0779e6cb595f"/>
+    <resource>
+      <Condition>
+        <id value="ad84b7a2-b4dd-474e-bef3-0779e6cb595f"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Condition_ad84b7a2-b4dd-474e-bef3-0779e6cb595f"> </a><p class="res-header-id"><b>Generated Narrative: Condition ad84b7a2-b4dd-474e-bef3-0779e6cb595f</b></p><a name="ad84b7a2-b4dd-474e-bef3-0779e6cb595f"> </a><a name="hcad84b7a2-b4dd-474e-bef3-0779e6cb595f"> </a><a name="ad84b7a2-b4dd-474e-bef3-0779e6cb595f-en-US"> </a><p><b>identifier</b>: <code>urn:oid:1.2.3.999</code>/cacceb57-395f-48e1-9c88-e9c9704dc2d2</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/condition-ver-status confirmed}">Confirmed</span></p><p><b>category</b>: <span title="Codes:{http://loinc.org 75326-9}">Problem</span></p><p><b>severity</b>: <span title="Codes:{http://loinc.org LA6751-7}">Moderate</span></p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 198436008}, {http://hl7.org/fhir/sid/icd-10 N95.1}">Menopausal flushing (finding)</span></p><p><b>subject</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-7685713c-e29e-4a75-8a90-45be7ba3be94">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><p><b>onset</b>: 2015</p><p><b>recordedDate</b>: 2016-10</p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:1.2.3.999"/>
+          <value value="cacceb57-395f-48e1-9c88-e9c9704dc2d2"/>
+        </identifier>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/condition-ver-status"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <category>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="75326-9"/>
+            <display value="Problem"/>
+          </coding>
+        </category>
+        <severity>
+          <coding>
+            <system value="http://loinc.org"/>
+            <code value="LA6751-7"/>
+            <display value="Moderate"/>
+          </coding>
+        </severity>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="198436008"/>
+            <display value="Menopausal flushing (finding)">
+              <extension url="http://hl7.org/fhir/StructureDefinition/translation">
+                <extension url="lang">
+                  <valueCode value="nl-NL"/>
+                </extension>
+                <extension url="content">
+                  <valueString value="opvliegers"/>
+                </extension>
+              </extension>
+            </display>
+          </coding>
+          <coding>
+            <system value="http://hl7.org/fhir/sid/icd-10"/>
+            <code value="N95.1"/>
+            <display value="Menopausal and female climacteric states"/>
+          </coding>
+        </code>
+        <subject>
+          <reference value="urn:uuid:7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+        </subject>
+        <onsetDateTime value="2015"/>
+        <recordedDate value="2016-10"/>
+      </Condition>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6e883e5e-7648-485a-86de-3640a61601fe"/>
+    <resource>
+      <MedicationStatement>
+        <id value="6e883e5e-7648-485a-86de-3640a61601fe"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="MedicationStatement_6e883e5e-7648-485a-86de-3640a61601fe"> </a><p class="res-header-id"><b>Generated Narrative: MedicationStatement 6e883e5e-7648-485a-86de-3640a61601fe</b></p><a name="6e883e5e-7648-485a-86de-3640a61601fe"> </a><a name="hc6e883e5e-7648-485a-86de-3640a61601fe"> </a><a name="6e883e5e-7648-485a-86de-3640a61601fe-en-US"> </a><p><b>identifier</b>: <code>urn:oid:1.2.3.999</code>/8faf0319-89d3-427c-b9d1-e8c8fd390dca</p><p><b>status</b>: Active</p><p><b>medication</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-6369a973-afc7-4617-8877-3e9811e05a5b">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><p><b>subject</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-7685713c-e29e-4a75-8a90-45be7ba3be94">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><p><b>effective</b>: 2015-03 --&gt; (ongoing)</p><blockquote><p><b>dosage</b></p></blockquote></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:1.2.3.999"/>
+          <value value="8faf0319-89d3-427c-b9d1-e8c8fd390dca"/>
+        </identifier>
+        <status value="active"/>
+        <medicationReference>
+          <reference value="urn:uuid:6369a973-afc7-4617-8877-3e9811e05a5b"/>
+        </medicationReference>
+        <subject>
+          <reference value="urn:uuid:7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+        </subject>
+        <effectivePeriod>
+          <start value="2015-03"/>
+        </effectivePeriod>
+        <dosage>
+          <timing>
+            <repeat>
+              <count value="1"/>
+              <periodUnit value="d"/>
+            </repeat>
+          </timing>
+          <route>
+            <coding>
+              <system value="http://standardterms.edqm.eu"/>
+              <code value="20053000"/>
+              <display value="Oral use"/>
+            </coding>
+          </route>
+          <doseAndRate>
+            <doseQuantity>
+              <value value="1"/>
+              <unit value="tablet"/>
+              <system value="http://unitsofmeasure.org"/>
+              <code value="1"/>
+            </doseQuantity>
+          </doseAndRate>
+        </dosage>
+      </MedicationStatement>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:6369a973-afc7-4617-8877-3e9811e05a5b"/>
+    <resource>
+      <Medication>
+        <id value="6369a973-afc7-4617-8877-3e9811e05a5b"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="Medication_6369a973-afc7-4617-8877-3e9811e05a5b"> </a><p class="res-header-id"><b>Generated Narrative: Medication 6369a973-afc7-4617-8877-3e9811e05a5b</b></p><a name="6369a973-afc7-4617-8877-3e9811e05a5b"> </a><a name="hc6369a973-afc7-4617-8877-3e9811e05a5b"> </a><a name="6369a973-afc7-4617-8877-3e9811e05a5b-en-US"> </a><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 108774000}, {urn:oid:2.16.840.1.113883.2.4.4.1 99872}, {urn:oid:2.16.840.1.113883.2.4.4.7 2076667}, {http://www.whocc.no/atc L02BG03}">Product containing anastrozole (medicinal product)</span></p></div>
+        </text>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="108774000"/>
+            <display value="Product containing anastrozole (medicinal product)"/>
+          </coding>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.1"/>
+            <code value="99872"/>
+            <display value="ANASTROZOL 1MG TABLET"/>
+          </coding>
+          <coding>
+            <system value="urn:oid:2.16.840.1.113883.2.4.4.7"/>
+            <code value="2076667"/>
+            <display value="ANASTROZOL CF TABLET FILMOMHULD 1MG"/>
+          </coding>
+          <coding>
+            <system value="http://www.whocc.no/atc"/>
+            <code value="L02BG03"/>
+            <display value="anastrozole"/>
+          </coding>
+        </code>
+      </Medication>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="urn:uuid:fe2769fd-22c9-4307-9122-ee0466e5aebb"/>
+    <resource>
+      <AllergyIntolerance>
+        <id value="fe2769fd-22c9-4307-9122-ee0466e5aebb"/>
+        <text>
+          <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><a name="AllergyIntolerance_fe2769fd-22c9-4307-9122-ee0466e5aebb"> </a><p class="res-header-id"><b>Generated Narrative: AllergyIntolerance fe2769fd-22c9-4307-9122-ee0466e5aebb</b></p><a name="fe2769fd-22c9-4307-9122-ee0466e5aebb"> </a><a name="hcfe2769fd-22c9-4307-9122-ee0466e5aebb"> </a><a name="fe2769fd-22c9-4307-9122-ee0466e5aebb-en-US"> </a><p><b>identifier</b>: <code>urn:oid:1.2.3.999</code>/8d9566a4-d26d-46be-a3e4-c9f3a0e5cd83</p><p><b>clinicalStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical active}">Active</span></p><p><b>verificationStatus</b>: <span title="Codes:{http://terminology.hl7.org/CodeSystem/allergyintolerance-verification confirmed}">Confirmed</span></p><p><b>type</b>: Allergy</p><p><b>category</b>: Medication</p><p><b>criticality</b>: High Risk</p><p><b>code</b>: <span title="Codes:{http://snomed.info/sct 373270004}">Substance with penicillin structure and antibacterial mechanism of action (substance)</span></p><p><b>patient</b>: <a href="Bundle-bundle-minimal.html#urn-uuid-7685713c-e29e-4a75-8a90-45be7ba3be94">Bundle: identifier = urn:oid:2.16.724.4.8.10.200.10#28b95815-76ce-457b-b7ae-a972e527db40; type = document; timestamp = 2020-12-11 14:30:00+0100</a></p><p><b>onset</b>: 2010</p></div>
+        </text>
+        <identifier>
+          <system value="urn:oid:1.2.3.999"/>
+          <value value="8d9566a4-d26d-46be-a3e4-c9f3a0e5cd83"/>
+        </identifier>
+        <clinicalStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-clinical"/>
+            <code value="active"/>
+          </coding>
+        </clinicalStatus>
+        <verificationStatus>
+          <coding>
+            <system value="http://terminology.hl7.org/CodeSystem/allergyintolerance-verification"/>
+            <code value="confirmed"/>
+          </coding>
+        </verificationStatus>
+        <type value="allergy"/>
+        <category value="medication"/>
+        <criticality value="high"/>
+        <code>
+          <coding>
+            <system value="http://snomed.info/sct"/>
+            <code value="373270004"/>
+            <display value="Substance with penicillin structure and antibacterial mechanism of action (substance)"/>
+          </coding>
+        </code>
+        <patient>
+          <reference value="urn:uuid:7685713c-e29e-4a75-8a90-45be7ba3be94"/>
+        </patient>
+        <onsetDateTime value="2010"/>
+      </AllergyIntolerance>
+    </resource>
+  </entry>
+</Bundle>
